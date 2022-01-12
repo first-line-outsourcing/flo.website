@@ -24,3 +24,23 @@
   border-color: #EFB104;
   color: #ffffff;
 }
+
+.footer {
+  h6 {
+    font-family: Halvar Mittel Md, sans-serif;
+    font-size: 18px;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  p {
+    font-family: Halvar Mittel Lt, sans-serif;
+    font-size: 14px;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 16px;
+    a {
+      color: #ffffff;
+    }
+  }
+}

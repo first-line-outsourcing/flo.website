@@ -18,10 +18,10 @@ import Technology from './pages/Technology';
 export default function App() {
   return (
     <Router>
-      <div className={'container'}>
+      <div className='container'>
         <nav className='navbar navbar-expand-lg'>
           <div className='container-fluid'>
-            <Link className={'navbar-brand'} aria-current='page' to='/'>
+            <Link className='navbar-brand' aria-current='page' to='/'>
               <img src={logo} alt='' width={76} />
             </Link>
             <button className='navbar-toggler' type='button' data-bs-toggle='collapse'
@@ -29,9 +29,9 @@ export default function App() {
                     aria-label='Toggle navigation'>
               <span className='navbar-toggler-icon'> </span>
             </button>
-            <div className={'d-flex'}>
+            <div className='d-flex'>
               <div className='collapse navbar-collapse' id='navbarTogglerDemo02'>
-                <ul className={'navbar-nav me-auto mb-2 mb-lg-0'}>
+                <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                   <li className='nav-item'>
                     <Link className='nav-link' aria-current='page' to='/services'>Our services</Link>
                   </li>
@@ -64,10 +64,10 @@ export default function App() {
               </div>
             </div>
           </div>
-
         </nav>
+      </div>
 
-        {/* A <Routes> looks through its children <Route>s and
+      {/* A <Routes> looks through its children <Route>s and
          renders the first one that matches the current URL. */}
         <Routes>
           <Route path='/about' element={<About />} />
@@ -82,7 +82,51 @@ export default function App() {
           <Route path='/technology' element={<Technology />} />
           <Route path='/' element={<Home />} />
         </Routes>
-      </div>
+      <footer className="footer">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <img src={logo} alt='' width={116} />
+            </div>
+            <div className="col">
+              <h6>Contacts</h6>
+              <p>First Line Outsorsing</p>
+              <p><a href="mailto:hello@flo.team">hello@flo.team</a></p>
+              <p><a href="tel:+79996384544">+7  (999) 638-45-44</a></p>
+              <p>Russia, Krasnodar Oktabrskaya 141</p>
+            </div>
+            <div className="col">
+              <h6>Company</h6>
+              <p><Link aria-current='page' to='/about'>About us</Link></p>
+              <p><a aria-current='page' href='https://medium.com/firstlineoutsourcing'>Blog</a></p>
+              <p><Link aria-current='page' to='/hiring'>Hiring</Link></p>
+              <p><Link aria-current='page' to='/cases'>Portfolio</Link></p>
+            </div>
+            <div className="col">
+              <h6>Development</h6>
+              <p><Link aria-current='page' to='/services'>Frontend development</Link></p>
+              <p><Link aria-current='page' to='/services'>Backend development</Link></p>
+              <p><Link aria-current='page' to='/services'>Mobile development</Link></p>
+              <p><Link aria-current='page' to='/services'>QA Automation</Link></p>
+            </div>
+            <div className="col">
+              <h6>Services</h6>
+              <p><Link aria-current='page' to='/services'>Amazon Web Services</Link></p>
+              <p><Link aria-current='page' to='/services'>Google Cloud Platform</Link></p>
+              <p><Link aria-current='page' to='/services'>Microsoft Azure</Link></p>
+              <p><Link aria-current='page' to='/services'>IBM Cloud</Link></p>
+            </div>
+            <div className="col">
+              <div className="social">
+
+              </div>
+              <div className="clutch">
+                <img src="" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </Router>
   );
 }
