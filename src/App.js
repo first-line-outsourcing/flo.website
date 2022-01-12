@@ -5,95 +5,73 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Modal from 'react-modal';
 import styles from './App.module.scss';
-
-Modal.setAppElement('#root');
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+import About from './pages/About';
+import Case from './pages/Case';
+import Cases from './pages/Cases';
+import Components from './pages/Components';
+import Contacts from './pages/Contacts';
+import Home from './pages/Home';
+import Process from './pages/Process';
+import Service from './pages/Service';
+import Services from './pages/Services';
+import Technologies from './pages/Technologies';
+import Technology from './pages/Technology';
 
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li className={'btn btn-primary'}>
-              <Link className={styles.link} to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
+        <ul className="nav nav-pills nav-justified">
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/components">Components</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/about">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/cases">Cases</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/case">Case</Link>
+          </li>
+          <li className="nav-item">
+          <Link className="nav-link" aria-current="page" to="/contacts">Contacts</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/services">Services</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/service">Service</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/technologies">Technologies</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" aria-current="page" to="/technology">Technology</Link>
+          </li>
 
-        {/* A <Switch> looks through its children <Route>s and
+        </ul>
+
+        {/* A <Routes> looks through its children <Route>s and
          renders the first one that matches the current URL. */}
         <Routes>
           <Route path="/about" element={<About />} />
-          <Route path="/users" element={<Users />} />
+          <Route path="/case" element={<Case />} />
+          <Route path="/cases" element={<Cases />} />
+          <Route path="/components" element={<Components />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/technologies" element={<Technologies />} />
+          <Route path="/technology" element={<Technology />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>
   );
-}
-
-function Home() {
-  let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-  return (
-    <div>
-      <button onClick={openModal}>Open Modal</button>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
-      </Modal>
-    </div>
-  )
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
