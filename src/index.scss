@@ -74,3 +74,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.heading {
+  height: 544px;
+  width: 100%;
+  padding-top: 300px;
+  background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("./images/services.jpg");
+  background-size: cover;
+  background-position-y: 40%;
+  h1 {
+    font-size: 56px;
+    line-height: 1.15;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Halvar Breit Rg, sans-serif;
+  }
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    font-family: Halvar Mittel Lt, sans-serif;
+  }
+}
