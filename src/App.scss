@@ -1,0 +1,26 @@
+.navbar-nav {
+  .nav-item {
+    margin: 0 24px;
+  }
+  .nav-link {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: #fff;
+    font-family: Halvar Mittel Lt, sans-serif;
+    &:hover {
+      color: #EFB104;
+    }
+  }
+}
+.btn-accent {
+  padding: 10px 16px 11px 16px;
+  font-family: Halvar Breit Rg, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+  background-color: #EFB104;
+  border-color: #EFB104;
+  color: #ffffff;
+}
