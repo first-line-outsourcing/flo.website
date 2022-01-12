@@ -25,6 +25,48 @@
   color: #ffffff;
 }
 
+.contact-us {
+  position: relative;
+  overflow: hidden;
+  margin-top: 120px;
+  margin-bottom: 34px;
+  .map {
+    position: absolute;
+    width: 1684px;
+    height: 830px;
+    right: 30vw;
+    opacity: 0.3;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  form {
+    label {
+      font-size: 14px;
+      line-height: 1.15;
+      font-weight: 400;
+      font-family: Halvar Mittel Rg, sans-serif;
+      color: #C5C7CD;
+    }
+    input, textarea {
+      background: #121213;
+      border: 1px solid #404147;
+      color: #C5C7CD;
+      &:focus {
+        background: #121213;
+        border: 1px solid #84858A;
+        color: #C5C7CD;
+        outline: none;
+      }
+    }
+    div:last-child {
+      margin: 32px 0;
+    }
+  }
+}
+
 .footer {
   h6 {
     font-family: Halvar Mittel Md, sans-serif;
@@ -42,5 +84,16 @@
     a {
       color: #ffffff;
     }
+  }
+}
+.neon {
+  font-size: 56px;
+  line-height: 1.15;
+  font-weight: bold;
+  font-family: Halvar Breit Bd, sans-serif;
+  color: #ffffff;
+  span {
+    color: #FFF4D7;
+    text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
   }
 }
