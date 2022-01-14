@@ -64,22 +64,15 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="mobileHR">
-          <hr/>
-        </div>
-        {items.map((item, index) => (
+        {items.map((item) => (
           <>
             <ServiceItem
               title={item.title}
               description={item.description}
               img={item.img}
             />
-            {items.length - 1 !== index ? <hr/> : null}
           </>
         ))}
-        <div className="mobileHR">
-          <hr/>
-        </div>
       </div>
     </div>
   );

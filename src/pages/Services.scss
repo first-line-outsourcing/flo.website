@@ -1,3 +1,6 @@
+$Small: "576px";
+$ExtraLarge: "1200px";
+
 .services {
   background-size: cover;
   background: url("../images/Vector 17.svg") 44% 160%;
@@ -43,13 +46,7 @@
   }
 }
 
-@media (min-width: 400px) {
-  .mobileHR {
-    display: none;
-  }
-}
-
-@media (max-width: 360px) {
+@media (max-width: $Small) {
   .services {
     background: none;
     h1 {
@@ -72,6 +69,16 @@
     }
   }
   .title {
+    border-bottom: 1px solid #54420f;
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: $ExtraLarge) {
+  .services {
+    background: none;
+    h1 {
+      font-size: 36px;
+    }
   }
 }
