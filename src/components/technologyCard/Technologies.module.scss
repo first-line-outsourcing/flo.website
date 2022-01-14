@@ -1,0 +1,51 @@
+.card{
+  display: grid;
+  //flex-direction: column;
+  //align-items: flex-start;
+  padding: 32px;
+
+  position: static;
+  width: 384px;
+  height: 328px;
+  left: 0px;
+  top: 0px;
+
+  background: rgba(18, 18, 19, 0.6);
+  /* Black/Dark Gray */
+
+  border: 1px solid #404147;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(20px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  //flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.arrow{
+  justify-self: flex-end;
+  }
+p {
+  font-family: Halvar Mittelschrift, sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  margin-bottom: 16px;
+  a {
+    color: #ffffff;
+  }
+}
+h3{
+  font-family: Halvar Mittelschrift, sans-serif;
+  line-height: 140%;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
