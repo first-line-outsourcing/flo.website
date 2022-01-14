@@ -5,26 +5,31 @@
     margin-top: 32px;
   }
 }
+
 .title {
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  margin-bottom: 120px;
+  margin-bottom: 70px;
+
   .container {
     position: relative;
     z-index: 2;
   }
+
   h3 {
     font-size: 40px;
     line-height: 1.15;
     font-weight: bold;
     font-family: Halvar Breit Bd, sans-serif;
     color: #ffffff;
+
     span {
       color: #FFF4D7;
       text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
     }
   }
+
   p {
     margin-top: 24px;
     font-size: 18px;
@@ -33,5 +38,37 @@
     font-family: Halvar Mittel Lt, sans-serif;
     color: #ffffff;
     width: 588px;
+  }
+}
+
+@media (min-width: 400px) {
+  .mobileHR {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .services {
+    h1 {
+      position: static;
+      width: 288px;
+      height: 185px;
+      left: 0;
+      top: 0;
+      font-size: 32px;
+      line-height: 37px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      width: 281px;
+    }
+  }
+  .title {
+    margin-bottom: 0;
   }
 }
