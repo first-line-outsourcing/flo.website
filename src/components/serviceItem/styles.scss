@@ -1,0 +1,37 @@
+.item {
+  margin-top: 32px;
+  h4 {
+    font-size: 32px;
+    width: 282px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-family: Halvar Breit Bd, sans-serif;
+    color: #ffffff;
+  }
+  p {
+    width: 435px;
+    //margin-left: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-family: Halvar Mittel Lt, sans-serif;
+    color: #ffffff;
+  }
+}
+.withHighlighting {
+  h4 {
+    color: #FFF4D7;
+    text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
+  }
+}
+.image {
+  border-radius: 10px;
+  width: 282px;
+  height: 168px;
+}
+.arrow {
+  position: relative;
+  left: -90px;
+  top: -80px;
+  height: 0;
+}

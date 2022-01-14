@@ -1,0 +1,37 @@
+.services {
+  hr {
+    opacity: 0.3;
+    border: 1px solid #EFB104;
+    margin-top: 32px;
+  }
+}
+.title {
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  margin-bottom: 120px;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-family: Halvar Breit Bd, sans-serif;
+    color: #ffffff;
+    span {
+      color: #FFF4D7;
+      text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
+    }
+  }
+  p {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: normal;
+    font-family: Halvar Mittel Lt, sans-serif;
+    color: #ffffff;
+    width: 588px;
+  }
+}
