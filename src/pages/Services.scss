@@ -1,4 +1,6 @@
 .services {
+  background-size: cover;
+  background: url("../images/Vector 17.svg") 44% 160%;
   hr {
     opacity: 0.3;
     border: 1px solid #EFB104;
@@ -49,6 +51,7 @@
 
 @media (max-width: 360px) {
   .services {
+    background: none;
     h1 {
       position: static;
       width: 288px;
