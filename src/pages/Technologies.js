@@ -22,72 +22,77 @@ export default function Technologies() {
     let cardArray = [
         {
             img: NodeJs,
-            title: 'NodeJs',
+            title: 'Node.Js',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: Js,
-            title: 'Js',
+            title: 'Java Script',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: TS,
-            title: 'TS',
+            title: 'TypeScript',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: Angular,
-            title: 'Angular',
+            title: 'Angular | NGXS',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: logoReact,
-            title: 'React',
+            title: 'React | MobX',
+            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+        },
+        {
+            img: '',
+            title: 'Serverless Framework',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: Express,
-            title: 'Express',
+            title: 'Express | Sails | Nest',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: AWS,
-            title: 'AWS',
+            title: 'Amazon Web Services',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: GCP,
-            title: 'GCP',
+            title: 'Google Cloud Platform',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: Azure,
-            title: 'Azure',
+            title: 'Microsoft Azure',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: IBMC,
-            title: 'IBMC',
+            title: 'IBM Cloud',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: PostgreSQL,
-            title: 'PostgreSQL',
+            title: 'PostgreSQL | MySQL | Aurora',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: Flutter,
-            title: 'Flutter',
+            title: 'Flutter | Getit',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: SQLite,
-            title: 'SQLite',
+            title: 'CloudantDB | SQLite',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
             img: AmazonQuantum,
-            title: 'AmazonQuantum',
+            title: 'Amazon Quantum Ledger DB',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
@@ -123,13 +128,13 @@ export default function Technologies() {
     }
     let key = 0;
     let cards = cardArray.map((card) => {
-        return <div className={'col-lg-4 col-sm-12'} key={key++}>
+        return <div className={'col-lg-4 col-sm-12 col-md-6'} key={key++}>
             <TechnologyCard img={card.img} title={card.title} text={card.text}/>
         </div>
     })
     
     return (
-        <div className='services'>
+        <div className={TechnologiesStyle.tech}>
             <div className="heading">
                 <div className="container">
                     <div className="row">
