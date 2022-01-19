@@ -1,0 +1,125 @@
+@import 'variables';
+@import 'forms';
+
+//
+//  Spacing
+//  ---------------------------------------------
+
+.pt-10 {
+    padding-top: 100px;
+}
+
+.pt-20 {
+    padding-top: 200px;
+}
+
+
+//
+//  Typography
+//  ---------------------------------------------
+
+h1, h2 {
+    color: $primary-color;
+    font-family: $HalvarBreitRg;
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 0.6em;
+    font-size: 56px;
+    line-height: 1.15;
+}
+
+h2 {
+    margin-bottom: 1em;
+    font-size: 40px;
+    line-height: 1.15;
+}
+  
+p {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: $primary-color;
+    font-family: $HalvarMittelRg;
+}
+
+.highlighted {
+    color: $accent-highlited-color;
+    text-shadow: 0px 0px 30px $accent-color;
+}
+
+hr {
+    background-color: $accent-color;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    min-width: 170px;
+    box-sizing: border-box;
+    border: none;
+    background: $primary-color;
+    border-radius: 4px;
+    font-family: $primary-font-bd;
+    font-size: $font-size-button;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: $accent-color;
+    text-align: center;
+    transition: .4s ease-in-out;
+    &:hover {
+        color: $accent-color;
+        box-shadow: 0px 0px 92px $primary-color, 0px 0px 20px $primary-color;
+    }
+    &:focus {
+        outline: 0;
+        box-shadow: 0px 0px 0px #000000;
+    }
+    &.btn-accent {
+        background: $accent-color;
+        color: $primary-color;
+        &:hover {
+            color: $primary-color;
+            box-shadow: 0px 0px 92px $accent-color, 0px 0px 20px $accent-color;
+        }
+        &:focus {
+            box-shadow: 0px 0px 0px #000000;
+        }
+    }
+    &.btn-bordered {
+        background: $backgr-color;
+        border: 1px solid $accent-color;
+        border-radius: 0;
+        font-family: $primary-font-rg;
+        font-weight: 400;
+        font-size: $font-size-button_lg;
+        &:hover {
+            color: $accent-highlited-color;
+            border-color: $accent-highlited-color;
+            box-shadow: inset 0px 0px 5px rgba(239, 177, 4, 0.6), 0px 0px 5px rgba(239, 177, 4, 0.6);
+            text-shadow: 0px 0px 10px $accent-color;
+        }
+        &:focus {
+            outline: 0;
+            box-shadow: 0px 0px 0px #000000;
+            text-shadow: 0px 0px 0px #000000;
+        }
+    }
+    &.full-width {
+        width: 100%;
+    }
+}
+
+.bg-white {
+    background-color: white;
+    h1, h2, p {
+        color: $text-dark;
+    }
+    .highlighted {
+        color: $accent-color;
+        text-shadow: none;
+    }
+}

@@ -1,0 +1,39 @@
+
+//
+//  Colors
+//  ---------------------------------------------
+
+$color-white: #FFFFFF;
+$color-yellow: #EFB104;
+$color-light_yellow: #FFF4D7;
+$color-dark_blue: #121213;
+$color-blue: #2F9BFF;
+$color-black: #1B1B1F;
+
+$primary-color: $color-white;
+$accent-color: $color-yellow;
+$accent-highlited-color: $color-light_yellow;
+$secondary-color: $color-blue;
+$backgr-color: $color-dark_blue;
+$text-dark: $color-black;
+
+
+//
+//  Fonts
+//  ---------------------------------------------
+
+$HalvarBreitRg: 'Halvar Breit Rg';
+$HalvarBreitXBd: 'Halvar Breit XBd';
+$HalvarMittelRg: 'Halvar Mittel Rg';
+
+$primary-font-rg: $HalvarBreitRg;
+$primary-font-bd: $HalvarBreitXBd;
+$paragraph-font: $HalvarMittelRg;
+
+
+//
+// Font-size
+// ----------------------------------------------
+
+$font-size-button: 18px;
+$font-size-button_lg: 24px;
