@@ -23,7 +23,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Halvar Breit Rg';
+  font-family: 'Halvar Breit Bd';
   src: url('fonts/Halvar/HalvarBreit-Bd.eot');
   src: local('Halvar Breitschrift Bold'), local('HalvarBreit-Bd'),
   url('fonts/Halvar/HalvarBreit-Bd.eot?#iefix') format('embedded-opentype'),
@@ -31,6 +31,18 @@
   url('fonts/Halvar/HalvarBreit-Bd.woff') format('woff'),
   url('fonts/Halvar/HalvarBreit-Bd.ttf') format('truetype');
   font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Halvar Breit Rg';
+  src: url('fonts/Halvar/HalvarBreit-Rg.eot');
+  src: local('Halvar Breitschrift Bold'), local('HalvarBreit-Rg'),
+      url('fonts/Halvar/HalvarBreit-Rg.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Halvar/HalvarBreit-Rg.woff2') format('woff2'),
+      url('fonts/Halvar/HalvarBreit-Rg.woff') format('woff'),
+      url('fonts/Halvar/HalvarBreit-Rg.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -82,19 +94,4 @@ code {
   background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("./images/services.jpg");
   background-size: cover;
   background-position-y: 40%;
-  h1 {
-    font-size: 56px;
-    line-height: 1.15;
-    font-weight: bold;
-    color: #ffffff;
-    font-family: Halvar Breit Rg, sans-serif;
-  }
-  p {
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-    color: #FFFFFF;
-    font-family: Halvar Mittel Lt, sans-serif;
-  }
 }
