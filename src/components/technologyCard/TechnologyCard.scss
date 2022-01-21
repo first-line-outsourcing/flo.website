@@ -1,6 +1,6 @@
 $Small: "576px";
 
-.card{
+.card {
   opacity: 0.98;
   display: grid;
   padding: 32px;
@@ -30,17 +30,31 @@ $Small: "576px";
   margin-left: auto;
   margin-right: auto;
 
-  h2{
+  h2 {
     font-size: 24px;
   }
-}
-.card:hover{
+
+  p {
+    width: 256px;
+    height: 66px;
+    overflow: hidden
+  }
+
   .arrow{
-    display:block;
+    .nav-link{
+      padding: 0;
+    }
+  }
+}
+
+.card:hover {
+  .arrow {
+    display: block;
     visibility: visible;
   }
 }
-.arrow{
+
+.arrow {
   visibility: hidden;
 }
 
@@ -50,26 +64,32 @@ p {
   line-height: 140%;
   color: #ffffff;
   margin-bottom: 16px;
+
   a {
     color: #ffffff;
   }
 }
-h3{
+
+h3 {
   font-family: Halvar Mittelschrift, sans-serif;
   line-height: 140%;
   color: #ffffff;
   margin-bottom: 10px;
 }
+
 @media (max-width: $Small) {
-  .card{
+  .card {
+    padding: 20px;
     margin-top: 16px;
     width: 288px;
     height: 235px;
-    h3{
+
+    h3 {
       font-size: 18px;
     }
-    img{
-      margin-bottom: 27px;
+
+    img {
+      margin-bottom: 20px;
     }
   }
 }
