@@ -1,6 +1,5 @@
 import React from "react";
 import TechnologyCard from "../components/technologyCard/technologyCard";
-import TechnologiesStyle from './Technologies.module.scss'
 import AmazonQuantum from '../images/technologies/AmazonQuantum.svg'
 import Angular from '../images/technologies/Angular.svg'
 import AWS from '../images/technologies/AWS.svg'
@@ -134,7 +133,7 @@ export default function Technologies() {
     })
     
     return (
-        <div className={TechnologiesStyle.tech}>
+        <div className="tech">
             <div className="heading">
                 <div className="container">
                     <div className="row">
@@ -145,7 +144,7 @@ export default function Technologies() {
                 </div>
             </div>
             <div className={'container'}>
-                <div className={TechnologiesStyle.cardContainer}>
+                <div className="cardContainer">
                     <div className={'row'}>
                         {cards}
                     </div>

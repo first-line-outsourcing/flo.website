@@ -1,0 +1,127 @@
+$Small: "576px";
+
+.main {
+  color: white;
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 200px 200px 300px;
+  grid-column-gap: 10px;
+  grid-template-areas: "cycle front back"
+                        "cycle cloud db"
+                        "text text text ";
+
+  margin-bottom: 40px;
+  padding-top: 80px;
+
+  h4 {
+    margin-bottom: 16px;
+    color: #212529;
+    font-family: Halvar Mittelschrift, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold;
+  }
+
+  span {
+    color: #212529;
+    font-family: Halvar Mittelschrift, sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  p {
+    color: #212529;
+    font-family: Halvar Mittelschrift, sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  .cycleBlock {
+    grid-area: cycle;
+    color: #212529;
+    font-family: Halvar Breitschrift, sans-serif;
+    font-size: 40px;
+    line-height: 46px;
+    width: 384px;
+    height: 138px;
+    font-weight: bold;
+
+    img {
+      width: 200px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+
+    }
+
+  }
+
+  .front {
+    grid-area: front;
+  }
+
+  .back {
+    grid-area: back;
+  }
+
+  .db {
+    grid-area: db;
+  }
+
+  .text {
+    grid-area: text;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .cloud {
+    grid-area: cloud;
+  }
+
+}
+
+@media (max-width: $Small) {
+  .main {
+    grid-template-rows: 270px repeat(4, 150px) 480px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cycle"
+                            "front"
+                            "back"
+                            "cloud"
+                              "db"
+                              "text";
+
+    img {
+      width: 156px;
+    }
+
+    .grid_item {
+      span {
+        display: block;
+        width: 268px;
+        font-size: 16px;
+
+      }
+    }
+
+    .text {
+      margin: 0;
+
+       .first {
+        margin-top: 80px;
+       }
+      p{
+        color: #1B1B1F;
+        font-family: Halvar Mittelschrift, sans-serif;
+        font-size: 16px;
+      }
+    }
+    .cycleBlock{
+      width: 96%;
+    }
+
+  }
+}
+
+
+
