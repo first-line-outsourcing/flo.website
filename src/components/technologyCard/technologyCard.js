@@ -10,7 +10,7 @@ const TechnologyCard = (props) => {
     
     return (
         <div className="card" onMouseEnter={() => mouseHandler()}>
-            <div>
+            <div className={'logo'}>
                 <img src={props.img} alt={''}/>
             </div>
             <div><h3>{props.title}</h3></div>

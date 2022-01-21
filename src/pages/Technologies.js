@@ -9,13 +9,14 @@ import Electron from '../images/technologies/Electron.svg'
 import Express from '../images/technologies/Express.svg'
 import Flutter from '../images/technologies/Flutter.svg'
 import GCP from '../images/technologies/GCP.svg'
-import IBMC from '../images/technologies/IBMC.svg'
+import IBMC from '../images/technologies/IBMC.png'
 import Js from '../images/technologies/Js.svg'
 import NodeJs from '../images/technologies/NodeJs.svg'
 import PostgreSQL from '../images/technologies/PostgreSQL.svg'
 import logoReact from '../images/technologies/logoReact.svg'
 import SQLite from '../images/technologies/SQLite.svg'
 import TS from '../images/technologies/TS.svg'
+import SLS from '../images/technologies/sls.png'
 
 export default function Technologies() {
     let cardArray = [
@@ -45,7 +46,7 @@ export default function Technologies() {
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
         {
-            img: '',
+            img: SLS,
             title: 'Serverless Framework',
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
