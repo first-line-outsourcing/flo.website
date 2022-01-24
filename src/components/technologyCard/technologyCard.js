@@ -10,7 +10,7 @@ const TechnologyCard = (props) => {
             </div>
             <div><h3>{props.title}</h3></div>
             <p> {props.text}</p>
-            <div className={'arrow'}><img src={Arrow}/></div>
+            <div className={'arrowContainer'}><img src={Arrow} className={'arrow'}/></div>
         
         </div>
     );
