@@ -7,8 +7,8 @@ $Small: "576px";
 
 .mapAndInfo {
   display: grid;
-  grid-template-areas: "info map";
-
+  grid-template-areas: "info mapContainer";
+  grid-template-columns: 260px 1fr;
   font-family: Halvar Mittelschrift;
   font-style: normal;
   font-weight: normal;
@@ -61,12 +61,17 @@ $Small: "576px";
   grid-area: mail;
 }
 
-.map {
-  grid-area: map;
-  width: 690px;
-  height: 354px;
- background-size: cover;
-  background: url("../images/contacts/map.png") no-repeat 44% 150%;
+.mapContainer {
+  grid-area: mapContainer;
+  display: grid;
+  background-size: cover;
+  .map{
+    height: 354px;
+    width: 690px;
+    background: url("../images/contacts/map.png") no-repeat 44% 150%;
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .title {
@@ -78,7 +83,7 @@ $Small: "576px";
 @media (max-width: $Small) {
   .mapAndInfo {
     grid-template-areas: "info"
-                        "map";
+                        "mapContainer";
 
   }
   .info {
@@ -91,9 +96,11 @@ $Small: "576px";
   .title {
     margin-top: 55px;
   }
-  .map{
+  .mapContainer {
     width: 288px;
     height: 147px;
-    background: url("../images/contacts/mobileMap.png") no-repeat;
+    .map{
+      background: url("../images/contacts/mobileMap.png") no-repeat;
+    }
   }
 }

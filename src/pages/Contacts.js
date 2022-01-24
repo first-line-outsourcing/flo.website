@@ -29,8 +29,8 @@ export default function Contacts() {
                     
                 </div>
                 
-                <div className={'map'}>
-                    {/*<div><img src={map} alt={''}/></div>*/}
+                <div className={'mapContainer'}>
+                    <div className={'map'}/>
                 </div>
             </div>
         </div>
