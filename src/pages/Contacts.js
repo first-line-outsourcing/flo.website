@@ -15,7 +15,6 @@ export default function Contacts() {
                         <div className={'point'}><img src={point} alt={''}/></div>
                         <div className={'address'}><div>Address</div> <div>Krasnodar, Russian Federation</div></div>
                     
-                    
                         <div className={'phone'}><img src={phone} alt={''}/></div>
                         <div className={'number'}>
                             <div>Call Us</div>
@@ -31,7 +30,7 @@ export default function Contacts() {
                 </div>
                 
                 <div className={'map'}>
-                    <div><img src={map} alt={''}/></div>
+                    {/*<div><img src={map} alt={''}/></div>*/}
                 </div>
             </div>
         </div>

@@ -1,9 +1,10 @@
 $Small: "576px";
 
-.contacts{
+.contacts {
   background-size: cover;
   background: url("../images/contacts/background.svg") no-repeat 44% 150%;
 }
+
 .mapAndInfo {
   display: grid;
   grid-template-areas: "info map";
@@ -62,23 +63,37 @@ $Small: "576px";
 
 .map {
   grid-area: map;
+  width: 690px;
+  height: 354px;
+ background-size: cover;
+  background: url("../images/contacts/map.png") no-repeat 44% 150%;
 }
-.title{
+
+.title {
   text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
   color: #FFF4D7;
   font-size: 56px;
 }
+
 @media (max-width: $Small) {
-.mapAndInfo{
-  grid-template-areas: "info"
+  .mapAndInfo {
+    grid-template-areas: "info"
                         "map";
 
-}
-  .info{
+  }
+  .info {
     margin-top: 40px;
     grid-row-gap: 40px;
     grid-template-columns: 30px 1fr;
     grid-template-rows: 55px 55px 55px;
-margin-bottom: 40px;
+    margin-bottom: 40px;
+  }
+  .title {
+    margin-top: 55px;
+  }
+  .map{
+    width: 288px;
+    height: 147px;
+    background: url("../images/contacts/mobileMap.png") no-repeat;
   }
 }
