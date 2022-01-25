@@ -9,7 +9,7 @@ export default function WorkProcess() {
   return (
     <div className="workProcess">
       <div className='row'>
-        <div className="col">
+        <div className="col leftSide">
           {leftSide.map(leftItem => (
             <p className="workProcessItem">{leftItem}</p>
           ))}
@@ -17,7 +17,7 @@ export default function WorkProcess() {
         <div className="col">
           <img src={workProcessLine} alt=""/>
         </div>
-        <div className="col">
+        <div className="col rightSide">
           <div className="rightItemsAlign"/>
           {rightSide.map(rightItem => (
             <p className="workProcessItem">{rightItem}</p>
