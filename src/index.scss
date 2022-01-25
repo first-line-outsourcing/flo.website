@@ -72,6 +72,19 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Halvar Mittel Bd';
+  src: url('fonts/Halvar/HalvarMittel-Bd.eot');
+  src: local('Halvar Mittelschrift Bold'), local('HalvarMittel-Bd'),
+  url('fonts/Halvar/HalvarMittel-Bd.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Halvar/HalvarMittel-Bd.woff2') format('woff2'),
+  url('fonts/Halvar/HalvarMittel-Bd.woff') format('woff'),
+  url('fonts/Halvar/HalvarMittel-Bd.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
