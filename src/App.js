@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 import './App.scss';
 import logo from './images/Logo.svg';
 import map from './images/map.svg';
@@ -80,8 +80,8 @@ export default function App() {
         <Route path="/components" element={<Components />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/process" element={<Process />} />
-        <Route path="/service" element={<Service />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceName" element={<Service />} />
         <Route path="/technologies" element={<Technologies />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="/" element={<Home />} />
