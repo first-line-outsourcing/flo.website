@@ -1,0 +1,129 @@
+@import '../components/variables';
+
+.about {
+    .heading {
+        padding-top: 190px;
+        background: url("../images/about/about_heading.jpg") no-repeat;
+        background-size: contain;
+        background-position-x: center;
+        background-attachment: fixed;
+    }
+
+    .infographics {
+        margin-bottom: 75px;
+    }
+
+    .info-digit {
+        display: inline-block;
+        color: $accent-color;
+        font-size: 56px;
+        font-family: $HalvarBreitRg;
+        font-weight: bold;
+    }
+
+    .our-team {
+        img {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        small {
+            font-size: 16px;
+        }
+    }
+
+    .facts {
+        .fact-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 80px;
+            padding-top: 33px;
+            text-align: center;
+        }
+        .fact-digit {
+            display: inline-block;
+            font-size: 80px;
+            font-family: $HalvarBreitRg;
+            font-weight: bold;
+            color: $accent-highlited-color;
+            text-shadow: 0px 0px 20px $accent-color, 0px 0px 15px $accent-color;
+        }
+        .fact-text {
+            font-family: $HalvarMittelBd;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.4em;
+        }
+        .guitar-players {
+            background: url("../images/about/facts/guitar.svg") no-repeat;
+        }
+        .longboard {
+            background: url("../images/about/facts/board.svg") no-repeat;
+        }
+        .sport-lovers {
+            background: url("../images/about/facts/sport.svg") no-repeat;
+        }
+        .average-age {
+            background: url("../images/about/facts/like.svg") no-repeat;
+        }
+        .pet-owners {
+            background: url("../images/about/facts/cat.svg") no-repeat;
+        }
+        .coffee-ammount {
+            background: url("../images/about/facts/coffee.svg") no-repeat;
+        }
+        .board-games {
+            background: url("../images/about/facts/games.svg") no-repeat;
+        }
+        .mango-fans {
+            background: url("../images/about/facts/mango.svg") no-repeat;
+        }
+        .husky-listener {
+            background: url("../images/about/facts/music.svg") no-repeat;
+        }
+        .programming {
+            background: url("../images/about/facts/programming.svg") no-repeat;
+        }
+        .guitar-players,
+        .longboard,
+        .sport-lovers,
+        .average-age,
+        .pet-owners,
+        .coffee-ammount,
+        .board-games,
+        .mango-fans,
+        .husky-listener,
+        .programming {
+            background-size: contain;
+            background-position: center top;
+        }
+    }
+
+    .development-services {
+        padding-top: 80px;
+        .d-s-heading {
+            margin-bottom: 100px;
+            padding-bottom: 150px;
+            background: url("../images/about/dev-services/d_s_heading.svg") no-repeat;
+            background-size: 300px;
+            background-position: left bottom;
+        }
+        .image-block {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .business-growth {
+        padding: 64px;
+        box-sizing: border-box;
+        background: url("../images/about/arrows_up.svg") no-repeat, $color-yellow;
+        background-position: right 85%;
+        background-size: 53%;
+        border-radius: 30px;
+        h2, p {
+            color: $color-white;
+        }
+    }
+}
