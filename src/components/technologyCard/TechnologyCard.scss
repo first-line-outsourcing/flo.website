@@ -1,4 +1,5 @@
 $Small: "576px";
+$ExtraLarge: "1200px";
 
 .card {
   opacity: 0.99;
@@ -30,57 +31,59 @@ $Small: "576px";
   margin-left: auto;
   margin-right: auto;
 
-  h2 {
-    font-size: 24px;
-  }
-
   .logo {
     width: 40px;
     height: 40px;
   }
-}
 
-p {
-  width: 256px;
-  height: 66px;
-  overflow: hidden
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-family: Halvar Mittelschrift, sans-serif;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  p {
+    width: 256px;
+    height: 66px;
+    overflow: hidden;
+    font-family: Halvar Mittelschrift, sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 16px;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  .arrowContainer {
+    visibility: hidden;
+    align-items: center;
+  }
 }
 
 .card:hover {
   .arrowContainer {
-    display: block;
     visibility: visible;
   }
 }
 
-.arrowContainer {
-  display: block;
-  visibility: hidden;
-  align-content: center;
-
-  .arrow {
-    display: block;
+.arrowContainer:hover {
+  .regularArrow {
+    .arrow {
+      border-radius: 140px;
+      box-sizing: border-box;
+      box-shadow: inset 80px 0px 20px rgba(243, 206, 113, 0.09), -3px 0px 30px rgba(238, 195, 88, 0.38);
+    }
   }
 }
 
-p {
-  font-family: Halvar Mittelschrift, sans-serif;
-  font-size: 16px;
-  line-height: 140%;
-  color: #ffffff;
-  margin-bottom: 16px;
-
-  a {
-    color: #ffffff;
-  }
-}
-
-h3 {
-  font-family: Halvar Mittelschrift, sans-serif;
-  line-height: 140%;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
 
 @media (max-width: $Small) {
   .card {
@@ -95,6 +98,26 @@ h3 {
 
     img {
       margin-bottom: 20px;
+    }
+
+
+  }
+}
+
+@media (max-width: $ExtraLarge) {
+  .card {
+    .arrowContainer {
+      visibility: visible;
+
+      .regularArrow {
+
+        .arrow {
+          display: block;
+          border-radius: 140px;
+          box-sizing: border-box;
+          box-shadow: inset 80px 0px 20px rgba(243, 206, 113, 0.09), -3px 0px 30px rgba(238, 195, 88, 0.38);
+        }
+      }
     }
   }
 }

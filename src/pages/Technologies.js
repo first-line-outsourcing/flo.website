@@ -106,29 +106,32 @@ export default function Technologies() {
             text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
         },
     ]
-    let windowSize = window.innerWidth
-    if (windowSize <= 720) {
-        cardArray = [
+        let mobileArray = [
+            {
+                img: NodeJs,
+                title: 'Node.Js',
+                text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+            },
             {
                 img: Js,
-                title: 'Js',
+                title: 'Java Script',
                 text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
             },
             {
-                img: Express,
-                title: 'Express',
-                text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-            },
-            {
-                img: Dart,
-                title: 'Dart',
+                img: TS,
+                title: 'TypeScript',
                 text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
             },
         ]
-    }
+    
     let key = 0;
     let cards = cardArray.map((card) => {
-        return <div className={'col-lg-4 col-sm-12 col-md-6'} key={key++}>
+            return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={key++}>
+            <TechnologyCard img={card.img} title={card.title} text={card.text}/>
+        </div>
+    })
+    let mobileCards = mobileArray.map((card) => {
+        return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 mobileCards'} key={key++}>
             <TechnologyCard img={card.img} title={card.title} text={card.text}/>
         </div>
     })
@@ -148,6 +151,7 @@ export default function Technologies() {
                 <div className={'cardContainer'}>
                     <div className={'row'}>
                         {cards}
+                        {mobileCards}
                     </div>
                 </div>'
             </div>
