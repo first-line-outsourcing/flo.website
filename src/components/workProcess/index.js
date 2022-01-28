@@ -7,11 +7,11 @@ export default function WorkProcess() {
   const rightSide = [];
   processItems.filter((item, index) => index % 2 === 0 ? leftSide.push(item) : rightSide.push(item));
   return (
-    <div className="workProcess">
-      <div className='row'>
+    <>
+      <div className='row workProcess'>
         <div className="col leftSide">
           {leftSide.map(leftItem => (
-            <p className="workProcessItem">{leftItem}</p>
+            <p className="workProcessItem" key={leftItem}>{leftItem}</p>
           ))}
         </div>
         <div className="col">
@@ -20,11 +20,11 @@ export default function WorkProcess() {
         <div className="col rightSide">
           <div className="rightItemsAlign"/>
           {rightSide.map(rightItem => (
-            <p className="workProcessItem">{rightItem}</p>
+            <p className="workProcessItem" key={rightItem}>{rightItem}</p>
           ))}
         </div>
       </div>
       <button className="button btn btn-accent">Read more</button>
-    </div>
+    </>
   )
 }

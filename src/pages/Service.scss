@@ -1,3 +1,5 @@
+@import '../components/variables';
+
 .container {
   h4 {
     font-size: 18px;
@@ -15,11 +17,11 @@
   background: url("../images/Vector 17.svg") no-repeat 70% -5%;
   padding-top: 120px;
   padding-bottom: 120px;
+
   h3 {
     font-size: 40px;
     font-family: Halvar Breit Bd, sans-serif;
     width: 435px;
-    height: 138px;
   }
 }
 
@@ -32,6 +34,7 @@
     letter-spacing: 0.01em;
     color: #212529;
   }
+
   h5 {
     width: 435px;
     margin-top: 112px;
@@ -40,6 +43,7 @@
     line-height: 21px;
     color: #212529;
   }
+
   h6 {
     width: 435px;
     margin-top: 16px;
@@ -49,7 +53,7 @@
   }
 }
 
-.technologiesStack{
+.technologiesStack {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -58,7 +62,52 @@
   max-width: 900px;
 }
 
-.workProcess{
+.workProcess {
   padding-top: 80px;
   max-width: 600px;
+}
+
+@media (max-width: $Small) {
+  .container {
+    h1 {
+      font-size: 32px;
+    }
+
+    h4 {
+      font-size: 16px;
+      width: 288px;
+    }
+  }
+
+  .mainPage {
+    background: url("../images/Vector 17.svg") no-repeat 0 10%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    h3 {
+      font-size: 24px;
+      width: 288px;
+    }
+
+    h4 {
+      font-size: 18px;
+      width: 288px;
+    }
+
+    h5 {
+      margin-top: 48px;
+      width: 288px;
+    }
+
+    h6 {
+      margin-top: 48px;
+      width: 288px;
+    }
+  }
+
+  .workProcess {
+    p {
+      font-size: 18px;
+    }
+  }
 }

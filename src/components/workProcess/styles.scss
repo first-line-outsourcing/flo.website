@@ -1,7 +1,6 @@
-.workProcess {
-}
+@import '../variables';
 
-.button{
+.button {
   height: 184px;
   width: 184px;
   border-radius: 50%;
@@ -25,4 +24,14 @@
 
 .rightSide {
   margin-right: 70px;
+}
+
+@media (max-width: $Small) {
+  .leftSide {
+    margin-left: 0;
+  }
+
+  .rightSide {
+    margin-right: 0;
+  }
 }

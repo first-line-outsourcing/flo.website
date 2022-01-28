@@ -73,9 +73,9 @@ export default function TechnologyItems({numberOfTechnologies}) {
   ]
   const displayTechnologies = allTechnologies.slice(0, numberOfTechnologies)
   return (
-    <div className="row justify-content-center ">
+    <div className="row justify-content-center technologies">
       {displayTechnologies.map((technology) => (
-        <div className="technologyItem">
+        <div className="technologyItem" key={technology.name}>
           <div className="imageArea">
             <img src={technology.img} alt=""/>
           </div>

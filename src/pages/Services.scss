@@ -1,5 +1,4 @@
-$Small: "576px";
-$ExtraLarge: "1200px";
+@import '../components/variables';
 
 .heading {
   background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("../images/services.jpg");
@@ -23,7 +22,7 @@ $ExtraLarge: "1200px";
     line-height: 1.15;
     font-weight: bold;
     font-family: Halvar Breit Bd, sans-serif;
-    color: #ffffff;
+    color: $color-white;
   }
 
   p {
@@ -32,7 +31,7 @@ $ExtraLarge: "1200px";
     line-height: 1.4;
     font-weight: normal;
     font-family: Halvar Mittel Lt, sans-serif;
-    color: #ffffff;
+    color: $color-white;
     width: 588px;
   }
 }
@@ -40,6 +39,7 @@ $ExtraLarge: "1200px";
 @media (max-width: $Small) {
   .services {
     background: none;
+
     h1 {
       position: static;
       width: 288px;
@@ -68,6 +68,7 @@ $ExtraLarge: "1200px";
 @media (max-width: $ExtraLarge) {
   .services {
     background: none;
+
     h1 {
       font-size: 36px;
     }

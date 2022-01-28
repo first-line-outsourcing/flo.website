@@ -3,10 +3,12 @@ import {useParams} from "react-router-dom";
 import "./Service.scss";
 import TechnologyItems from "../components/technologyItems";
 import WorkProcess from "../components/workProcess";
+import {useMediaQuery} from 'react-responsive';
 
 
 export default function Service() {
   const {serviceName} = useParams();
+  const isMobile = useMediaQuery({query: '(max-width: 576px)'});
   const pageData = {
     webdev: {
       headerImage: require("../images/services/webDevHeader.jpg"),
@@ -24,9 +26,8 @@ export default function Service() {
       <div
         className="heading"
         style={{
-          backgroundImage: "linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url(" +
-            pageData[serviceName].headerImage
-            + ")",
+          backgroundImage: `linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url(
+            ${pageData[serviceName].headerImage})`,
         }}>
         <div className="container">
           <div className="row">
@@ -43,7 +44,8 @@ export default function Service() {
             <div className="row">
               <div className="col">
                 <h3>
-                  <span className="highlighted">{pageData[serviceName].pageTitle.split(' ').slice(0, 2).join(' ')}</span>
+                  <span
+                    className="highlighted">{pageData[serviceName].pageTitle.split(' ').slice(0, 2).join(' ')}</span>
                   {' ' + pageData[serviceName].pageTitle.split(' ').slice(2, pageData[serviceName].pageTitle.length).join(' ')}
                 </h3>
               </div>
@@ -59,13 +61,14 @@ export default function Service() {
       <div className="technologiesStack text-center bg-white">
         <div className="container itemsContainer">
           <h1><span className="highlighted">Technologies</span> stack</h1>
-            <TechnologyItems numberOfTechnologies={9}/>
+          <TechnologyItems numberOfTechnologies={isMobile ? 6 : 9}/>
         </div>
       </div>
       <div className="container text-center workProcess">
         <h2>Our <span className="highlighted">work process</span></h2>
-        <p>We’re transparent in our work and use agile. We’ll be in touch with you and start the next step only after your approval. </p>
-        <WorkProcess />
+        <p>We’re transparent in our work and use agile. We’ll be in touch with you and start the next step only after
+          your approval. </p>
+        <WorkProcess/>
       </div>
     </>
   );
