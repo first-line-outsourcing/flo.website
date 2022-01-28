@@ -18,143 +18,145 @@ import SQLite from '../images/technologies/SQLite.svg'
 import TS from '../images/technologies/TS.svg'
 import SLS from '../images/technologies/sls.png'
 import './Technologies.scss'
+
 export default function Technologies() {
-    let cardArray = [
-        {
-            img: NodeJs,
-            title: 'Node.Js',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: Js,
-            title: 'Java Script',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: TS,
-            title: 'TypeScript',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: Angular,
-            title: 'Angular | NGXS',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: logoReact,
-            title: 'React | MobX',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: SLS,
-            title: 'Serverless Framework',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: Express,
-            title: 'Express | Sails | Nest',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: AWS,
-            title: 'Amazon Web Services',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: GCP,
-            title: 'Google Cloud Platform',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: Azure,
-            title: 'Microsoft Azure',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: IBMC,
-            title: 'IBM Cloud',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: PostgreSQL,
-            title: 'PostgreSQL | MySQL | Aurora',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: Flutter,
-            title: 'Flutter | Getit',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: SQLite,
-            title: 'CloudantDB | SQLite',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: AmazonQuantum,
-            title: 'Amazon Quantum Ledger DB',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: Dart,
-            title: 'Dart',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-        {
-            img: Electron,
-            title: 'Electron',
-            text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-        },
-    ]
-        let mobileArray = [
-            {
-                img: NodeJs,
-                title: 'Node.Js',
-                text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-            },
-            {
-                img: Js,
-                title: 'Java Script',
-                text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-            },
-            {
-                img: TS,
-                title: 'TypeScript',
-                text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
-            },
-        ]
-    
-    let key = 0;
-    let cards = cardArray.map((card) => {
-            return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={key++}>
-            <TechnologyCard img={card.img} title={card.title} text={card.text}/>
-        </div>
-    })
-    let mobileCards = mobileArray.map((card) => {
-        return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 mobileCards'} key={key++}>
-            <TechnologyCard img={card.img} title={card.title} text={card.text}/>
-        </div>
-    })
-    
-    return (
-        <div className={'tech'}>
-            <div className="heading">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-8">
-                            <h1>Full-cycle development for your business needs</h1>
-                        </div>
-                    </div>
-                </div>
+  let cardArray = [
+    {
+      img: NodeJs,
+      title: 'Node.Js',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Js,
+      title: 'Java Script',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: TS,
+      title: 'TypeScript',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Angular,
+      title: 'Angular | NGXS',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: logoReact,
+      title: 'React | MobX',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: SLS,
+      title: 'Serverless Framework',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Express,
+      title: 'Express | Sails | Nest',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: AWS,
+      title: 'Amazon Web Services',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: GCP,
+      title: 'Google Cloud Platform',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Azure,
+      title: 'Microsoft Azure',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: IBMC,
+      title: 'IBM Cloud',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: PostgreSQL,
+      title: 'PostgreSQL | MySQL | Aurora',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Flutter,
+      title: 'Flutter | Getit',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: SQLite,
+      title: 'CloudantDB | SQLite',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: AmazonQuantum,
+      title: 'Amazon Quantum Ledger DB',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Dart,
+      title: 'Dart',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Electron,
+      title: 'Electron',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+  ]
+  let mobileArray = [
+    {
+      img: NodeJs,
+      title: 'Node.Js',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: Js,
+      title: 'Java Script',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+    {
+      img: TS,
+      title: 'TypeScript',
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+    },
+  ]
+
+  let key = 0;
+  let cards = cardArray.map((card) => {
+    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={key++}>
+      <TechnologyCard img={card.img} title={card.title} text={card.text}/>
+    </div>
+  })
+  let mobileCards = mobileArray.map((card) => {
+    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 mobileCards'} key={key++}>
+      <TechnologyCard img={card.img} title={card.title} text={card.text}/>
+    </div>
+  })
+
+  return (
+    <div className={'tech'}>
+      <div className="heading">
+        <div className="container">
+          <div className="row">
+            <div className="col-8">
+              <h1>Full-cycle development for your business needs</h1>
             </div>
-            <div className={'container'}>
-                <div className={'cardContainer'}>
-                    <div className={'row'}>
-                        {cards}
-                        {mobileCards}
-                    </div>
-                </div>'
-            </div>
+          </div>
         </div>
-    )
+      </div>
+      <div className={'container'}>
+        <div className={'cardContainer'}>
+          <div className={'row'}>
+            {cards}
+            {mobileCards}
+          </div>
+        </div>
+        '
+      </div>
+    </div>
+  )
 }

@@ -1,5 +1,5 @@
-$Small: "576px";
-$ExtraLarge: "1200px";
+@import "../components/variables";
+
 .tech {
   background-size: cover;
   background: url("../images/technologies/back.svg") no-repeat 44% 90%;
@@ -39,7 +39,7 @@ $ExtraLarge: "1200px";
   .tech {
     background: none;
   }
-  .cardContainer{
+  .cardContainer {
     .desktopCards {
       display: none;
     }
