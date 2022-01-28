@@ -24,115 +24,134 @@ export default function Technologies() {
     {
       img: NodeJs,
       title: 'Node.Js',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Js,
       title: 'Java Script',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: TS,
       title: 'TypeScript',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Angular,
       title: 'Angular | NGXS',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: logoReact,
       title: 'React | MobX',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: SLS,
       title: 'Serverless Framework',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Express,
       title: 'Express | Sails | Nest',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: AWS,
       title: 'Amazon Web Services',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: GCP,
       title: 'Google Cloud Platform',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Azure,
       title: 'Microsoft Azure',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: IBMC,
       title: 'IBM Cloud',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: PostgreSQL,
       title: 'PostgreSQL | MySQL | Aurora',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Flutter,
       title: 'Flutter | Getit',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: SQLite,
       title: 'CloudantDB | SQLite',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: AmazonQuantum,
       title: 'Amazon Quantum Ledger DB',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Dart,
       title: 'Dart',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Electron,
       title: 'Electron',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
   ]
   let mobileArray = [
     {
       img: NodeJs,
       title: 'Node.Js',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: Js,
       title: 'Java Script',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
     {
       img: TS,
       title: 'TypeScript',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.'
+      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
+      link: "https://flo.team/"
     },
   ]
 
-  let key = 0;
   let cards = cardArray.map((card) => {
-    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={key++}>
-      <TechnologyCard img={card.img} title={card.title} text={card.text}/>
+    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={card.title}>
+      <TechnologyCard img={card.img} title={card.title} text={card.text} link={card.link}/>
     </div>
   })
   let mobileCards = mobileArray.map((card) => {
-    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 mobileCards'} key={key++}>
+    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 mobileCards'} key={card.title}>
       <TechnologyCard img={card.img} title={card.title} text={card.text}/>
     </div>
   })
@@ -155,7 +174,6 @@ export default function Technologies() {
             {mobileCards}
           </div>
         </div>
-        '
       </div>
     </div>
   )
