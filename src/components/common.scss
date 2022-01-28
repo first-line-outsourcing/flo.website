@@ -14,6 +14,11 @@
 }
 
 
+.full-width {
+    width: 100%;
+}
+
+
 //
 //  Typography
 //  ---------------------------------------------
@@ -34,6 +39,16 @@ h2 {
     margin-bottom: 1em;
     font-size: 40px;
     line-height: 1.15;
+}
+
+
+h3 {
+    margin-bottom: 0.3em;
+    font-family: $HalvarMittelRg;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: $primary-color;
 }
   
 p {
