@@ -1,0 +1,41 @@
+@import '../variables';
+
+.contactUs {
+  margin-top: -130px;
+  position: relative;
+  margin-bottom: -400px;
+  height: 510px;
+  background: url("../../images/about/arrows_up.svg") no-repeat;
+  background-position: right 85%;
+  background-size: 53%;
+  z-index: 2;
+}
+
+.business-growth {
+  position: relative;
+  z-index: 1;
+  padding: 64px;
+  box-sizing: border-box;
+  background: $color-yellow;
+
+  border-radius: 30px;
+  h2, p {
+    color: $color-white;
+  }
+}
+
+@media (max-width: $Small) {
+  .container {
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .contactUs {
+    background-image: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

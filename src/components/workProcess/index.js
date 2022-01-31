@@ -1,5 +1,6 @@
 import "./styles.scss"
 import workProcessLine from "../../images/workProcessLine.svg"
+import {Link} from "react-router-dom";
 
 export default function WorkProcess() {
   const processItems = ["Init", "Discovery", "Design", "Development", "Delivery", "Support"];
@@ -24,7 +25,9 @@ export default function WorkProcess() {
           ))}
         </div>
       </div>
-      <button className="button btn btn-accent">Read more</button>
+      <Link to='/process'>
+        <button className="button btn btn-accent">Read more</button>
+      </Link>
     </>
   )
 }
