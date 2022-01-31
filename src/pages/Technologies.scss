@@ -1,0 +1,52 @@
+@import "../components/variables";
+
+.tech {
+  background-size: cover;
+  background: url("../images/technologies/back.svg") no-repeat 44% 90%;
+}
+
+.cardContainer {
+  margin-top: 132px;
+
+  .desktopCards {
+    display: block;
+  }
+
+  .mobileCards {
+    display: none;
+  }
+}
+
+@media (max-width: $Small) {
+  .cardContainer {
+    margin-top: 72px;
+
+    .desktopCards {
+      display: none;
+    }
+
+    .mobileCards {
+      display: block;
+    }
+  }
+  .title {
+    border-bottom: 1px solid #54420f;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $ExtraLarge) {
+  .tech {
+    background: none;
+  }
+  .cardContainer {
+    .desktopCards {
+      display: none;
+    }
+
+    .mobileCards {
+      display: block;
+    }
+  }
+}
+

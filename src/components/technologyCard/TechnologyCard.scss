@@ -1,0 +1,122 @@
+@import '../variables';
+
+.card {
+  opacity: 0.99;
+  display: grid;
+  padding: 32px;
+
+  position: static;
+  width: 355px;
+  height: 328px;
+  left: 0;
+  top: 0;
+
+  background: rgba(18, 18, 19, 0.6);
+  /* Black/Dark Gray */
+
+  border: 1px solid #404147;
+  box-sizing: border-box;
+  box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  order: 0;
+  flex-grow: 0;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-family: Halvar Mittelschrift, sans-serif;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  p {
+    width: 256px;
+    height: 66px;
+    overflow: hidden;
+    font-family: Halvar Mittelschrift, sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 16px;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  .arrowContainer {
+    visibility: hidden;
+    align-items: center;
+  }
+}
+
+.card:hover {
+  .arrowContainer {
+    visibility: visible;
+  }
+}
+
+.arrowContainer:hover {
+  .regularArrow {
+    .arrow {
+      border-radius: 140px;
+      box-sizing: border-box;
+      box-shadow: inset 80px 0px 20px rgba(243, 206, 113, 0.09), -3px 0px 30px rgba(238, 195, 88, 0.38);
+    }
+  }
+}
+
+
+@media (max-width: $Small) {
+  .card {
+    padding: 20px;
+    margin-top: 16px;
+    width: 288px;
+    height: 235px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+
+
+  }
+}
+
+@media (max-width: $ExtraLarge) {
+  .card {
+    .arrowContainer {
+      visibility: visible;
+
+      .regularArrow {
+
+        .arrow {
+          display: block;
+          border-radius: 140px;
+          box-sizing: border-box;
+          box-shadow: inset 80px 0px 20px rgba(243, 206, 113, 0.09), -3px 0px 30px rgba(238, 195, 88, 0.38);
+        }
+      }
+    }
+  }
+}
