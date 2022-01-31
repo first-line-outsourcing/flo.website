@@ -67,6 +67,7 @@ export default function Process() {
            style={{
              backgroundImage: `linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%),
              url(${require("../images/process.jpg")})`,
+             backgroundPosition: "center",
              paddingTop: '200px'
            }}>
         <div className="container">
