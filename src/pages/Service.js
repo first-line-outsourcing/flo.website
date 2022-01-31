@@ -28,6 +28,7 @@ export default function Service() {
         style={{
           backgroundImage: `linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url(
             ${pageData[serviceName].headerImage})`,
+          backgroundPosition: "center",
         }}>
         <div className="container">
           <div className="row">
