@@ -1,3 +1,5 @@
+@import './components/variables';
+
 @font-face {
   font-family: 'Halvar Mittel Lt';
   src: url('fonts/Halvar/HalvarMittel-Lt.eot');
@@ -101,10 +103,13 @@ code {
 }
 
 .heading {
-  height: 544px;
   width: 100%;
   padding-top: 300px;
+  padding-bottom: 35px;
   background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("./images/services.jpg");
   background-size: cover;
   background-position-y: 40%;
+  @include m {
+    padding-bottom: 165px;
+  }
 }
