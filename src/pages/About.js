@@ -1,12 +1,16 @@
 import React from "react";
 import "./About.scss";
+import andrewZaikin from '../images/about/team/team_zaikin_andrew.jpg';
+import anastasiaZhivaeva from '../images/about/team/team_zhivaeva_anastasia.jpg';
+import victorKolesnikov from '../images/about/team/team_kolesnikov_victor.jpg';
+import anastasiaDziova from '../images/about/team/team_dziova_anastasia.jpg';
 
 export default function About() {
   return <div className="about">
     <div className="heading">
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="ow-cols-1 row-cols-md-2">
             <h1>Our team</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
           </div>
@@ -16,14 +20,14 @@ export default function About() {
 
     <div className="bg-white pt-10 pb-5">
       <div className="container">
-        <div className="row gx-5 row-cols-1 row-cols-md-2">
-          <div className="col">
+        <div className="row gx-md-5 row-cols-1 row-cols-md-2">
+          <div className="col pb-md-5">
             <h2>About <span className="highlighted">us</span></h2>
             <p>Unlike most other firms, we take business needs first, making cutting-edge tech work for the goals of your company.</p>
             <p>One of our core values is design. As fans of all things simple, we create clean, in-your-face user interfaces even for the most sophisticated workflows.We strongly believe in the lean methodology, which means we'll encourage you to spend as little money as possible for the first version of your product. Instead of making assumptions and allocating huge budgets upfront, we should quickly create an MVP for you, take it to the market, collect feedback and reiterate fast!</p>
           </div>
           <div className="col">
-            <div className="row gx-5">
+            <div className="row gx-md-5">
               <div className="col">
                 <p className="text-center infographics"><span className="info-digit full-width">54</span>Clients reached their goals</p>
                 <p className="text-center infographics"><span className="info-digit full-width">24+</span>High-skilled employees</p>
@@ -38,36 +42,36 @@ export default function About() {
       </div>
     </div>
 
-    <div className="our-team pt-10 mb-5 pb-3">
+    <div className="our-team pt-10 pb-3">
       <div className="container">
-        <h2 className="text-center pb-3">Our <span className="highlighted">team</span></h2>
-          <div className="row row-cols-2 row-cols-md-4 mb-5 pb-2">
-            <div className="col">
-              <img src={require("../images/about/team/team_zaikin_andrew.jpg")} alt="development-services"></img>
-              <h3 className="teammate-name">Андрей Заикин</h3>
-              <small className="text-muted">Founder, CEO</small>
-            </div>
-            <div className="col">
-              <img src={require("../images/about/team/team_zhivaeva_anastasia.jpg")} alt="development-services"></img>
-              <h3 className="teammate-name">Живаева Анастасия</h3>
-              <small className="text-muted">CTO</small>
-            </div>
-            <div className="col">
-              <img src={require("../images/about/team/team_kolesnikov_victor.jpg")} alt="development-services"></img>
-              <h3 className="teammate-name">Колесников Виктор</h3>
-              <small className="text-muted">Senior Software Engineer</small>
-            </div>
-            <div className="col">
-              <img src={require("../images/about/team/team_dziova_anastasia.jpg")} alt="development-services"></img>
-              <h3 className="teammate-name">Дзиова Анастасия</h3>
-              <small className="text-muted">HR Manager</small>
-            </div>
+        <h2 className="pb-3">Our <span className="highlighted">team</span></h2>
+        <div className="row row-cols-2 row-cols-md-4 mb-2 pb-2">
+          <div className="col team-card">
+            <img src={andrewZaikin} alt="development-services"></img>
+            <h3 className="teammate-name">Andrew Zaikin</h3>
+            <small className="text-muted">Founder, CEO</small>
           </div>
-          <button className="btn btn-bordered full-width">Join us</button>
+          <div className="col team-card">
+            <img src={anastasiaZhivaeva} alt="development-services"></img>
+            <h3 className="teammate-name">Anastasia Zhivaeva</h3>
+            <small className="text-muted">CTO</small>
+          </div>
+          <div className="col team-card">
+            <img src={victorKolesnikov} alt="development-services"></img>
+            <h3 className="teammate-name">Victor Kolesnikov</h3>
+            <small className="text-muted">Senior Software Engineer</small>
+          </div>
+          <div className="col team-card">
+            <img src={anastasiaDziova} alt="development-services"></img>
+            <h3 className="teammate-name">Anastasia Dziova</h3>
+            <small className="text-muted">HR Manager</small>
+          </div>
+        </div>
+        <button className="btn btn-bordered full-width">Join us</button>
       </div>
     </div>
 
-    <div className="facts pt-10">
+    <div className="facts pt-10 pb-3">
       <div className="container">
         <h2 className="text-center">Facts about us</h2>
         <div className="row row-cols-2 row-cols-md-5">
@@ -137,12 +141,12 @@ export default function About() {
 
     <div className="development-services bg-white">
       <div className="container">
-        <div className="row gx-5">
+        <div className="row gx-md-5">
           <div className="col-lg-4">
             <h2 className="d-s-heading"><span className="highlighted">Full cycle</span> of development<br/>services</h2>
           </div>
           <div className="col-lg-8">
-            <div className="row gx-5">
+            <div className="row gx-md-5">
               <div class="col-lg-4">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
               </div>
@@ -170,7 +174,7 @@ export default function About() {
     <div className="bg-white pb-5">
       <div className="container">
         <div className="business-growth">
-          <div className="row gx-5">
+          <div className="row gx-md-5">
             <div className="col-md-6">
               <h2>Are you ready for your business growth? </h2>
               <p>Let&#39;s move your business forward to the clouds! Tell us about your idea! We will interview you and offer the best solution for reaching the goal.</p>
