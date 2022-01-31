@@ -3,12 +3,10 @@ import {useParams} from "react-router-dom";
 import "./Service.scss";
 import TechnologyItems from "../components/technologyItems";
 import WorkProcess from "../components/workProcess";
-import {useMediaQuery} from 'react-responsive';
 
 
 export default function Service() {
   const {serviceName} = useParams();
-  const isMobile = useMediaQuery({query: '(max-width: 576px)'});
   const pageData = {
     webdev: {
       headerImage: require("../images/services/webDevHeader.jpg"),
@@ -17,7 +15,8 @@ export default function Service() {
       pageTitle: "Full cycle of development services",
       pageDescription: "You have only challenges and ideas, but we have solutions to help your business. We will design, develop and test your web product. We only interview you and then do everything yourself!",
       pageQuestion: "What will you get?",
-      pageAnswer: "SaaS, single page applications, progressive web applications"
+      pageAnswer: "SaaS, single page applications, progressive web applications",
+      technologyNumbers: [1, 2, 4, 5]
     }
   }
 
@@ -62,7 +61,7 @@ export default function Service() {
       <div className="technologiesStack text-center bg-white">
         <div className="container itemsContainer">
           <h1><span className="highlighted">Technologies</span> stack</h1>
-          <TechnologyItems numberOfTechnologies={isMobile ? 6 : 9}/>
+          <TechnologyItems technologyNumbers={pageData[serviceName].technologyNumbers}/>
         </div>
       </div>
       <div className="container text-center workProcess">

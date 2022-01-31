@@ -2,55 +2,80 @@
 
 .container {
   h4 {
-    font-size: 18px;
-    width: 588px;
+    font-size: 16px;
+    width: 288px;
     font-family: Halvar Mittel Lt, sans-serif;
     font-style: normal;
     font-weight: 300;
     line-height: 140%;
     letter-spacing: 0.01em;
     color: #FFFFFF;
+    @include m {
+      font-size: 18px;
+      width: 588px;
+    }
   }
 }
 
 .mainPage {
-  background: url("../images/Vector 17.svg") no-repeat 70% -5%;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  background: url("../images/Vector 17.svg") no-repeat 0 10%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  @include m {
+    background: url("../images/Vector 17.svg") no-repeat 70% -5%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 
   h3 {
-    font-size: 40px;
+    font-size: 24px;
+    width: 288px;
     font-family: Halvar Breit Bd, sans-serif;
-    width: 435px;
     color: $color-black;
+    @include m {
+      width: 435px;
+      font-size: 40px;
+    }
   }
 }
 
 .pageDescription {
   h4 {
-    width: 435px;
+    font-size: 18px;
+    width: 288px;
     font-family: Halvar Mittel Lt, sans-serif;
-    font-size: 24px;
     line-height: 140%;
     letter-spacing: 0.01em;
     color: #212529;
+    @include m {
+      font-size: 24px;
+      width: 435px;
+    }
   }
 
   h5 {
-    width: 435px;
-    margin-top: 112px;
+    margin-top: 48px;
+    width: 288px;
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
     color: #212529;
+    @include m {
+      width: 435px;
+      margin-top: 112px;
+    }
   }
 
   h6 {
-    width: 435px;
-    margin-top: 16px;
+    margin-top: 48px;
+    width: 288px;
     font-size: 18px;
     line-height: 140%;
     color: #212529;
+    @include m {
+      width: 435px;
+      margin-top: 16px;
+    }
   }
 }
 
@@ -66,49 +91,10 @@
 .workProcess {
   padding-top: 80px;
   max-width: 600px;
-}
-
-@media (max-width: $Small) {
-  .container {
-    h1 {
-      font-size: 32px;
-    }
-
-    h4 {
-      font-size: 16px;
-      width: 288px;
-    }
-  }
-
-  .mainPage {
-    background: url("../images/Vector 17.svg") no-repeat 0 10%;
-    padding-top: 48px;
-    padding-bottom: 48px;
-
-    h3 {
+  p {
+    font-size: 18px;
+    @include m {
       font-size: 24px;
-      width: 288px;
-    }
-
-    h4 {
-      font-size: 18px;
-      width: 288px;
-    }
-
-    h5 {
-      margin-top: 48px;
-      width: 288px;
-    }
-
-    h6 {
-      margin-top: 48px;
-      width: 288px;
-    }
-  }
-
-  .workProcess {
-    p {
-      font-size: 18px;
     }
   }
 }
