@@ -24,16 +24,119 @@ $text-dark: $color-black;
 
 $HalvarBreitRg: 'Halvar Breit Rg';
 $HalvarBreitXBd: 'Halvar Breit XBd';
+$HalvarMittelLt: 'Halvar Mittel Lt';
 $HalvarMittelRg: 'Halvar Mittel Rg';
+
+$HalvarMittelBd: 'Halvar Mittel Bd';
 
 $primary-font-rg: $HalvarBreitRg;
 $primary-font-bd: $HalvarBreitXBd;
-$paragraph-font: $HalvarMittelRg;
+$paragraph-font: $HalvarMittelLt;
+
+
+//
+// Media-width
+// ----------------------------------------------
+
+$screen-s : 350px;
+$screen-m-max : 767px;
+$screen-m : 768px;
+$screen-l-max : 1023px;
+$screen-l : 1024px;
+$screen-xl : 1920px;
+$screen-xxl : 2400px;
+
+
+//
+// Mixins
+// ----------------------------------------------
+
+@mixin  s_max {
+    @media (max-width: #{$screen-s}) {
+        @content;
+    }
+}
+@mixin  s {
+    @media (min-width: #{$screen-s}) {
+        @content;
+    }
+}
+  @mixin  m_max {
+    @media (max-width: #{$screen-m-max}) {
+      @content;
+    }
+}
+@mixin  m {
+    @media (min-width: #{$screen-m}) {
+      @content;
+    }
+}
+@mixin  l_max {
+    @media (max-width: #{$screen-l-max}) {
+      @content;
+    }
+}
+@mixin  l {
+    @media (min-width: #{$screen-l}) {
+      @content;
+    }
+}
+@mixin  xl {
+    @media (min-width: #{$screen-xl}) {
+      @content;
+    }
+}
+@mixin  xxl {
+    @media (min-width: #{$screen-xxl}) {
+      @content;
+    }
+}
 
 
 //
 // Font-size
 // ----------------------------------------------
 
+:root {
+    --font-first-level: 32px;
+    --font-second-level: 24px;
+    --font-third-level: 18px;
+    --font-paragraph: 16px;
+    --font-size-button: 18px;
+    --font-size-button_lg: 24px;
+    @include m {
+        --font-first-level: 56px;
+        --font-second-level: 32px;
+        --font-third-level: 24px;
+    }
+    @include l {
+        --font-second-level: 40px;
+        --font-paragraph: 18px;
+    }
+}
+
+
+//
+// Spacing
+// ----------------------------------------------
+
+:root {
+    --spacer: 1rem;
+    @include m {
+        --spacer: 2rem;
+    }
+}
 $font-size-button: 18px;
 $font-size-button_lg: 24px;
+$font-size-button_lg: 24px;
+
+//
+//Bootstrap breakpoints
+// ----------------------------------------------
+
+
+$Small: "576px";
+$Medium: "768px";
+$Large: "992px";
+$ExtraLarge: "1200px";
+

@@ -1,3 +1,5 @@
+@import './components/variables';
+
 @font-face {
   font-family: 'Halvar Mittel Lt';
   src: url('fonts/Halvar/HalvarMittel-Lt.eot');
@@ -72,6 +74,19 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Halvar Mittel Bd';
+  src: url('fonts/Halvar/HalvarMittel-Bd.eot');
+  src: local('Halvar Mittelschrift Bold'), local('HalvarMittel-Bd'),
+  url('fonts/Halvar/HalvarMittel-Bd.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Halvar/HalvarMittel-Bd.woff2') format('woff2'),
+  url('fonts/Halvar/HalvarMittel-Bd.woff') format('woff'),
+  url('fonts/Halvar/HalvarMittel-Bd.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -88,10 +103,13 @@ code {
 }
 
 .heading {
-  height: 544px;
   width: 100%;
   padding-top: 300px;
+  padding-bottom: 35px;
   background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("./images/services.jpg");
   background-size: cover;
   background-position-y: 40%;
+  @include m {
+    padding-bottom: 165px;
+  }
 }
