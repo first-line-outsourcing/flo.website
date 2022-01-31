@@ -1,4 +1,4 @@
-$Small: "576px";
+@import "../../../components/variables";
 
 .main {
   color: white;
@@ -80,6 +80,55 @@ $Small: "576px";
 
 }
 
+@media (max-width: $Large){
+  .main {
+    grid-template-rows: 270px repeat(4, 150px) 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cycle cycle"
+                            "front back"
+                            "cloud db"
+                              "text text";
+
+    img {
+      width: 156px;
+    }
+
+    .grid_item {
+      span {
+        display: block;
+        width: 268px;
+        font-size: 16px;
+
+      }
+    }
+
+    .text {
+      margin: 0;
+
+      .first {
+        margin-top: 80px;
+      }
+      p{
+        color: #1B1B1F;
+        font-family: Halvar Mittelschrift, sans-serif;
+        font-size: 16px;
+      }
+    }
+    .cycleBlock{
+      width: 60%;
+      margin-left: auto;
+      .cycleText {
+        margin-left: -180px;
+        margin-top: 30px;
+      }
+      img{
+        margin-top: -20px;
+      }
+    }
+
+  }
+}
+
 @media (max-width: $Small) {
   .main {
     grid-template-rows: 270px repeat(4, 150px) 480px;
@@ -118,6 +167,12 @@ $Small: "576px";
     }
     .cycleBlock{
       width: 96%;
+      .cycleText{
+        margin: 0;
+      }
+      img{
+        margin: 0;
+      }
     }
 
   }

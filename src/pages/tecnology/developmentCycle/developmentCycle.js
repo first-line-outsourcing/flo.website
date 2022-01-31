@@ -5,7 +5,7 @@ const DevelopmentCycle = () => {
     return (
         <div className='main'>
             
-            <div className='cycleBlock'>Full cycle  of  development service<div><img src={cycleImg} alt={''}/></div></div>
+          <div className='cycleBlock'><div className={'cycleText'}>Full cycle  of  development service</div><div><img src={cycleImg} alt={''}/></div></div>
             <div className='empty'>test</div>
             <div className={`front grid_item`}>
                 <h4>Frontend development</h4>
