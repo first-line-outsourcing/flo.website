@@ -1,4 +1,4 @@
-$Small: "576px";
+@import "../components/variables";
 
 .block {
   display: block;
@@ -13,9 +13,47 @@ $Small: "576px";
     position: absolute;
     padding-top: 120px;
     font-weight: bold;
-    text-shadow: 0 0 22px #EFB104, 0 0 20px #EFB104;
-    color: #FFF4D7;
+    color: $accent-highlited-color;
+    text-shadow: 0px 0px 30px $accent-color;
     font-size: 56px;
+  }
+  @include m_max {
+
+
+    //@media (max-width: $Small) {
+    .mapAndInfo {
+      grid-template-areas: "info"
+                        "mapContainer";
+
+      .mapContainer {
+        .map {
+          width: 288px;
+          height: 147px;
+        }
+      }
+    }
+    .info {
+      margin-top: 40px;
+      grid-row-gap: 40px;
+      grid-template-columns: 30px 1fr;
+      grid-template-rows: 55px 55px 55px;
+      margin-bottom: 40px;
+    }
+    .title {
+      margin-top: 55px;
+    }
+
+  }
+  @include l_max{
+    .mapAndInfo {
+
+      .mapContainer {
+        .map {
+          width: 400px;
+          height: 200px;
+        }
+      }
+    }
   }
 }
 
@@ -89,28 +127,3 @@ $Small: "576px";
 }
 
 
-@media (max-width: $Small) {
-  .mapAndInfo {
-    grid-template-areas: "info"
-                        "mapContainer";
-
-  }
-  .info {
-    margin-top: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: 30px 1fr;
-    grid-template-rows: 55px 55px 55px;
-    margin-bottom: 40px;
-  }
-  .title {
-    margin-top: 55px;
-  }
-  .mapContainer {
-    width: 288px;
-    height: 147px;
-
-    .map {
-      background: url("../images/contacts/mobileMap.png") no-repeat;
-    }
-  }
-}

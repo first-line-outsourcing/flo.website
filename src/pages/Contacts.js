@@ -1,7 +1,8 @@
 import React from "react";
 import point from '../images/contacts/point.svg'
 import phone from '../images/contacts/phone.svg'
-import message from '../images/contacts/message.png'
+import message from '../images/contacts/message.svg'
+import map from '../images/contacts/map.png'
 import './Contacts.scss'
 
 export default function Contacts() {
@@ -32,7 +33,7 @@ export default function Contacts() {
         </div>
 
         <div className='mapContainer'>
-          <div className='map'/>
+          <img src={map} alt='' className='map'/>
         </div>
       </div>
     </div>
