@@ -12,15 +12,19 @@
 }
 
 .business-growth {
-  position: relative;
-  z-index: 1;
   padding: 64px;
   box-sizing: border-box;
   background: $color-yellow;
 
   border-radius: 30px;
   h2, p {
+    position: relative;
+    z-index: 3;
     color: $color-white;
+  }
+  button {
+    position: relative;
+    z-index: 3;
   }
 }
 
