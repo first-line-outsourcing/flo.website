@@ -17,10 +17,8 @@
     text-shadow: 0px 0px 30px $accent-color;
     font-size: 56px;
   }
+
   @include m_max {
-
-
-    //@media (max-width: $Small) {
     .mapAndInfo {
       grid-template-areas: "info"
                         "mapContainer";
@@ -44,7 +42,7 @@
     }
 
   }
-  @include l_max{
+  @include l_max {
     .mapAndInfo {
 
       .mapContainer {
