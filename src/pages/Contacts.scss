@@ -1,84 +1,93 @@
 $Small: "576px";
 
+.block {
+  display: block;
+}
+
 .contacts {
   background-size: cover;
-  background: url("../images/contacts/background.svg") no-repeat 44% 150%;
+  background: url("../images/contacts/background.svg") no-repeat 0% 3%;
+  background-size: 35%;
+
+  .contactsTitle {
+    position: absolute;
+    padding-top: 120px;
+    font-weight: bold;
+    text-shadow: 0 0 22px #EFB104, 0 0 20px #EFB104;
+    color: #FFF4D7;
+    font-size: 56px;
+  }
 }
 
 .mapAndInfo {
+  padding-top: 244px;
   display: grid;
   grid-template-areas: "info mapContainer";
   grid-template-columns: 260px 1fr;
-  font-family: Halvar Mittelschrift;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 140%;
   color: #FFFFFF;
-}
 
-.info {
-  grid-area: info;
-  display: grid;
-  grid-template-columns: 0.1fr 1fr;
-  grid-template-rows: 60px 60px 60px;
-  grid-row-gap: 80px;
-  grid-template-areas: "point address"
+  .info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 60px 60px 60px;
+    grid-row-gap: 80px;
+    grid-template-areas: "point address"
                         "phone numberf"
                         "message mail";
 
-  img {
-    width: 20px;
-    height: 20px;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+    }
+
+    .point {
+      grid-area: point;
+    }
+
+    .address {
+      width: 260px;
+      height: 25px;
+      grid-area: address;
+    }
+
+    .phone {
+      grid-area: phone;
+    }
+
+    .number {
+      grid-area: numberf;
+    }
+
+    .message {
+      grid-area: message;
+    }
+
+    .mail {
+      grid-area: mail;
+    }
   }
 
-}
+  .mapContainer {
+    grid-area: mapContainer;
+    display: grid;
+    background-size: cover;
 
-.point {
-  grid-area: point;
-}
-
-.address {
-  width: 238px;
-  height: 25px;
-
-  grid-area: address;
-}
-
-.phone {
-  grid-area: phone;
-}
-
-.number {
-  grid-area: numberf;
-}
-
-.message {
-  grid-area: message;
-}
-
-.mail {
-  grid-area: mail;
-}
-
-.mapContainer {
-  grid-area: mapContainer;
-  display: grid;
-  background-size: cover;
-  .map{
-    height: 354px;
-    width: 690px;
-    background: url("../images/contacts/map.png") no-repeat 44% 150%;
-    display: block;
-    margin-left: auto;
+    .map {
+      height: 354px;
+      width: 690px;
+      background: url("../images/contacts/map.png") no-repeat 44% 150%;
+      display: block;
+      margin-left: auto;
+    }
   }
 }
 
-.title {
-  text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
-  color: #FFF4D7;
-  font-size: 56px;
-}
 
 @media (max-width: $Small) {
   .mapAndInfo {
@@ -99,7 +108,8 @@ $Small: "576px";
   .mapContainer {
     width: 288px;
     height: 147px;
-    .map{
+
+    .map {
       background: url("../images/contacts/mobileMap.png") no-repeat;
     }
   }
