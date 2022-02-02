@@ -5,7 +5,7 @@ import './Technology.scss'
 
 export default function Technology() {
   return (
-    <div className={'tech'}>
+    <div className={'technology'}>
       <div className="heading">
         <div className="container">
           <div className="row">
@@ -15,15 +15,12 @@ export default function Technology() {
           </div>
         </div>
       </div>
-      <div className={'about'}>
-        <div className={'container'}><DevelopmentCycle/></div>
+      <div className='bg-white'>
+        <div className='container'><DevelopmentCycle/></div>
       </div>
       <div>
-        <div className={'container'}><OurService/></div>
+        <div className='container'><OurService/></div>
       </div>
-      <div>contact us</div>
-      <div>our cases</div>
-      <div>client testimoniaals</div>
     </div>
   );
 }

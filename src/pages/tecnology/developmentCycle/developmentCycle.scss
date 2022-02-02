@@ -1,7 +1,6 @@
 @import "../../../components/variables";
 
 .main {
-  color: white;
   display: grid;
 
   grid-template-columns: 2fr 1fr 1fr;
@@ -14,44 +13,76 @@
   margin-bottom: 40px;
   padding-top: 80px;
 
-  h4 {
-    margin-bottom: 16px;
-    color: #212529;
-    font-family: Halvar Mittelschrift, sans-serif;
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: bold;
+  @include l_max {
+    grid-template-rows: 270px repeat(4, 150px) 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cycle cycle"
+                            "front back"
+                            "cloud db"
+                              "text text";
+  }
+  @include m_max {
+    grid-template-rows: 270px repeat(4, 150px) 480px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cycle"
+                            "front"
+                            "back"
+                            "cloud"
+                              "db"
+                              "text";
   }
 
-  span {
-    color: #212529;
-    font-family: Halvar Mittelschrift, sans-serif;
-    font-size: 18px;
-    line-height: 140%;
+  img {
+    @include l_max {
+      width: 156px;
+    }
+    @include m_max {
+      width: 156px;
+    }
   }
 
-  p {
-    color: #212529;
-    font-family: Halvar Mittelschrift, sans-serif;
+  h3 {
     font-size: 18px;
-    line-height: 140%;
   }
 
   .cycleBlock {
     grid-area: cycle;
-    color: #212529;
-    font-family: Halvar Breitschrift, sans-serif;
+    color: $text-dark;
+    font-family: $HalvarBreitRg;
     font-size: 40px;
     line-height: 46px;
     width: 384px;
     height: 138px;
     font-weight: bold;
+    @include l_max {
+      width: 60%;
+      margin-left: auto;
+    }
+    @include m_max {
+      width: 96%;
+    }
 
     img {
       width: 200px;
       margin-top: 24px;
       margin-bottom: 24px;
+      @include l_max {
+        margin-top: -20px;
+      }
+      @include m_max {
+        margin: 0;
+      }
 
+    }
+
+    .cycleText {
+      @include l_max {
+        margin-left: -180px;
+        margin-top: 30px;
+      }
+      @include m_max {
+        margin: 0;
+      }
     }
 
   }
@@ -72,111 +103,33 @@
     grid-area: text;
     margin-left: 20%;
     margin-right: 20%;
+    @include l_max {
+      margin: 0;
+    }
+
+    .first {
+      @include l_max {
+        margin-top: 80px;
+      }
+    }
   }
 
   .cloud {
     grid-area: cloud;
   }
 
-}
-
-@media (max-width: $Large){
-  .main {
-    grid-template-rows: 270px repeat(4, 150px) 40px;
-    grid-template-columns: 1fr;
-    grid-template-areas: "cycle cycle"
-                            "front back"
-                            "cloud db"
-                              "text text";
-
-    img {
-      width: 156px;
+  .grid_item {
+    @include l_max {
+      display: block;
+      width: 268px;
+      font-size: 16px;
     }
-
-    .grid_item {
-      span {
-        display: block;
+    @include m_max {
+      p {
         width: 268px;
-        font-size: 16px;
-
       }
     }
-
-    .text {
-      margin: 0;
-
-      .first {
-        margin-top: 80px;
-      }
-      p{
-        color: #1B1B1F;
-        font-family: Halvar Mittelschrift, sans-serif;
-        font-size: 16px;
-      }
-    }
-    .cycleBlock{
-      width: 60%;
-      margin-left: auto;
-      .cycleText {
-        margin-left: -180px;
-        margin-top: 30px;
-      }
-      img{
-        margin-top: -20px;
-      }
-    }
-
   }
 }
-
-@media (max-width: $Small) {
-  .main {
-    grid-template-rows: 270px repeat(4, 150px) 480px;
-    grid-template-columns: 1fr;
-    grid-template-areas: "cycle"
-                            "front"
-                            "back"
-                            "cloud"
-                              "db"
-                              "text";
-
-    img {
-      width: 156px;
-    }
-
-    .grid_item {
-      span {
-        display: block;
-        width: 268px;
-        font-size: 16px;
-
-      }
-    }
-
-    .text {
-      margin: 0;
-
-       .first {
-        margin-top: 80px;
-       }
-      p{
-        color: #1B1B1F;
-        font-family: Halvar Mittelschrift, sans-serif;
-        font-size: 16px;
-      }
-    }
-    .cycleBlock{
-      width: 96%;
-      .cycleText{
-        margin: 0;
-      }
-      img{
-        margin: 0;
-      }
-    }
-
-  }
-}
-
 
 
