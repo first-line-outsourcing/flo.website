@@ -10,12 +10,14 @@ export default function Components() {
 
       <h1>h1 Heading <span className="highlighted">highlighted</span></h1>
       <h2>h2 Heading <span className="highlighted">highlighted</span></h2>
+      <h3>h3 Heading</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
     </div>
     <div className="bg-white mt-5 mb-5 pt-5 pb-5">
       <div className="container">
         <h1>h1 Heading <span className="highlighted">highlighted</span></h1>
         <h2>h2 Heading <span className="highlighted">highlighted</span></h2>
+        <h3>h3 Heading</h3>
         <div className="row">
           <div className="col-6">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
