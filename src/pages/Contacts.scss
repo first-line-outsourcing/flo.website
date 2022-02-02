@@ -1,0 +1,120 @@
+@import "../components/variables";
+
+$customBreakpointLarge: "991px";
+
+@mixin customBreakpointLarge {
+  @media (max-width: #{$customBreakpointLarge}) {
+    @content;
+  }
+}
+
+.contacts {
+  background-size: cover;
+  background: url("../images/contacts/background.svg") no-repeat 0 4%;
+  background-size: 35%;
+
+  .contactsTitle {
+    position: absolute;
+    padding-top: 120px;
+  }
+
+  .mapAndInfo {
+    padding-top: 244px;
+
+    display: grid;
+    grid-template-areas: "info mapContainer";
+
+    p {
+      line-height: 1.0;
+    }
+
+    p:first-child {
+      font-weight: bold;
+    }
+
+    @include m_max {
+      grid-template-areas: "info info"
+                        "mapContainer mapContainer";
+      padding-top: 160px;
+
+    }
+    @include m {
+      font-size: 18px;
+    }
+    color: $color-white;
+
+    .info {
+      grid-area: info;
+      display: grid;
+      grid-template-columns: 0.1fr 1fr;
+      grid-template-rows: 60px 60px 60px;
+      grid-row-gap: 80px;
+      grid-template-areas: "point address"
+                        "phone numberf"
+                        "message mail";
+      @include m_max {
+        margin-top: 40px;
+        grid-row-gap: 40px;
+        grid-template-columns: 30px 1fr;
+        grid-template-rows: 55px 55px 55px;
+        margin-bottom: 40px;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+      }
+
+      .point {
+        grid-area: point;
+      }
+
+      .address {
+        width: 260px;
+        height: 25px;
+        grid-area: address;
+      }
+
+      .phone {
+        grid-area: phone;
+      }
+
+      .number {
+        grid-area: numberf;
+      }
+
+      .message {
+        grid-area: message;
+      }
+
+      .mail {
+        grid-area: mail;
+      }
+    }
+
+    .mapContainer {
+      grid-area: mapContainer;
+
+      .map {
+        display: block;
+        border-radius: 9px;
+        height: auto;
+        width: 100%;
+        margin-left: auto;
+
+        @include l_max {
+          width: 100%;
+          height: auto;
+        }
+        @include customBreakpointLarge {
+          margin-top: 60px;
+        }
+        @include m_max {
+          margin-top: 0;
+        }
+
+      }
+    }
+  }
+}
