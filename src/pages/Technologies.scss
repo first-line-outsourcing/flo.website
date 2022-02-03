@@ -19,12 +19,12 @@
       @include l_max {
         display: none;
       }
+    }
 
-      .mobileCards {
-        display: none;
-        @include l_max {
-          display: block;
-        }
+    .mobileCards {
+      display: none;
+      @include l_max {
+        display: block;
       }
     }
   }

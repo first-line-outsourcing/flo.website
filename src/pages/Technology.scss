@@ -1,4 +1,10 @@
 @import "src/components/variables";
+$logoBreakpoint: 1320px;
+@mixin logoBreakpoint {
+  @media (max-width: #{$logoBreakpoint}) {
+    @content;
+  }
+}
 .headerDescription {
   max-width: 588px;
 }
@@ -6,11 +12,11 @@
  background-size: 400px;
   background-position: 75% 100%;
   background-repeat: no-repeat;
-  @include xl{
-    background-position: 65% 100%;
-  }
-  @include l_max{
-    background-position: 75% 100%;
+@include logoBreakpoint{
+  background-size: 0;
+}
+  @include xxl{
+    background-position: 60% 100%;
   }
 
 }
