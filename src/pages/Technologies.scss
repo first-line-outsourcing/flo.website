@@ -14,18 +14,5 @@
       margin-top: 72px;
     }
 
-    .desktopCards {
-      display: block;
-      @include l_max {
-        display: none;
-      }
-    }
-
-    .mobileCards {
-      display: none;
-      @include l_max {
-        display: block;
-      }
-    }
   }
 }

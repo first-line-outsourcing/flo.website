@@ -150,11 +150,6 @@ export default function Technologies() {
       <TechnologyCard img={card.img} title={card.title} text={card.text} link={card.link}/>
     </div>
   })
-  let mobileCards = mobileArray.map((card) => {
-    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 mobileCards'} key={card.title}>
-      <TechnologyCard img={card.img} title={card.title} text={card.text}/>
-    </div>
-  })
 
   return (
     <div className={'tech'}>
@@ -171,7 +166,6 @@ export default function Technologies() {
         <div className={'cardContainer'}>
           <div className={'row'}>
             {cards}
-            {mobileCards}
           </div>
         </div>
       </div>

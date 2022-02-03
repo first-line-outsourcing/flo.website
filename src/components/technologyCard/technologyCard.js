@@ -8,9 +8,9 @@ const TechnologyCard = ({img, title, text, link}) => {
   return (
     <Link className="nav-link" aria-current="page" to={`${link}`}>
       <div className='card'>
-        <div>
-          <img src={img} alt={''} className='logo'/>
-        </div>
+
+        <img src={img} alt={''} className='logo'/>
+
         <div><h3>{title}</h3></div>
         <p> {text}</p>
         <div className='arrowContainer'>
