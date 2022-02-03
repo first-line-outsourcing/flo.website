@@ -1,0 +1,21 @@
+@import "../variables";
+
+.bgContactUs {
+  margin-top: 120px;
+
+  .mobile {
+   display: none;
+    width: 100%;
+    @include s_max{
+      display: block;
+    }
+  }
+
+  .desktop {
+    display: block;
+    @include s_max{
+      display: none;
+    }
+  }
+
+}

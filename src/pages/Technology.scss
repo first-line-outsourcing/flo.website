@@ -1,1 +1,16 @@
+@import "src/components/variables";
+.headerDescription {
+  max-width: 588px;
+}
+.bg{
+ background-size: 400px;
+  background-position: 75% 100%;
+  background-repeat: no-repeat;
+  @include xl{
+    background-position: 65% 100%;
+  }
+  @include l_max{
+    background-position: 75% 100%;
+  }
 
+}
