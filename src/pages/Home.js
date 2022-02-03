@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 import './Home.scss';
+import {ContactUsModal} from "../components/contactUsModal";
 import headingImg from '../images/home/home_heading_video_img.png';
 import caseThumb from '../images/home/case_thumb_1.png';
 import caseThumbTwo from '../images/home/case_thumb_2.png';
@@ -36,22 +37,32 @@ Modal.setAppElement('#root');
 // };
 
 export default function Home() {
-  // let subtitle;
-  // const [modalIsOpen, setIsOpen] = React.useState(false);
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
-  //
-  // function afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   subtitle.style.color = '#f00';
-  // }
-  //
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
+  const [modalIsOpen, setIsOpen] = React.useState(true);
+  function openModal() {
+    setIsOpen(true);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+    document.body.style.overflow = 'unset';
+  }
   return (
     <main className="overflow-hidden-sm">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className="Modal"
+        overlayClassName="Overlay"
+      >
+        <ContactUsModal closeModal={closeModal}/>
+      </Modal>
+      <section className="container top-section">
+        <div className="row">
+          <div className="col-7">
+            <h1 className="neon">Move <span>your business</span> forward</h1>
+            <p>Cloud web and mobile development based on serverless architecture for reaching your business goals </p>
+            <Link className="btn btn-accent" to="/services">What we do</Link>
       <section className="top-section">
         <div className="container">
           <div className="row">
@@ -359,25 +370,3 @@ export default function Home() {
     </main>
   )
 }
-/*
- * <button onClick={openModal}>Open Modal</button>
- <Modal
- isOpen={modalIsOpen}
- onAfterOpen={afterOpenModal}
- onRequestClose={closeModal}
- style={customStyles}
- contentLabel="Example Modal"
- >
- <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
- <button onClick={closeModal}>close</button>
- <div>I am a modal</div>
- <form>
- <input />
- <button>tab navigation</button>
- <button>stays</button>
- <button>inside</button>
- <button>the modal</button>
- </form>
- </Modal>
- *
- * */

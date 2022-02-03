@@ -147,3 +147,28 @@ code {
     }
   }
 }
+
+.Modal {
+  position: absolute;
+  background: $color-dark_blue;
+  height: 100%;
+  width: 100%;
+  @include m {
+    border-radius: 16px;
+    max-width: 652px;
+    width: auto;
+    height: auto;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(37, 37, 37, 0.8);
+}
