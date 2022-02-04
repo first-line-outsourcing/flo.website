@@ -43,7 +43,7 @@ export default function Technologies() {
       img: Angular,
       title: 'Angular | NGXS',
       text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "https://flo.team/"
+      link: "/technology/angular"
     },
     {
       img: logoReact,
@@ -124,35 +124,10 @@ export default function Technologies() {
       link: "https://flo.team/"
     },
   ]
-  let mobileArray = [
-    {
-      img: NodeJs,
-      title: 'Node.Js',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "https://flo.team/"
-    },
-    {
-      img: Js,
-      title: 'Java Script',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "https://flo.team/"
-    },
-    {
-      img: TS,
-      title: 'TypeScript',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "https://flo.team/"
-    },
-  ]
 
   let cards = cardArray.map((card) => {
     return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={card.title}>
       <TechnologyCard img={card.img} title={card.title} text={card.text} link={card.link}/>
-    </div>
-  })
-  let mobileCards = mobileArray.map((card) => {
-    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 mobileCards'} key={card.title}>
-      <TechnologyCard img={card.img} title={card.title} text={card.text}/>
     </div>
   })
 
@@ -171,7 +146,6 @@ export default function Technologies() {
         <div className={'cardContainer'}>
           <div className={'row'}>
             {cards}
-            {mobileCards}
           </div>
         </div>
       </div>

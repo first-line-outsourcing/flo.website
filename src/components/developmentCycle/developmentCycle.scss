@@ -1,0 +1,136 @@
+@import "../variables";
+
+.main {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 200px 200px 300px;
+  grid-column-gap: 10px;
+  grid-template-areas: "cycle front back"
+                        "cycle cloud db"
+                        "text text text ";
+
+  margin-bottom: 40px;
+  padding-top: 80px;
+
+  @include l_max {
+    grid-template-rows: 270px repeat(4, 150px) 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cycle cycle"
+                            "front back"
+                            "cloud db"
+                              "text text";
+  }
+  @include m_max {
+    grid-template-rows: 270px repeat(4, 150px) 480px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cycle"
+                            "front"
+                            "back"
+                            "cloud"
+                              "db"
+                              "text";
+  }
+
+  img {
+    @include l_max {
+      width: 156px;
+    }
+    @include m_max {
+      width: 156px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .cycleBlock {
+    grid-area: cycle;
+    color: $text-dark;
+    font-family: $HalvarBreitRg;
+    font-size: 40px;
+    line-height: 46px;
+    width: 384px;
+    height: 138px;
+    font-weight: bold;
+    @include l_max {
+      width: 60%;
+      margin-left: auto;
+    }
+    @include m_max {
+      width: 96%;
+    }
+
+    img {
+      width: 200px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      @include l_max {
+        margin-top: -20px;
+      }
+      @include m_max {
+        margin: 0;
+      }
+
+    }
+
+    .cycleText {
+      @include l_max {
+        margin-left: -180px;
+        margin-top: 30px;
+      }
+      @include m_max {
+        margin: 0;
+      }
+    }
+
+  }
+
+  .front {
+    grid-area: front;
+  }
+
+  .back {
+    grid-area: back;
+  }
+
+  .db {
+    grid-area: db;
+  }
+
+  .text {
+    grid-area: text;
+    margin-left: 20%;
+    margin-right: 20%;
+    @include l_max {
+      margin: 0;
+    }
+
+    .first {
+      @include l_max {
+        margin-top: 80px;
+      }
+    }
+  }
+
+  .cloud {
+    grid-area: cloud;
+  }
+
+  .grid_item {
+    @include l_max {
+      display: block;
+      width: 268px;
+      font-size: 16px;
+    }
+    @include m_max {
+      p {
+        width: 268px;
+      }
+    }
+  }
+
+}
+
+

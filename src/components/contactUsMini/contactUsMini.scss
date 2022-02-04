@@ -1,0 +1,25 @@
+@import "../variables";
+$banerBreakpoint : 450px;
+@mixin  banerBreakpoint {
+  @media (max-width: #{$banerBreakpoint}) {
+    @content;
+  }
+}
+.bgContactUs {
+  margin-top: 120px;
+
+  .mobile {
+   display: none;
+    @include banerBreakpoint{
+      display: block;
+    }
+  }
+
+  .desktop {
+    display: block;
+    @include banerBreakpoint{
+      display: none;
+    }
+  }
+
+}
