@@ -4,6 +4,7 @@ import './App.scss';
 import logo from './images/Logo.svg';
 import map from './images/map.svg';
 
+import ScrollToTop from "./helper/ScrollToTop";
 import About from './pages/About';
 import Case from './pages/Case';
 import Cases from './pages/Cases';
@@ -16,7 +17,6 @@ import Services from './pages/Services';
 import Technologies from './pages/Technologies';
 import Technology from './pages/Technology';
 import NotFound from "./pages/notFound";
-import ScrollToTop from "./ScrollToTop";
 
 export default function App() {
   return (
