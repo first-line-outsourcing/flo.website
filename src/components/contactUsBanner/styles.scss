@@ -5,10 +5,12 @@
   position: relative;
   margin-bottom: -400px;
   height: 510px;
-  background: url("../../images/about/arrows_up.svg") no-repeat;
-  background-position: right 85%;
+  background: url("../../images/about/arrows_up.svg") no-repeat right 85%;
   background-size: 53%;
   z-index: 2;
+  @include m_max {
+    background-image: none;
+  }
 }
 
 .business-growth {
@@ -27,19 +29,16 @@
     z-index: 3;
   }
 }
-
-@media (max-width: $Small) {
-  .container {
-    h2 {
+.container {
+  h2 {
+    @include m_max {
       font-size: 24px;
     }
   }
+}
 
-  .contactUs {
-    background-image: none;
-  }
-
-  .btn {
+.btn {
+  @include m_max {
     width: 100%;
   }
 }

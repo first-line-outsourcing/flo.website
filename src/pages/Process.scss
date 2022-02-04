@@ -3,15 +3,32 @@
 .ourWorkProcessHead {
   max-width: 650px;
   margin-top: 80px;
+  @include m_max {
+    margin-top: 40px;
+  }
 }
 
 .ourWorkProcess {
   margin-top: 80px;
+  @include m_max {
+    margin-top: 0;
+    padding-bottom: 80px;
+  }
 
   h3 {
     font-size: 32px;
     font-family: $HalvarBreitBd;
     margin-top: 450px;
+    @include m_max {
+      font-size: 24px;
+      margin-top: 56px;
+    }
+  }
+
+  p {
+    @include m_max {
+      font-size: 14px;
+    }
   }
 
   span {
@@ -25,6 +42,10 @@
     color: $color-white;
     font-size: 18px;
     line-height: 140%;
+    @include m_max {
+      font-size: 14px;
+      line-height: 140%;
+    }
   }
 }
 
@@ -52,44 +73,24 @@
     margin-bottom: -60px;
   }
 }
-
-@media (max-width: $Medium) {
-  .heading {
+.heading {
+  @include m_max {
     height: 360px;
   }
+}
 
-  .ourWorkProcessHead {
-    margin-top: 40px;
-  }
-
-  .undisplayedOnMobile {
+.undisplayedOnMobile {
+  @include m_max {
     display: none;
   }
+}
 
-  .container {
-    h1 {
+.container {
+  h1 {
+    @include m_max {
       font-size: 32px;
       margin-top: 60px;
       width: 288px;
-    }
-  }
-
-  .ourWorkProcess {
-    margin-top: 0;
-    padding-bottom: 80px;
-
-    h3 {
-      font-size: 24px;
-      margin-top: 56px;
-    }
-
-    p {
-      font-size: 14px;
-    }
-
-    li {
-      font-size: 14px;
-      line-height: 140%;
     }
   }
 }
