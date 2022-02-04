@@ -10,7 +10,6 @@ $banerBreakpoint : 450px;
 
   .mobile {
    display: none;
-   // width: 100%;
     @include banerBreakpoint{
       display: block;
     }

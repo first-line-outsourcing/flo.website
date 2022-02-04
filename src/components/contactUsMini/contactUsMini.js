@@ -1,9 +1,9 @@
 import React from 'react';
-import './contactUs.scss'
-import mobile from '../../images/contactUs/mobile.png'
-import desktop from '../../images/contactUs/background.png'
+import './contactUsMini.scss'
+import mobile from '../../images/contactUsMini/mobile.png'
+import desktop from '../../images/contactUsMini/background.png'
 import {Link} from "react-router-dom";
-const ContactUs = () => {
+const ContactUsMini = () => {
   return (
     <Link  to={`#`}>
     <div className='row bgContactUs'>
@@ -14,4 +14,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUsMini;

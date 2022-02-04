@@ -124,26 +124,6 @@ export default function Technologies() {
       link: "https://flo.team/"
     },
   ]
-  let mobileArray = [
-    {
-      img: NodeJs,
-      title: 'Node.Js',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "https://flo.team/"
-    },
-    {
-      img: Js,
-      title: 'Java Script',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "https://flo.team/"
-    },
-    {
-      img: TS,
-      title: 'TypeScript',
-      text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "https://flo.team/"
-    },
-  ]
 
   let cards = cardArray.map((card) => {
     return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={card.title}>

@@ -3,7 +3,7 @@ import DevelopmentCycle from "../components/developmentCycle/developmentCycle";
 import OurService from "../components/ourService/ourService";
 import './Technology.scss'
 import {useParams} from "react-router-dom";
-import ContactUs from "../components/contactUs/contactUs";
+import ContactUsMini from "../components/contactUsMini/contactUsMini";
 import OurCases from "../components/ourCases/ourCases";
 
 export default function Technology() {
@@ -93,7 +93,7 @@ export default function Technology() {
       </div>
       <div className='container'>
         <OurService servicesInfo={pageData[technologyName].servicesInfo}/>
-        <ContactUs/>
+        <ContactUsMini/>
       </div>
       <div className='ourCases'>
         <OurCases caseInfo={pageData[technologyName].casesInfo}/>

@@ -18,14 +18,14 @@ const OurService = ({servicesInfo}) => {
         </div>
       </div>
       {servicesInfo.map((item) => (
-        <>
+        <div key={item.title}>
           <ServiceItem
             title={item.title}
             description={item.description}
             img={item.img}
             link={item.link}
           />
-        </>
+        </div>
       ))}
     </div>
   );
