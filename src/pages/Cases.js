@@ -1,101 +1,154 @@
 import React from "react";
 import './Cases.scss';
+import android from '../images/cases/techLogo/android.svg';
+import react from '../images/cases/techLogo/react.svg';
+import ios from '../images/cases/techLogo/ios.svg';
+import web from '../images/cases/techLogo/web.svg'
+import hirefy from '../images/cases/hirefy.png'
+import img3 from '../images/cases/img3.png'
+import superchat from '../images/cases/superchat.png'
+import meatEater from '../images/cases/meatEater.png'
+
 import CaseElement from "../components/caseElement/caseElement";
 
 export default function Cases() {
 
   let cases = [
     {
-      image: '',
+      image: hirefy,
       title: 'Our big project that is too long for this world and smth',
       technologies: [
         {
-          logo: '',
+          logo: android,
           title: 'Android'
         },
         {
-          logo: '',
+          logo: ios,
           title: 'iOS'
         },
         {
-          logo: '',
+          logo: web,
           title: 'Web'
         },
         {
-          logo: '',
+          logo: react,
           title: 'React'
         },
       ],
     },
     {
-      image: '',
+      image: superchat,
+      title: 'Writer Chrome Extension.',
+      technologies: [
+        {
+          logo: android,
+          title: 'Android'
+        },
+        {
+          logo: ios,
+          title: 'iOS'
+        },
+        {
+          logo: web,
+          title: 'Web'
+        },
+        {
+          logo: react,
+          title: 'React'
+        },
+      ],
+    },
+    {
+      image: superchat,
       title: 'Writer Chrome Extension',
       technologies: [
         {
-          logo: '',
+          logo: android,
           title: 'Android'
         },
         {
-          logo: '',
+          logo: ios,
           title: 'iOS'
         },
         {
-          logo: '',
+          logo: web,
           title: 'Web'
         },
         {
-          logo: '',
+          logo: react,
           title: 'React'
         },
       ],
     },
     {
-      image: '',
-      title: 'Writer Chrome Extension',
+      image: img3,
+      title: 'Our big project that is too long for this world and smth2',
       technologies: [
         {
-          logo: '',
+          logo: android,
           title: 'Android'
         },
         {
-          logo: '',
+          logo: ios,
           title: 'iOS'
         },
         {
-          logo: '',
+          logo: web,
           title: 'Web'
         },
         {
-          logo: '',
+          logo: react,
           title: 'React'
         },
       ],
     },
     {
-      image: '',
-      title: 'Our big project that is too long for this world and smth',
+      image: meatEater,
+      title: 'Our big project that is too long for this world and smth3',
       technologies: [
         {
-          logo: '',
+          logo: android,
           title: 'Android'
         },
         {
-          logo: '',
+          logo: ios,
           title: 'iOS'
         },
         {
-          logo: '',
+          logo: web,
           title: 'Web'
         },
         {
-          logo: '',
+          logo: react,
+          title: 'React'
+        },
+      ],
+    },
+    {
+      image: superchat,
+      title: 'Fireaway',
+      technologies: [
+        {
+          logo: android,
+          title: 'Android'
+        },
+        {
+          logo: ios,
+          title: 'iOS'
+        },
+        {
+          logo: web,
+          title: 'Web'
+        },
+        {
+          logo: react,
           title: 'React'
         },
       ],
     },
   ];
   let items = cases.map((item) => {
-    return <div>
+    return <div className='col-xl-6 col-lg-6' key={item.title}>
       <CaseElement caseInfo={item}/>
     </div>
   })
@@ -105,18 +158,24 @@ export default function Cases() {
     }}>
       <div className="container">
         <div className="row">
-          <div className="col-8">
-            <h1 className='highlighted'>Cases</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid earum error illo illum libero nulla
-              provident. Incidunt labore similique soluta?
-            </p>
+          <div className="col-12 col-lg-12">
+            <h1 className='highlighted casesPageTitle'>Cases</h1>
+            <div className='casesPadeDescriptionWrapper'>
+              <p className='casesPageDescription'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                earum error illo illum libero nulla
+                provident. Incidunt labore similique soluta?
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div className='casesContainer'>
-      <div className='row'>
-        {items}
+    <div className='container'>
+      <div className='casesContainer'>
+        <div className='row items align-items-center'>
+          {items}
+        </div>
+        <button className='btn btn-accent loadMore'>Load More</button>
       </div>
     </div>
   </div>

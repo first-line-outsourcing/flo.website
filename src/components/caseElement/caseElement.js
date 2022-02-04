@@ -1,17 +1,19 @@
 import React from 'react';
-
-const CaseElement = ({image, title, technologies}) => {
-  let technology= technologies.map((tech)=>{
-    return <div>
-      <img src={tech.image} alt=''/>
-      <span>{tech.title}</span>
+import './caseElement.scss'
+const CaseElement = ({caseInfo}) => {
+  let technology= caseInfo.technologies.map((tech)=>{
+    return <div key={`${tech.title}_caseElement`} className='col-xl-auto col-lg-auto col-auto'>
+      <img src={tech.logo} alt='' className='techLogo'/>
+      <span className='techTitle'>{tech.title}</span>
     </div>
   })
   return (
-    <div>
-      <img src={image}/>
-      <h3>{title}</h3>
+    <div className='caseElement '>
+      <img src={caseInfo.image} alt='' className='caseImage'/>
+      <p>{caseInfo.title}</p>
+      <div className='row techno'>
       {technology}
+      </div>
     </div>
   );
 };
