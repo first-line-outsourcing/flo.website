@@ -16,10 +16,12 @@ import Services from './pages/Services';
 import Technologies from './pages/Technologies';
 import Technology from './pages/Technology';
 import NotFound from "./pages/notFound";
+import ScrollToTop from "./ScrollToTop";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <header>
         <div className="container">
           <nav className="navbar navbar-expand-lg">
