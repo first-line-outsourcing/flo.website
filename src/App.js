@@ -15,6 +15,7 @@ import Service from './pages/Service';
 import Services from './pages/Services';
 import Technologies from './pages/Technologies';
 import Technology from './pages/Technology';
+import NotFound from "./pages/notFound";
 
 export default function App() {
   return (
@@ -85,6 +86,7 @@ export default function App() {
         <Route path="/technologies" element={<Technologies />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
       <div className="contact-us">
         <img className="map" src={map} alt="" />
