@@ -1,17 +1,17 @@
-$Small: "576px";
-$ExtraLarge: "1200px";
+@import '../variables';
 
 .item {
   margin-top: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid #54420f;
+
   h4 {
     font-size: 32px;
     width: 282px;
     line-height: 1.15;
     font-weight: bold;
     font-family: Halvar Breit Bd, sans-serif;
-    color: #ffffff;
+    color: $color-white;
   }
 
   p {
@@ -20,13 +20,14 @@ $ExtraLarge: "1200px";
     line-height: 1.4;
     font-weight: 400;
     font-family: Halvar Mittel Lt, sans-serif;
-    color: #ffffff;
+    color: $color-white;
   }
 
   .arrow {
     display: none;
   }
 }
+
 a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
@@ -40,9 +41,10 @@ a:hover, a:visited, a:link, a:active {
 @media (min-width: $Small) {
   .item:hover {
     h4 {
-      color: #FFF4D7;
-      text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
+      color: $color-light_yellow;
+      text-shadow: 0 0 92px $color-yellow, 0 0 20px $color-yellow;
     }
+
     .arrow {
       display: inherit;
       position: relative;

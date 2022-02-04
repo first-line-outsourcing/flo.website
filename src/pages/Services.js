@@ -8,7 +8,7 @@ export default function Services() {
       title: "Web dev",
       description: "We develop SaaS solutions, SPA, PWA based on serverless architecture to level up your business. We help with different tasks, the process of optimization, sales growth, and customer loyalty.",
       img: require("../images/services/webDev.jpg"),
-      link: "https://flo.team/"
+      link: "/services/webdev"
     },
     {
       title: "Mobile dev",
@@ -62,7 +62,7 @@ export default function Services() {
         <div className="title">
           <div className="row">
             <div className="col">
-              <h3>Our <span>services</span></h3>
+              <h3>Our <span className="highlighted">services</span></h3>
               <p>
                 Together with you we discuss your challenges and choose the most effective way of solving them. We
                 interview you to understand your business, understand the processes and offer the and concentrate on the
@@ -72,14 +72,12 @@ export default function Services() {
           </div>
         </div>
         {items.map((item) => (
-          <>
-            <ServiceItem
-              title={item.title}
-              description={item.description}
-              img={item.img}
-              link={item.link}
-            />
-          </>
+          <ServiceItem
+            title={item.title}
+            description={item.description}
+            img={item.img}
+            link={item.link}
+          />
         ))}
       </div>
     </div>

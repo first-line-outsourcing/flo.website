@@ -1,15 +1,14 @@
-$Small: "576px";
-$ExtraLarge: "1200px";
+@import '../components/variables';
+
+.heading {
+  background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("../images/services.jpg");
+  background-size: cover;
+  background-position-y: 40%;
+}
 
 .services {
   background-size: cover;
   background: url("../images/Vector 17.svg") no-repeat 44% 150%;
-
-  hr {
-    opacity: 0.3;
-    border: 1px solid #EFB104;
-    margin-top: 32px;
-  }
 }
 
 .title {
@@ -18,22 +17,12 @@ $ExtraLarge: "1200px";
   padding-top: 80px;
   margin-bottom: 70px;
 
-  .container {
-    position: relative;
-    z-index: 2;
-  }
-
   h3 {
     font-size: 40px;
     line-height: 1.15;
     font-weight: bold;
     font-family: Halvar Breit Bd, sans-serif;
-    color: #ffffff;
-
-    span {
-      color: #FFF4D7;
-      text-shadow: 0 0 92px #EFB104, 0 0 20px #EFB104;
-    }
+    color: $color-white;
   }
 
   p {
@@ -42,7 +31,7 @@ $ExtraLarge: "1200px";
     line-height: 1.4;
     font-weight: normal;
     font-family: Halvar Mittel Lt, sans-serif;
-    color: #ffffff;
+    color: $color-white;
     width: 588px;
   }
 }
@@ -50,6 +39,7 @@ $ExtraLarge: "1200px";
 @media (max-width: $Small) {
   .services {
     background: none;
+
     h1 {
       position: static;
       width: 288px;
@@ -78,6 +68,7 @@ $ExtraLarge: "1200px";
 @media (max-width: $ExtraLarge) {
   .services {
     background: none;
+
     h1 {
       font-size: 36px;
     }

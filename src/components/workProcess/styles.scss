@@ -1,0 +1,37 @@
+@import '../variables';
+
+.button {
+  height: 184px;
+  width: 184px;
+  border-radius: 50%;
+  margin-top: -370px;
+}
+
+.workProcessItem {
+  margin-bottom: 368px;
+  font-family: Halvar Breit Bd, sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.rightItemsAlign {
+  margin-top: 52px;
+}
+
+.leftSide {
+  margin-left: 70px;
+}
+
+.rightSide {
+  margin-right: 70px;
+}
+
+@media (max-width: $Small) {
+  .leftSide {
+    margin-left: 0;
+  }
+
+  .rightSide {
+    margin-right: 0;
+  }
+}
