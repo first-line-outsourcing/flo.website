@@ -54,8 +54,9 @@ export default function Home() {
         onRequestClose={closeModal}
         className="Modal"
         overlayClassName="Overlay"
+        ariaHideApp={false}
       >
-        <ContactUsModal closeModal={closeModal}/>
+        <ContactUsModal closeModal={closeModal} title={'Contact us'}/>
       </Modal>
       <section className="container top-section">
         <div className="row">

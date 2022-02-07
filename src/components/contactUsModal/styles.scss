@@ -12,6 +12,9 @@
 
   label {
     color: #C5C7CD;
+    @include m_max {
+      font-size: 20px;
+    }
   }
 
   input, textarea, input:focus, textarea:focus {
@@ -36,6 +39,7 @@
   button {
     width: 100%;
     margin-top: 48px;
+    height: 54px;
     @include m {
       width: auto;
     }
@@ -55,6 +59,9 @@
   label {
     font-size: 14px;
     color: #84858A;
+    @include m_max {
+      font-size: 19px;
+    }
   }
 }
 
@@ -78,20 +85,39 @@
   display: none;
 }
 
-//.file-box {
-//  display: inline-block;
-//  width: 100%;
-//  border: 1px solid;
-//  padding: 5px 0px 5px 5px;
-//  height: calc(2rem - 2px);
-//  color: #FFFFFF;
-//}
 
-.file-button {
-  //background: red;
-  //padding: 5px;
-  //position: absolute;
-  //border: 1px solid;
-  //top: 0px;
-  //right: 0px;
+.submitModal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @include m {
+    border-radius: 16px;
+    max-width: 652px;
+    width: auto;
+    height: auto;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modalIsSubmit {
+  width: 320px;
+  height: 210px;
+  padding: 32px;
+  background: $color-dark_blue;
+  border-radius: 16px;
+  h3 {
+    font-family: $HalvarBreitXBd;
+    width: 157px;
+    font-size: 18px;
+  }
+  button {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  @include m_max {
+    margin: 50% auto 0;
+  }
 }
