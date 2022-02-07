@@ -5,7 +5,7 @@ const CaseElement = ({caseInfo}) => {
     return (
       <div key={`${tech.title}_caseElement`} className='col-xl-auto col-lg-auto col-auto'>
         <img src={tech.logo} alt='' className='techLogo'/>
-        <span className='techTitle'>{tech.title}</span>
+        <p className='techTitle'>{tech.title}</p>
       </div>
     );
   })

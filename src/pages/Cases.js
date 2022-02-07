@@ -5,7 +5,7 @@ import CasesElement from "../components/casesElement/casesElement";
 export default function Cases() {
   const casesKey = [1, 2, 3, 4, 5, 6];
   return (
-    <>
+    <div className='casesPage'>
       <div className="heading" style={{
         backgroundSize: 0,
       }}>
@@ -23,14 +23,7 @@ export default function Cases() {
           </div>
         </div>
       </div>
-      <div className='container'>
-        <div className='casesContainer'>
-          <div className='row items align-items-center'>
-            <CasesElement casesKey={casesKey}/>
-          </div>
-          <button className='btn btn-accent loadMore'>Load More</button>
-        </div>
-      </div>
-    </>
+      <CasesElement casesKey={casesKey} background={'black'}/>
+    </div>
   );
 }

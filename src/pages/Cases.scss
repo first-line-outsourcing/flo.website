@@ -1,7 +1,11 @@
 @import "src/components/variables";
-.heading{
-  padding-top: 150px;
+.casesPage{
+  .heading{
+    padding-top: 150px;
+    padding-bottom: 0;
+  }
 }
+
 .casesPadeDescriptionWrapper {
   @include l_max {
     margin-left: auto;
@@ -24,19 +28,6 @@
   }
   @include m_max {
     display: none;
-  }
-}
-
-.casesContainer {
-  background-size: cover;
-  background: url("../images/cases/line.svg") no-repeat 44% 90%;
-  @include l_max {
-    background: none;
-
-  }
-
-  .items {
-    grid-row-gap: 50px;
   }
 }
 

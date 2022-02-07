@@ -1,78 +1,103 @@
 import React from 'react';
-import iosLogo from "../../images/cases/techLogo/ios.svg";
-import webLogo from "../../images/cases/techLogo/web.svg";
-import reactLogo from "../../images/cases/techLogo/react.svg";
-import androidLogo from "../../images/cases/techLogo/android.svg";
 import hirefy from "../../images/cases/hirefy.png";
 import superchat from "../../images/cases/superchat.png";
 import img3 from "../../images/cases/img3.png";
 import meatEater from "../../images/cases/meatEater.png";
 import CaseElement from "./caseElement/caseElement";
-
-const CasesElement = ({casesKey}) => {
+import './casesElement.scss'
+import androidBlack from '../../images/casesElement/techLogoBlack/android.svg'
+import iosBlack from '../../images/casesElement/techLogoBlack/ios.svg'
+import webBlack from '../../images/casesElement/techLogoBlack/web.svg'
+import reactBlack from '../../images/casesElement/techLogoBlack/react.svg'
+import androidWhite from '../../images/casesElement/techLogoWhite/android.svg'
+import iosWhite from '../../images/casesElement/techLogoWhite/ios.svg'
+import webWhite from '../../images/casesElement/techLogoWhite/web.svg'
+import reactWhite from '../../images/casesElement/techLogoWhite/react.svg'
+const CasesElement = (casesInfo) => {
+  const techLogoColor=casesInfo.background==='white'?'black':'white'
   const technology = {
-    ios: {
-      logo: iosLogo,
-      title: 'iOS'
+    white: {
+      ios: {
+        logo: iosWhite,
+        title: 'iOS'
+      },
+      www: {
+        logo: webWhite,
+        title: 'Web',
+      },
+      react: {
+        logo: reactWhite,
+        title: 'React'
+      },
+      android: {
+        logo: androidWhite,
+        title: 'Android'
+      }
     },
-    web: {
-      logo: webLogo,
-      title: 'Web',
+    black: {
+      ios: {
+        logo: iosBlack,
+        title: 'iOS'
+      },
+      www: {
+        logo: webBlack,
+        title: 'Web',
+      },
+      react: {
+        logo: reactBlack,
+        title: 'React'
+      },
+      android: {
+        logo: androidBlack,
+        title: 'Android'
+      }
     },
-    react: {
-      logo: reactLogo,
-      title: 'React'
-    },
-    android: {
-      logo: androidLogo,
-      title: 'Android'
-    }
   }
   const cases = {
     1: {
       image: hirefy,
       title: 'Our big project that is too long for this world and smth',
       technologies: [
-        technology.android, technology.ios, technology.web, technology.react,
+        technology[techLogoColor].android, technology[techLogoColor].ios, technology[techLogoColor].www, technology[techLogoColor].react,
       ],
     },
     2: {
       image: superchat,
       title: 'Writer Chrome Extension.',
       technologies: [
-        technology.android, technology.ios, technology.web, technology.react,
+        technology[techLogoColor].android, technology[techLogoColor].ios, technology[techLogoColor].www, technology[techLogoColor].react,
       ],
     },
     3: {
       image: superchat,
       title: 'Writer Chrome Extension',
       technologies: [
-        technology.android, technology.ios, technology.web, technology.react,
+        technology[techLogoColor].android, technology[techLogoColor].ios, technology[techLogoColor].www, technology[techLogoColor].react,
       ],
     },
     4: {
       image: img3,
       title: 'Our big project that is too long for this world and smth2',
       technologies: [
-        technology.android, technology.ios, technology.web, technology.react,
+        technology[techLogoColor].android, technology[techLogoColor].ios, technology[techLogoColor].www, technology[techLogoColor].react,
       ],
     },
     5: {
       image: meatEater,
       title: 'Our big project that is too long for this world and smth3',
       technologies: [
-        technology.android, technology.ios, technology.web, technology.react,
+        technology[techLogoColor].android, technology[techLogoColor].ios, technology[techLogoColor].www, technology[techLogoColor].react,
       ],
     },
     6: {
       image: superchat,
       title: 'Fireaway',
       technologies: [
-        technology.android, technology.ios, technology.web, technology.react,
+        technology[techLogoColor].android, technology[techLogoColor].ios, technology[techLogoColor].www, technology[techLogoColor].react,
       ],
     },
   };
-  const resultArray = casesKey.map((key) => {
+  const resultArray = casesInfo.casesKey.map((key) => {
     return cases[key];
   })
   const items = resultArray.map((item) => {
@@ -83,11 +108,14 @@ const CasesElement = ({casesKey}) => {
     );
   })
 
-
   return (
-    <>
-      {items}
-    </>
+    <div className={`casesWrapper ${casesInfo.background==='white'?'bg-white':''}`}>
+      <div className='container'>
+        <div className='row items align-items-center'>
+          {items}
+        </div>
+      </div>
+    </div>
   );
 };
 
