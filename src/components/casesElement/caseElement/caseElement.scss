@@ -1,4 +1,5 @@
-@import "../variables";
+@import "../../variables";
+
 $caseBreakpoint: 550px;
 @mixin caseBreakpoint {
   @media (max-width: #{$caseBreakpoint}) {

@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 const TechnologyCard = ({img, title, text, link}) => {
 
   return (
-    <Link className="nav-link" aria-current="page" to={link}>
+    <Link className="nav-link" to={link}>
       <div className='card'>
 
         <img src={img} alt={''} className='logo'/>

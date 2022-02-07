@@ -1,6 +1,5 @@
 import React from 'react';
 import './caseElement.scss'
-
 const CaseElement = ({caseInfo}) => {
   const technology = caseInfo.technologies.map((tech) => {
     return (
@@ -14,7 +13,7 @@ const CaseElement = ({caseInfo}) => {
     <div className='caseElement'>
       <img src={caseInfo.image} alt='' className='caseImage'/>
       <p>{caseInfo.title}</p>
-      <div className='row techno'>
+      <div className='row'>
         {technology}
       </div>
     </div>

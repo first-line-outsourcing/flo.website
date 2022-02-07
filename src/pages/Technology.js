@@ -74,7 +74,7 @@ export default function Technology() {
     }
   }
   return (
-    <div className={'technology'}>
+    <>
       <div className="heading bg" style={{
         backgroundImage: `url(
             ${pageData[technologyName].headerImage})`,
@@ -98,6 +98,6 @@ export default function Technology() {
       <div className='ourCases'>
         <OurCases caseInfo={pageData[technologyName].casesInfo}/>
       </div>
-    </div>
+    </>
   );
 }
