@@ -86,7 +86,6 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:serviceName" element={<Service />} />
         <Route path="/technologies" element={<Technologies />} />
-        <Route path="/technology" element={<Technology />} />
         <Route path="/technology/:technologyName" element={<Technology />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound/>} />
