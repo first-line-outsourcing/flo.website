@@ -43,7 +43,7 @@ export default function Technologies() {
       img: Angular,
       title: 'Angular | NGXS',
       text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, enim esse nemo suscipit vitae.',
-      link: "/technology/angular"
+      link: "/technologies/angular"
     },
     {
       img: logoReact,

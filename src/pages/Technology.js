@@ -5,6 +5,7 @@ import './Technology.scss'
 import {useParams} from "react-router-dom";
 import ContactUsMini from "../components/contactUsMini/contactUsMini";
 import OurCases from "../components/ourCases/ourCases";
+import NotFound from "./notFound";
 
 export default function Technology() {
   const {technologyName} = useParams();
@@ -73,31 +74,35 @@ export default function Technology() {
       ]
     }
   }
-  return (
-    <div className={'technology'}>
-      <div className="heading bg" style={{
-        backgroundImage: `url(
+  if (pageData[technologyName]) {
+    return (
+      <div className='technology'>
+        <div className="heading bg" style={{
+          backgroundImage: `url(
             ${pageData[technologyName].headerImage})`,
-      }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-8">
-              <h1>{pageData[technologyName].headerTitle}</h1>
-              <p className='headerDescription'>{pageData[technologyName].headerDescription}</p>
+        }}>
+          <div className="container">
+            <div className="row">
+              <div className="col-8">
+                <h1>{pageData[technologyName].headerTitle}</h1>
+                <p className='headerDescription'>{pageData[technologyName].headerDescription}</p>
+              </div>
             </div>
           </div>
         </div>
+        <div className='bg-white'>
+          <div className='container'><DevelopmentCycle devInfo={pageData[technologyName].devInfo}/></div>
+        </div>
+        <div className='container'>
+          <OurService servicesInfo={pageData[technologyName].servicesInfo}/>
+          <ContactUsMini/>
+        </div>
+        <div className='ourCases'>
+          <OurCases caseInfo={pageData[technologyName].casesInfo}/>
+        </div>
       </div>
-      <div className='bg-white'>
-        <div className='container'><DevelopmentCycle devInfo={pageData[technologyName].devInfo}/></div>
-      </div>
-      <div className='container'>
-        <OurService servicesInfo={pageData[technologyName].servicesInfo}/>
-        <ContactUsMini/>
-      </div>
-      <div className='ourCases'>
-        <OurCases caseInfo={pageData[technologyName].casesInfo}/>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    return <NotFound/>
+  }
 }
