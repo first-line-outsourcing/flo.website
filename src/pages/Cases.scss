@@ -1,5 +1,7 @@
 @import "src/components/variables";
-
+.heading{
+  padding-top: 200px;
+}
 .casesPadeDescriptionWrapper {
   @include l_max {
     margin-left: auto;
