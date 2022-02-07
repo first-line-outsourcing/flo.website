@@ -37,7 +37,7 @@ Modal.setAppElement('#root');
 // };
 
 export default function Home() {
-  const [modalIsOpen, setIsOpen] = React.useState(true);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
     document.body.style.overflow = 'hidden';
