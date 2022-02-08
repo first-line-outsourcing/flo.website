@@ -3,7 +3,12 @@
 .casesPage {
   .heading {
     padding-top: 150px;
-    padding-bottom: 0;
+    padding-bottom: 150px;
+    @include m_max{
+      height: auto;
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
   }
 
   .casesPageTitle {
@@ -11,8 +16,8 @@
       text-align: center;
     }
     @include m_max {
-      margin-left: auto;
       margin-right: auto;
+      text-align: left;
     }
   }
 
@@ -21,6 +26,8 @@
     @include l_max {
       max-width: 730px;
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
     @include m_max {
       display: none;
