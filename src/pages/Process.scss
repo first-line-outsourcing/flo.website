@@ -1,0 +1,96 @@
+@import '../components/variables';
+
+.ourWorkProcessHead {
+  max-width: 650px;
+  margin-top: 80px;
+  @include m_max {
+    margin-top: 40px;
+  }
+}
+
+.ourWorkProcess {
+  margin-top: 80px;
+  @include m_max {
+    margin-top: 0;
+    padding-bottom: 80px;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-family: $HalvarBreitBd;
+    margin-top: 450px;
+    @include m_max {
+      font-size: 24px;
+      margin-top: 56px;
+    }
+  }
+
+  p {
+    @include m_max {
+      font-size: 14px;
+    }
+  }
+
+  span {
+    margin-right: 40px;
+    color: $accent-color;
+    text-shadow: none;
+  }
+
+  li {
+    font-family: $HalvarMittelRg;
+    color: $color-white;
+    font-size: 18px;
+    line-height: 140%;
+    @include m_max {
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+}
+
+.ourWorkProcessLeftSide {
+  margin-top: -450px;
+  max-width: 384px;
+  text-align: end;
+
+  li {
+    float: right;
+  }
+}
+
+.ourWorkProcessCenterLine {
+  max-width: 350px;
+  text-align: center;
+}
+
+.ourWorkProcessRightSide {
+  margin-top: -120px;
+  max-width: 384px;
+  text-align: start;
+
+  ul {
+    margin-bottom: -60px;
+  }
+}
+.heading {
+  @include m_max {
+    height: 360px;
+  }
+}
+
+.undisplayedOnMobile {
+  @include m_max {
+    display: none;
+  }
+}
+
+.container {
+  h1 {
+    @include m_max {
+      font-size: 32px;
+      margin-top: 60px;
+      width: 288px;
+    }
+  }
+}

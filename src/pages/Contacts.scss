@@ -101,13 +101,13 @@ $customBreakpointLarge: "991px";
       .map {
         display: block;
         border-radius: 9px;
-        height: auto;
+        height: 354px;
         width: 100%;
         margin-left: auto;
 
         @include l_max {
           width: 100%;
-          height: auto;
+          height: 300px;
         }
         @include customBreakpointLarge {
           margin-top: 60px;

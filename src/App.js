@@ -4,6 +4,7 @@ import './App.scss';
 import logo from './images/Logo.svg';
 import map from './images/map.svg';
 
+import ScrollToTop from "./helper/ScrollToTop";
 import About from './pages/About';
 import Case from './pages/Case';
 import Cases from './pages/Cases';
@@ -20,6 +21,7 @@ import NotFound from "./pages/notFound";
 export default function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <header>
         <div className="container">
           <nav className="navbar navbar-expand-lg">
@@ -84,7 +86,6 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:serviceName" element={<Service />} />
         <Route path="/technologies" element={<Technologies />} />
-        <Route path="/technology" element={<Technology />} />
         <Route path="/technology/:technologyName" element={<Technology />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound/>} />

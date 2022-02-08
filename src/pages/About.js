@@ -4,6 +4,7 @@ import andrewZaikin from '../images/about/team/team_zaikin_andrew.jpg';
 import anastasiaZhivaeva from '../images/about/team/team_zhivaeva_anastasia.jpg';
 import victorKolesnikov from '../images/about/team/team_kolesnikov_victor.jpg';
 import anastasiaDziova from '../images/about/team/team_dziova_anastasia.jpg';
+import ContactUsBanner from "../components/contactUsBanner";
 
 export default function About() {
   return <div className="about">
@@ -170,19 +171,6 @@ export default function About() {
         <br/>making cutting-edge tech work for the goals of your company.</p>
       </div>
     </div>
-
-    <div className="bg-white pb-5">
-      <div className="container">
-        <div className="business-growth">
-          <div className="row gx-md-5">
-            <div className="col-md-6">
-              <h2>Are you ready for your business growth? </h2>
-              <p>Let&#39;s move your business forward to the clouds! Tell us about your idea! We will interview you and offer the best solution for reaching the goal.</p>
-              <button className="btn">Contact us</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ContactUsBanner background={"bg-white"}/>
   </div>;
 }

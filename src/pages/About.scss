@@ -184,23 +184,4 @@
             font-size: 18px;
         }
     }
-
-    .business-growth {
-        padding: 40px 20px;
-        box-sizing: border-box;
-        background: $color-yellow;
-        border-radius: 8px;
-        @include m {
-            padding: 64px;
-            border-radius: 30px;
-        }
-        @include l {
-            background: url("../images/about/arrows_up.svg") no-repeat, $color-yellow;
-            background-position: right 85%;
-            background-size: 53%;
-        }
-        h2, p {
-            color: $color-white;
-        }
-    }
 }
