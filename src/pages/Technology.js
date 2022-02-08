@@ -89,13 +89,16 @@ export default function Technology() {
           </div>
         </div>
       </div>
+
       <div className='bg-white'>
         <div className='container'><DevelopmentCycle devInfo={pageData[technologyName].devInfo}/></div>
       </div>
+
       <div className='container'>
         <OurService servicesInfo={pageData[technologyName].servicesInfo}/>
         <ContactUsMini/>
       </div>
+
       <div>
         <div className='ourCases pt-10 pb-5'>
           <div className='container'>
@@ -111,8 +114,8 @@ export default function Technology() {
             <button className='btn btn-accent col-1'>Load more</button>
           </div>
         </div>
-
       </div>
+
     </div>
   );
 }

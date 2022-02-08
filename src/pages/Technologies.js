@@ -150,6 +150,7 @@ export default function Technologies() {
           </div>
         </div>
       </div>
+
       <div className={'container'}>
         <div className={'cardContainer'}>
           <div className={'row'}>
@@ -157,6 +158,7 @@ export default function Technologies() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
