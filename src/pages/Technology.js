@@ -8,6 +8,7 @@ import OurCases from "../components/ourCases/ourCases";
 
 export default function Technology() {
   const {technologyName} = useParams();
+  let cases = [1, 2, 3, 4];
   const pageData = {
     angular: {
       headerImage: require("../images/technology/angular.png"),
@@ -95,8 +96,16 @@ export default function Technology() {
         <OurService servicesInfo={pageData[technologyName].servicesInfo}/>
         <ContactUsMini/>
       </div>
-      <div className='ourCases'>
-        <OurCases caseInfo={pageData[technologyName].casesInfo}/>
+      <div>
+        <div className='contactUsMain pt-10 pb-5'>
+          <div className='container'>
+            <h1 className='highlighted text-center'>Our cases</h1>
+            <h2 className='text-center'>based on development service</h2>
+            <p className='text-center'> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Animi debitis dolores itaque magni mollitia placeat quod reprehenderit tenetur vel vitae.</p>
+          </div>
+        </div>
+        <OurCases casesKey={cases} background={'black'}/>
       </div>
     </>
   );

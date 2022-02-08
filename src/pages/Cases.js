@@ -1,6 +1,6 @@
 import React from "react";
 import './Cases.scss';
-import CasesElement from "../components/casesElement/casesElement";
+import OurCases from "../components/ourCases/ourCases";
 
 export default function Cases() {
   const casesKey = [1, 2, 3, 4, 5, 6];
@@ -23,7 +23,7 @@ export default function Cases() {
           </div>
         </div>
       </div>
-      <CasesElement casesKey={casesKey} background={'black'}/>
+      <OurCases casesKey={casesKey} background={'black'}/>
     </div>
   );
 }

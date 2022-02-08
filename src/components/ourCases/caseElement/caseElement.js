@@ -1,5 +1,7 @@
 import React from 'react';
 import './caseElement.scss'
+import {Link} from "react-router-dom";
+
 const CaseElement = ({caseInfo}) => {
   const technology = caseInfo.technologies.map((tech) => {
     return (
@@ -10,13 +12,15 @@ const CaseElement = ({caseInfo}) => {
     );
   })
   return (
-    <div className='caseElement'>
-      <img src={caseInfo.image} alt='' className='caseImage'/>
-      <p>{caseInfo.title}</p>
-      <div className='row'>
-        {technology}
+    <Link className="nav-link" to={caseInfo.link}>
+      <div className='caseElement'>
+        <img src={caseInfo.image} alt='' className='caseImage'/>
+        <p>{caseInfo.title}</p>
+        <div className='row'>
+          {technology}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
