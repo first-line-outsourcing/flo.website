@@ -6,9 +6,7 @@ export default function Cases() {
   const casesKey = [1, 2, 3, 4, 5, 6];
   return (
     <div className='casesPage'>
-      <div className="heading" style={{
-        backgroundSize: 0,
-      }}>
+      <div className="heading">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-12">

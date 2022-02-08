@@ -135,9 +135,7 @@ export default function Technologies() {
 
   return (
     <div className={'technologiesPage'}>
-      <div className="heading" style={{
-        backgroundSize: 0,
-      }}>
+      <div className="heading">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-8">

@@ -12,6 +12,13 @@ $logoBreakpoint: 1320px;
     h1 {
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 0;
+      @include m {
+        font-size: 40px;
+      }
+      @include m_max {
+        font-size: 24px;
+      }
     }
 
     margin-top: 120px;
