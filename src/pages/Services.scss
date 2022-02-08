@@ -1,14 +1,14 @@
 @import '../components/variables';
 
-.heading {
-  background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("../images/services.jpg");
-  background-size: cover;
-  background-position-y: 40%;
-}
-
 .services {
   background-size: cover;
   background: url("../images/Vector 17.svg") no-repeat 44% 150%;
+
+  .heading {
+    background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("../images/services.jpg");
+    background-size: cover;
+    background-position-y: 40%;
+  }
 }
 
 .title {
