@@ -20,7 +20,7 @@ import SLS from '../images/technologies/sls.png'
 import './Technologies.scss'
 
 export default function Technologies() {
-  let cardArray = [
+  const cardArray = [
     {
       img: NodeJs,
       title: 'Node.Js',
@@ -125,10 +125,12 @@ export default function Technologies() {
     },
   ]
 
-  let cards = cardArray.map((card) => {
-    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={card.title}>
-      <TechnologyCard img={card.img} title={card.title} text={card.text} link={card.link}/>
-    </div>
+  const cards = cardArray.map((card) => {
+    return (
+      <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={card.title}>
+        <TechnologyCard img={card.img} title={card.title} text={card.text} link={card.link}/>
+      </div>
+    );
   })
 
   return (
@@ -150,5 +152,5 @@ export default function Technologies() {
         </div>
       </div>
     </div>
-  )
+  );
 }

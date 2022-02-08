@@ -1,0 +1,43 @@
+@import "src/components/variables";
+.casesPage{
+  .heading{
+    padding-top: 150px;
+    padding-bottom: 0;
+  }
+}
+
+.casesPadeDescriptionWrapper {
+  @include l_max {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 730px;
+  }
+}
+
+.casesPageTitle {
+  @include l_max {
+    text-align: center;
+  }
+}
+
+.casesPageDescription {
+  max-width: 588px;
+  @include l_max {
+    max-width: 730px;
+    text-align: center;
+  }
+  @include m_max {
+    display: none;
+  }
+}
+
+.loadMore {
+  display: block;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  @include m_max {
+    width: 100%;
+  }
+}
+

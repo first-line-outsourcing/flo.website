@@ -14,12 +14,14 @@ $customBreakpointLarge: "991px";
   background-size: 35%;
 
   .contactsTitle {
-    position: absolute;
-    padding-top: 120px;
+    padding-top: 180px;
+    @include m_max{
+      padding-top: 130px;
+    }
   }
 
   .mapAndInfo {
-    padding-top: 244px;
+    padding-top: 80px;
 
     display: grid;
     grid-template-areas: "info mapContainer";
@@ -35,7 +37,7 @@ $customBreakpointLarge: "991px";
     @include m_max {
       grid-template-areas: "info info"
                         "mapContainer mapContainer";
-      padding-top: 160px;
+      padding-top: 20px;
 
     }
     @include m {
