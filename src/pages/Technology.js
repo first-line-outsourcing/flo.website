@@ -75,7 +75,7 @@ export default function Technology() {
     }
   }
   return (
-    <>
+    <div className='technologyPage'>
       <div className="heading bg" style={{
         backgroundImage: `url(
             ${pageData[technologyName].headerImage})`,
@@ -89,15 +89,18 @@ export default function Technology() {
           </div>
         </div>
       </div>
+
       <div className='bg-white'>
         <div className='container'><DevelopmentCycle devInfo={pageData[technologyName].devInfo}/></div>
       </div>
+
       <div className='container'>
         <OurService servicesInfo={pageData[technologyName].servicesInfo}/>
         <ContactUsMini/>
       </div>
+
       <div>
-        <div className='contactUsMain pt-10 pb-5'>
+        <div className='ourCases pt-10 pb-5'>
           <div className='container'>
             <h1 className='highlighted text-center'>Our cases</h1>
             <h2 className='text-center'>based on development service</h2>
@@ -106,7 +109,13 @@ export default function Technology() {
           </div>
         </div>
         <OurCases casesKey={cases} background={'black'}/>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <button className='btn btn-accent col-1'>Load more</button>
+          </div>
+        </div>
       </div>
-    </>
+
+    </div>
   );
 }

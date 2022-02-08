@@ -1,11 +1,50 @@
 @import "../components/variables";
 
-.tech {
+$titleBreakpoint: 420px;
+@mixin titleBreakpoint {
+  @media (max-width: #{$titleBreakpoint}) {
+    @content;
+  }
+}
+
+.technologiesPage {
   background-size: cover;
   background: url("../images/technologies/back.svg") no-repeat 44% 90%;
   @include l_max {
     background: none;
+  }
 
+  .heading {
+    padding-top: 150px;
+    padding-bottom: 0;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .technologiesTitle {
+    @include l_max {
+      font-size: 36px;
+    }
+    @include m_max {
+      width: 100%;
+      text-align: center;
+    }
+    @include titleBreakpoint {
+      text-align: left;
+    }
+  }
+
+  .technologiesDescription {
+    overflow: hidden;
+    max-width: 588px;
+    @include m_max {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 88px;
+    }
+    @include titleBreakpoint {
+      text-align: left;
+    }
   }
 
   .cardContainer {
@@ -13,6 +52,10 @@
     @include m_max {
       margin-top: 72px;
     }
+    @include l_max {
+      margin-top: 20px;
+    }
 
   }
+
 }

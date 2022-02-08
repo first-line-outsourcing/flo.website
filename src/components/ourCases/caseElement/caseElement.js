@@ -12,7 +12,7 @@ const CaseElement = ({caseInfo}) => {
     );
   })
   return (
-    <Link className="nav-link" to={caseInfo.link}>
+    <Link to={caseInfo.link}>
       <div className='caseElement'>
         <img src={caseInfo.image} alt='' className='caseImage'/>
         <p>{caseInfo.title}</p>
