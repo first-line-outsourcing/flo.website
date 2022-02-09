@@ -2,7 +2,7 @@ import React from "react";
 import DevelopmentCycle from "../components/developmentCycle/developmentCycle";
 import OurService from "../components/ourService/ourService";
 import './Technology.scss'
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import ContactUsMini from "../components/contactUsMini/contactUsMini";
 import OurCases from "../components/ourCases/ourCases";
 
@@ -94,7 +94,7 @@ export default function Technology() {
         <OurCases casesKey={pageData[technologyName].casesKeys} background={'black'}/>
         <div className='container'>
           <div className='row justify-content-center'>
-            <button className='btn btn-accent col-1'>Load more</button>
+           <Link to='/cases' className='col-1'><button className='btn btn-accent'>Load more</button></Link>
           </div>
         </div>
       </div>
