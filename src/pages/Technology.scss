@@ -49,7 +49,9 @@ $logoBreakpoint: 1320px;
     }
 
   }
-
+  .loadMore{
+    color: white;
+  }
   .btn {
     @include m_max {
       width: 90%;

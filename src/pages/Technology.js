@@ -54,7 +54,7 @@ export default function Technology() {
           link: "https://flo.team/"
         },
       ],
-      casesKeys: [1,2,3,4]
+      casesKeys: [1, 2, 3, 4]
     }
   }
   return (
@@ -94,7 +94,7 @@ export default function Technology() {
         <OurCases casesKey={pageData[technologyName].casesKeys} background={'black'}/>
         <div className='container'>
           <div className='row justify-content-center'>
-           <Link to='/cases' className='col-1'><button className='btn btn-accent'>Load more</button></Link>
+            <button className='btn btn-accent col-1'><Link to='/cases' className='loadMore'>Load more</Link></button>
           </div>
         </div>
       </div>
