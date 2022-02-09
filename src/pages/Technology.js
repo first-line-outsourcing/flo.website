@@ -5,6 +5,7 @@ import './Technology.scss'
 import {Link, useParams} from "react-router-dom";
 import ContactUsMini from "../components/contactUsMini/contactUsMini";
 import OurCases from "../components/ourCases/ourCases";
+import NotFound from "./notFound";
 
 export default function Technology() {
   const {technologyName} = useParams();
@@ -57,7 +58,13 @@ export default function Technology() {
       casesKeys: [1, 2, 3, 4]
     }
   }
-  return (
+  if(!pageData.hasOwnProperty(technologyName)){
+    return (
+      <NotFound/>
+    )
+  }
+
+    return (
     <div className='technologyPage'>
       <div className="heading bg" style={{
         backgroundImage: `url(
