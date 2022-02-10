@@ -4,7 +4,7 @@
 //  ---------------------------------------------
 
 $color-white: #FFFFFF;
-$color-yellow: #EFB104;
+$color-yellow: #efb104;
 $color-light_yellow: #FFF4D7;
 $color-dark_blue: #121213;
 $color-blue: #2F9BFF;
@@ -100,15 +100,19 @@ $screen-xxl : 2400px;
     --font-first-level: 32px;
     --font-second-level: 24px;
     --font-third-level: 18px;
+
+    --font-fifth-level: 16px;
     --font-paragraph: 16px;
     --font-size-button: 18px;
     --font-size-button_lg: 24px;
     @include m {
-        --font-first-level: 56px;
         --font-second-level: 32px;
         --font-third-level: 24px;
+        
+        --font-fifth-level: 18px;
     }
     @include l {
+        --font-first-level: 56px;
         --font-second-level: 40px;
         --font-paragraph: 18px;
     }

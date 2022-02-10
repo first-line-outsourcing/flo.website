@@ -94,7 +94,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #121213;
+  background: $color-dark_blue;
 }
 
 code {
@@ -111,5 +111,40 @@ code {
   background-position-y: 40%;
   @include m {
     padding-bottom: 165px;
+  }
+}
+
+.business-growth {
+  position: relative;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background: $color-yellow;
+  border-radius: 8px;
+  color: white;
+  @include m {
+      padding: 64px;
+      border-radius: 30px;
+  }
+  @include l {
+      background: $color-yellow;
+      &::after {
+        position: absolute;
+        width: 60%;
+        height: 130%;
+        top: -25%;
+        right: 0;
+        background: url("./images/about/arrows_up.svg") no-repeat;
+        background-size: contain;
+        background-position: right;
+        content: "";
+      }
+  }
+  h2, p {
+      color: $color-white;
+  }
+  .bg-white & {
+    h2, p {
+      color: $color-white;
+    }
   }
 }

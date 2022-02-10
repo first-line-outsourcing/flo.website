@@ -10,7 +10,7 @@ export default function About() {
     <div className="heading">
       <div className="container">
         <div className="row">
-          <div className="ow-cols-1 row-cols-md-2">
+          <div className="row-cols-1 row-cols-md-2">
             <h1>Our team</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
           </div>
