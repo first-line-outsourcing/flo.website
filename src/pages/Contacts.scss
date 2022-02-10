@@ -14,12 +14,14 @@ $customBreakpointLarge: "991px";
   background-size: 35%;
 
   .contactsTitle {
-    position: absolute;
-    padding-top: 120px;
+    padding-top: 180px;
+    @include m_max {
+      padding-top: 130px;
+    }
   }
 
   .mapAndInfo {
-    padding-top: 244px;
+    padding-top: 80px;
 
     display: grid;
     grid-template-areas: "info mapContainer";
@@ -35,7 +37,7 @@ $customBreakpointLarge: "991px";
     @include m_max {
       grid-template-areas: "info info"
                         "mapContainer mapContainer";
-      padding-top: 160px;
+      padding-top: 20px;
 
     }
     @include m {
@@ -71,7 +73,7 @@ $customBreakpointLarge: "991px";
       }
 
       .address {
-        width: 260px;
+        width: 100%;
         height: 25px;
         grid-area: address;
       }
@@ -99,13 +101,13 @@ $customBreakpointLarge: "991px";
       .map {
         display: block;
         border-radius: 9px;
-        height: auto;
+        height: 354px;
         width: 100%;
         margin-left: auto;
 
         @include l_max {
           width: 100%;
-          height: auto;
+          height: 300px;
         }
         @include customBreakpointLarge {
           margin-top: 60px;
@@ -116,5 +118,9 @@ $customBreakpointLarge: "991px";
 
       }
     }
+  }
+
+  a {
+    color: white;
   }
 }

@@ -20,7 +20,7 @@ import SLS from '../images/technologies/sls.png'
 import './Technologies.scss'
 
 export default function Technologies() {
-  let cardArray = [
+  const cardArray = [
     {
       img: NodeJs,
       title: 'Node.Js',
@@ -125,23 +125,30 @@ export default function Technologies() {
     },
   ]
 
-  let cards = cardArray.map((card) => {
-    return <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={card.title}>
-      <TechnologyCard img={card.img} title={card.title} text={card.text} link={card.link}/>
-    </div>
+  const cards = cardArray.map((card) => {
+    return (
+      <div className={'col-lg-6 col-sm-12 col-md-6 col-xl-4 desktopCards'} key={card.title}>
+        <TechnologyCard img={card.img} title={card.title} text={card.text} link={card.link}/>
+      </div>
+    );
   })
 
   return (
-    <div className={'tech'}>
+    <div className={'technologiesPage'}>
       <div className="heading">
         <div className="container">
           <div className="row">
-            <div className="col-8">
-              <h1>Full-cycle development for your business needs</h1>
+            <div className="col-12 col-md-8">
+              <h1 className='technologiesTitle'>Software Development Technologies</h1>
+              <p className='technologiesDescription'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aspernatur beatae dolor enim esse
+                exercitationem fugiat hic, ipsum iure maiores omnis quam quasi quo reiciendis sunt ullam? In nemo quidem
+                quo.</p>
             </div>
           </div>
         </div>
       </div>
+
       <div className={'container'}>
         <div className={'cardContainer'}>
           <div className={'row'}>
@@ -149,6 +156,7 @@ export default function Technologies() {
           </div>
         </div>
       </div>
+
     </div>
-  )
+  );
 }

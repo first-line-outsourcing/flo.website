@@ -1,22 +1,58 @@
 @import "src/components/variables";
+
 $logoBreakpoint: 1320px;
 @mixin logoBreakpoint {
   @media (max-width: #{$logoBreakpoint}) {
     @content;
   }
 }
-.headerDescription {
-  max-width: 588px;
-}
-.bg{
- background-size: 400px;
-  background-position: 75% 100%;
-  background-repeat: no-repeat;
-@include logoBreakpoint{
-  background-size: 0;
-}
-  @include xxl{
-    background-position: 60% 100%;
+
+.technologyPage {
+  .ourCases {
+    h1 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+      @include m {
+        font-size: 40px;
+      }
+      @include m_max {
+        font-size: 24px;
+      }
+    }
+
+    margin-top: 120px;
+    @include l_max {
+      margin-top: 60px;
+    }
+
+    p {
+      max-width: 587px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
+  .headerDescription {
+    max-width: 588px;
+  }
+
+  .bg {
+    background-size: 400px;
+    background-position: 75% 100%;
+    background-repeat: no-repeat;
+    @include logoBreakpoint {
+      background-size: 0;
+    }
+    @include xxl {
+      background-position: 60% 100%;
+    }
+
+  }
+
+  .btn {
+    @include m_max {
+      width: 90%;
+    }
+  }
 }

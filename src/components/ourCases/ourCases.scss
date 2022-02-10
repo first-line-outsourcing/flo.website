@@ -1,9 +1,18 @@
-@import "../variables";
+@import '../variables';
 
-.contactUsMain {
-  p {
-    max-width: 587px;
-    margin-left: auto;
-    margin-right: auto;
+.casesWrapper {
+  background: url("../../images/cases/line.svg") no-repeat 0 0;
+  @include l_max {
+    background: none;
+
+  }
+
+  .items {
+    grid-row-gap: 50px;
+  }
+
+  padding-bottom: 80px;
+  @include m_max {
+    padding-top:0;
   }
 }
