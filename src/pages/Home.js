@@ -1,14 +1,14 @@
 import React from "react";
 import Modal from 'react-modal';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
 // import required modules
-import { Navigation } from "swiper";
+import {Navigation} from "swiper";
 
 import './Home.scss';
 import {ContactUsModal} from "../components/contactUsModal";
@@ -23,18 +23,6 @@ import servicesSlide from '../images/home/swiper/slide_1.jpg';
 import servicesSlideTwo from '../images/home/swiper/slide_2.jpg';
 import clientMedia from '../images/home/swiper/client_media.png';
 import clientPhoto from '../images/home/swiper/client_photo.png';
-
-Modal.setAppElement('#root');
-// const customStyles = {
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     transform: 'translate(-50%, -50%)',
-//   },
-// };
 
 export default function Home() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -58,12 +46,6 @@ export default function Home() {
       >
         <ContactUsModal closeModal={closeModal} title={'Contact us'}/>
       </Modal>
-      <section className="container top-section">
-        <div className="row">
-          <div className="col-7">
-            <h1 className="neon">Move <span>your business</span> forward</h1>
-            <p>Cloud web and mobile development based on serverless architecture for reaching your business goals </p>
-            <Link className="btn btn-accent" to="/services">What we do</Link>
       <section className="top-section">
         <div className="container">
           <div className="row">

@@ -95,6 +95,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $color-dark_blue;
+  .ReactModalPortal {
+    position: relative;
+    z-index: 999;
+  }
 }
 
 code {
