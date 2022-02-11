@@ -21,6 +21,22 @@
     width: 100%;
 }
 
+.full-width-sm {
+    @include s-max {
+        width: 100%;
+    }
+}
+
+.full-width-md {
+    @include m-max {
+        width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
 
 //
 //  Typography
@@ -51,6 +67,15 @@ h3 {
     font-weight: 700;
     font-size: var(--font-third-level);
     line-height: 1;
+    color: $primary-color;
+}
+
+h5 {
+    margin-bottom: calc(var(--spacer) * 0.3);
+    font-family: $HalvarMittelRg;
+    font-weight: 700;
+    font-size: var(--font-fourth-level);
+    line-height: 0.8;
     color: $primary-color;
 }
   
@@ -133,7 +158,7 @@ hr {
 
 .bg-white {
     background-color: white;
-    h1, h2, h3, p {
+    h1, h2, h3, h4, h5, p {
         color: $text-dark;
     }
     .highlighted {
