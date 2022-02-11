@@ -2,12 +2,14 @@ import React from "react";
 import DevelopmentCycle from "../components/developmentCycle/developmentCycle";
 import OurService from "../components/ourService/ourService";
 import './Technology.scss'
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import ContactUsMini from "../components/contactUsMini/contactUsMini";
 import OurCases from "../components/ourCases/ourCases";
 import NotFound from "./notFound";
+import {useNavigate} from "react-router-dom";
 
 export default function Technology() {
+  const navigate = useNavigate();
   const {technologyName} = useParams();
   const pageData = {
     angular: {
@@ -58,13 +60,13 @@ export default function Technology() {
       casesKeys: [1, 2, 3, 4]
     }
   }
-  if(!pageData.hasOwnProperty(technologyName)){
+  if (!pageData.hasOwnProperty(technologyName)) {
     return (
       <NotFound/>
     )
   }
 
-    return (
+  return (
     <div className='technologyPage'>
       <div className="heading bg" style={{
         backgroundImage: `url(
@@ -101,7 +103,7 @@ export default function Technology() {
         <OurCases casesKey={pageData[technologyName].casesKeys} background={'black'}/>
         <div className='container'>
           <div className='row justify-content-center'>
-            <button className='btn btn-accent col-1'><Link to='/cases' className='loadMore'>Load more</Link></button>
+            <button className='btn btn-accent col-1' onClick={() => navigate('/cases')}>Load more</button>
           </div>
         </div>
       </div>
