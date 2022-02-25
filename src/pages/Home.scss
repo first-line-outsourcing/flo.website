@@ -5,7 +5,7 @@
 }
 
 .top-section {
-  padding-top: calc(var(--spacer) * 7);
+  padding-top: calc(var(--spacer) * 3);
   h1 {
     padding-bottom: var(--spacer);
   }
@@ -27,6 +27,7 @@
     }
   }
   @include l {
+    padding-top: calc(var(--spacer) * 7);
     background: url("../images/home/home_heading_bg_curv.svg") no-repeat;
     background-position-x: -30px;
     p {

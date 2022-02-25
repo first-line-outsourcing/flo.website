@@ -6,7 +6,7 @@
 $color-white: #FFFFFF;
 $color-yellow: #efb104;
 $color-light_yellow: #FFF4D7;
-$color-dark_blue: #121213;
+$color-dark_blue: #111112;
 $color-blue: #2F9BFF;
 $color-black: #1B1B1F;
 
@@ -41,8 +41,8 @@ $paragraph-font: $HalvarMittelLt;
 $screen-s : 350px;
 $screen-m-max : 767px;
 $screen-m : 768px;
-$screen-l-max : 1023px;
-$screen-l : 1024px;
+$screen-l-max : 991px;
+$screen-l : 992px;
 $screen-xl : 1920px;
 $screen-xxl : 2400px;
 
@@ -109,7 +109,7 @@ $screen-xxl : 2400px;
     @include m {
         --font-second-level: 32px;
         --font-third-level: 24px;
-        
+
         --font-fifth-level: 18px;
     }
     @include l {

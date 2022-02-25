@@ -1,24 +1,3 @@
-header {
-  position: absolute;
-  width: 100%;
-}
-.navbar-nav {
-  .nav-item {
-    margin: 0 24px;
-  }
-  .nav-link {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21px;
-    letter-spacing: 0.01em;
-    color: #fff;
-    font-family: Halvar Mittel Lt, sans-serif;
-    &:hover {
-      color: #EFB104;
-    }
-  }
-}
-
 .contact-us {
   position: relative;
   overflow: hidden;
