@@ -134,7 +134,7 @@ code {
         position: absolute;
         width: 60%;
         height: 130%;
-        top: -25%;
+        bottom: 0;
         right: 0;
         background: url("./images/about/arrows_up.svg") no-repeat;
         background-size: contain;
@@ -154,17 +154,22 @@ code {
 
 .Modal {
   position: absolute;
-  background: $color-dark_blue;
   height: 100%;
   width: 100%;
+  max-height: 100vh;
   @include m {
-    border-radius: 16px;
     max-width: 652px;
     width: auto;
     height: auto;
-    margin-left: 50%;
-    margin-top: 50%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
+  }
+  .contactUsModal {
+    background: $color-dark_blue;
+    @include m {
+      border-radius: 16px;
+    }
   }
 }
 
@@ -175,4 +180,5 @@ code {
   right: 0;
   bottom: 0;
   background-color: rgba(37, 37, 37, 0.8);
+  overflow: auto;
 }

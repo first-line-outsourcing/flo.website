@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import Modal from 'react-modal';
 import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 
 import './header.scss';
+import {ContactUsModal} from "../../components/contactUsModal";
 
 import logo from '../../images/Logo.svg';
 
@@ -23,6 +25,17 @@ export default function StickyHeader() {
             setScroll(window.scrollY > 50);
         });
     }, []);
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    function openModal() {
+        setIsOpen(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    function closeModal() {
+        setIsOpen(false);
+        document.body.style.overflow = 'unset';
+    };
   
     return (
         <header className = {scroll ? "sticky-header header-scroll" : "sticky-header header-top"}>
@@ -32,7 +45,7 @@ export default function StickyHeader() {
                         <img src={logo} alt="" width={76} />
                     </Link>
                     <div className='d-inline-flex'>
-                        <button type={'button'} className="contact-button-sm"><span className='icon-envelope'></span></button>
+                        <button type={'button'} className="contact-button-sm" onClick={openModal}><span className='icon-envelope'></span></button>
                         <button className="navbar-toggler" 
                                 onClick={showNavbar}
                                 type="button">
@@ -69,10 +82,19 @@ export default function StickyHeader() {
                             {/*  <Link className='nav-link' aria-current='page' to='/technology'>Technology</Link>*/}
                             {/*</li>*/}
                         </ul>
-                        <button type={'button'} className="btn btn-accent contact-button">Contact us <span className='icon-arrow-right'></span></button>
+                        <button type={'button'} className="btn btn-accent contact-button" onClick={openModal}>Contact us <span className='icon-arrow-right'></span></button>
                     </div>
                 </div>
             </nav>
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                className="Modal"
+                overlayClassName="Overlay"
+                ariaHideApp={false}
+            >
+                <ContactUsModal closeModal={closeModal} title={'Contact us'}/>
+            </Modal>
         </header>
     );
   };

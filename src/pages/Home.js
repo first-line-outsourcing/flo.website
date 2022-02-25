@@ -282,7 +282,7 @@ export default function Home() {
             <div className="col-md-6">
               <h2>Are you ready for your business growth? </h2>
               <p className="mb-4">Let&#39;s move your business forward to the clouds! Tell us about your idea! We will interview you and offer the best solution for reaching the goal.</p>
-              <button className="btn">Contact us</button>
+              <button className="btn" onClick={openModal}>Contact us</button>
             </div>
           </div>
         </div>
