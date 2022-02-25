@@ -2,13 +2,13 @@ import React from "react";
 import DevelopmentCycle from "../components/developmentCycle/developmentCycle";
 import OurService from "../components/ourService/ourService";
 import './Technology.scss'
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import ContactUsMini from "../components/contactUsMini/contactUsMini";
 import OurCases from "../components/ourCases/ourCases";
+import NotFound from "./notFound";
 
 export default function Technology() {
   const {technologyName} = useParams();
-  let cases = [1, 2, 3, 4];
   const pageData = {
     angular: {
       headerImage: require("../images/technology/angular.png"),
@@ -55,25 +55,15 @@ export default function Technology() {
           link: "https://flo.team/"
         },
       ],
-      casesInfo: [
-        {
-          description: "We develop SaaS solutions, SPA, PWA based on serverless architecture to level up your business. We help with different tasks, the process of optimization, sales growth, and customer loyalty.",
-          mainImg: require("../images/services/webDev.jpg"),
-          link: "https://flo.team/"
-        },
-        {
-          description: "Сross-platform app development for a quick launch! Be in touch with your clients!",
-          img: require("../images/services/mobileDev.jpg"),
-          link: "https://flo.team/"
-        },
-        {
-          description: "We develop apps for private networks and for specific tasks. We customize the inner tasks of your business.",
-          img: require("../images/services/desktopApps.jpg"),
-          link: "https://flo.team/"
-        },
-      ]
+      casesKeys: [1, 2, 3, 4]
     }
   }
+  if (!pageData.hasOwnProperty(technologyName)) {
+    return (
+      <NotFound/>
+    )
+  }
+
   return (
     <div className='technologyPage'>
       <div className="heading bg" style={{
@@ -108,10 +98,12 @@ export default function Technology() {
               Animi debitis dolores itaque magni mollitia placeat quod reprehenderit tenetur vel vitae.</p>
           </div>
         </div>
-        <OurCases casesKey={cases} background={'black'}/>
+        <OurCases casesKey={pageData[technologyName].casesKeys} background={'black'}/>
         <div className='container'>
-          <div className='row justify-content-center'>
-            <button className='btn btn-accent col-1'>Load more</button>
+          <div className='text-center'>
+            <Link to='/cases'>
+              <button className='btn btn-accent'>Load more</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,123 @@
+@import "../variables";
+
+.contactUsModal {
+  padding: 32px;
+  font-family: $HalvarMittelRg;
+  font-size: 16px;
+
+  h3 {
+    font-family: $HalvarBreitXBd;
+    font-size: 24px;
+  }
+
+  label {
+    color: #C5C7CD;
+    @include m_max {
+      font-size: 20px;
+    }
+  }
+
+  input, textarea, input:focus, textarea:focus {
+    height: 48px;
+    font-size: 14px;
+    background: #121213;
+    margin-bottom: 16px;
+    border-color: #404147;
+    color: #84858A;
+    border-radius: 4px;
+  }
+
+  textarea {
+    min-height: 96px;
+    max-height: 400px;
+  }
+
+  a {
+    color: $color-yellow;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 48px;
+    height: 54px;
+    @include m {
+      width: auto;
+    }
+  }
+}
+
+.closeButton {
+  cursor: pointer;
+}
+
+.privacyPolicy {
+  input, input:focus {
+    height: 16px;
+    width: 16px;
+    margin-top: 5px;
+  }
+  label {
+    font-size: 14px;
+    color: #84858A;
+    @include m_max {
+      font-size: 19px;
+    }
+  }
+}
+
+.inputFile-box {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  background: #121213;
+  margin-bottom: 16px;
+  color: #84858A;
+  border: 1px solid #404147;
+  border-radius: 4px;
+
+  img {
+    padding: 16px;
+  }
+}
+
+.inputFile {
+  display: none;
+}
+
+
+.submitModal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @include m {
+    border-radius: 16px;
+    max-width: 652px;
+    width: auto;
+    height: auto;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modalIsSubmit {
+  width: 320px;
+  height: 210px;
+  padding: 32px;
+  background: $color-dark_blue;
+  border-radius: 16px;
+  h3 {
+    font-family: $HalvarBreitXBd;
+    width: 157px;
+    font-size: 18px;
+  }
+  button {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  @include m_max {
+    margin: 50% auto 0;
+  }
+}

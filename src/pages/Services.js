@@ -52,7 +52,7 @@ export default function Services() {
       <div className="heading">
         <div className="container">
           <div className="row">
-            <div className="col-8">
+            <div className="col-md-10">
               <h1>Full-cycle development for your business needs</h1>
             </div>
           </div>

@@ -1,16 +1,17 @@
 import React from "react";
 import Modal from 'react-modal';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
 // import required modules
-import { Navigation } from "swiper";
+import {Navigation} from "swiper";
 
 import './Home.scss';
+import {ContactUsModal} from "../components/contactUsModal";
 import headingImg from '../images/home/home_heading_video_img.png';
 import caseThumb from '../images/home/case_thumb_1.png';
 import caseThumbTwo from '../images/home/case_thumb_2.png';
@@ -23,35 +24,28 @@ import servicesSlideTwo from '../images/home/swiper/slide_2.jpg';
 import clientMedia from '../images/home/swiper/client_media.png';
 import clientPhoto from '../images/home/swiper/client_photo.png';
 
-Modal.setAppElement('#root');
-// const customStyles = {
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     transform: 'translate(-50%, -50%)',
-//   },
-// };
-
 export default function Home() {
-  // let subtitle;
-  // const [modalIsOpen, setIsOpen] = React.useState(false);
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
-  //
-  // function afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   subtitle.style.color = '#f00';
-  // }
-  //
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+    document.body.style.overflow = 'unset';
+  }
   return (
     <main className="overflow-hidden-sm">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className="Modal"
+        overlayClassName="Overlay"
+        ariaHideApp={false}
+      >
+        <ContactUsModal closeModal={closeModal} title={'Contact us'}/>
+      </Modal>
       <section className="top-section">
         <div className="container">
           <div className="row">
@@ -359,25 +353,3 @@ export default function Home() {
     </main>
   )
 }
-/*
- * <button onClick={openModal}>Open Modal</button>
- <Modal
- isOpen={modalIsOpen}
- onAfterOpen={afterOpenModal}
- onRequestClose={closeModal}
- style={customStyles}
- contentLabel="Example Modal"
- >
- <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
- <button onClick={closeModal}>close</button>
- <div>I am a modal</div>
- <form>
- <input />
- <button>tab navigation</button>
- <button>stays</button>
- <button>inside</button>
- <button>the modal</button>
- </form>
- </Modal>
- *
- * */

@@ -17,79 +17,79 @@ import amazonQuantumLedgerDB from "../../images/technologiesStack/amazonQuantumL
 import dart from "../../images/technologiesStack/dart.jpg";
 import electron from "../../images/technologiesStack/electron.jpg";
 
-export default function TechnologyItems({technologyNumbers}) {
-  const allTechnologies = [
-    {
+export default function TechnologyItems({technologies}) {
+  const allTechnologies = {
+    node: {
       name: 'Node',
       img: node,
     },
-    {
+    javaScript: {
       name: 'Java Script',
       img: javaScript,
     },
-    {
+    typeScript: {
       name: 'TypeScript',
       img: typeScript,
     },
-    {
+    angularNGXS: {
       name: 'Angular | NGXS',
       img: angularNGXS,
     },
-    {
+    react: {
       name: 'React | MobX',
       img: react,
     },
-    {
+    serverlessFramework: {
       name: 'Serverless Framework',
       img: serverlessFramework,
     },
-    {
+    express: {
       name: 'Express | Sails | Nest',
       img: express,
     },
-    {
+    aws: {
       name: 'Amazon Web Services',
       img: aws,
     },
-    {
+    gcp: {
       name: 'Google Cloud Platform',
       img: gcp,
     },
-    {
+    microsoftAzure: {
       name: 'Microsoft Azure',
       img: microsoftAzure,
     },
-    {
+    ibm: {
       name: 'IBM Cloud',
       img: ibm,
     },
-    {
+    postgreSQL: {
       name: 'PostgreSQL | MySQL | Aurora',
       img: postgreSQL,
     },
-    {
+    flutter: {
       name: 'Flutter | GetIt',
       img: flutter,
     },
-    {
+    cloudantDB: {
       name: 'CloudantDB | SQLite',
       img: cloudantDB,
     },
-    {
+    amazonQuantumLedgerDB: {
       name: 'Amazon Quantum Ledger DB',
       img: amazonQuantumLedgerDB,
     },
-    {
+    dart: {
       name: 'Dart',
       img: dart,
     },
-    {
+    electron: {
       name: 'Electron',
       img: electron,
     }
-  ]
-  const displayTechnologies = allTechnologies.filter((technology, index) =>
-    technologyNumbers.includes(index)
+  }
+  const displayTechnologies = technologies.map((technology) =>
+    allTechnologies[technology]
   )
   return (
     <div className="row justify-content-center technologies">

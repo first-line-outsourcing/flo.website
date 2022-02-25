@@ -1,100 +1,119 @@
 @import '../components/variables';
 
-.container {
-  h4 {
-    font-size: 16px;
-    width: 288px;
-    font-family: Halvar Mittel Lt, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 140%;
-    letter-spacing: 0.01em;
-    color: #FFFFFF;
-    @include m {
-      font-size: 18px;
-      width: 588px;
+.service {
+  .heading {
+    background-attachment: fixed;
+    background-position-x: center;
+    h1 {
+      margin-top: -150px;
     }
   }
-}
+  .container {
+    h4 {
+      font-size: 16px;
+      width: 288px;
+      font-family: Halvar Mittel Lt, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      color: #FFFFFF;
+      @include m {
+        font-size: 18px;
+        width: 588px;
+      }
+    }
+  }
 
-.mainPage {
-  background: url("../images/Vector 17.svg") no-repeat 0 10%;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  @include m {
-    background: url("../images/Vector 17.svg") no-repeat 70% -5%;
+  .mainPage {
+    background: url("../images/Vector 17.svg") no-repeat 0 10%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @include m {
+      background: url("../images/Vector 17.svg") no-repeat 70% -5%;
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    h3 {
+      font-size: 24px;
+      width: 288px;
+      font-family: Halvar Breit Bd, sans-serif;
+      color: $color-black;
+      @include m {
+        width: 435px;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .pageDescription {
+    h4 {
+      font-size: 18px;
+      width: 288px;
+      font-family: Halvar Mittel Lt, sans-serif;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      color: #212529;
+      @include m {
+        font-size: 24px;
+        width: 435px;
+      }
+    }
+
+    h5 {
+      margin-top: 48px;
+      width: 288px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      color: #212529;
+      @include m {
+        width: 435px;
+        margin-top: 112px;
+      }
+    }
+
+    h6 {
+      margin-top: 48px;
+      width: 288px;
+      font-size: 18px;
+      line-height: 140%;
+      color: #212529;
+      @include m {
+        width: 435px;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .ourCases {
+    max-width: 587px;
+
+  }
+
+  .ourCasesButton {
+    margin-bottom: 80px;
+  }
+
+  .technologiesStack {
     padding-top: 120px;
     padding-bottom: 120px;
   }
 
-  h3 {
-    font-size: 24px;
-    width: 288px;
-    font-family: Halvar Breit Bd, sans-serif;
-    color: $color-black;
-    @include m {
-      width: 435px;
-      font-size: 40px;
-    }
-  }
-}
-
-.pageDescription {
-  h4 {
-    font-size: 18px;
-    width: 288px;
-    font-family: Halvar Mittel Lt, sans-serif;
-    line-height: 140%;
-    letter-spacing: 0.01em;
-    color: #212529;
-    @include m {
-      font-size: 24px;
-      width: 435px;
-    }
+  .itemsContainer {
+    max-width: 900px;
   }
 
-  h5 {
-    margin-top: 48px;
-    width: 288px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    color: #212529;
-    @include m {
-      width: 435px;
-      margin-top: 112px;
-    }
-  }
+  .workProcess {
+    padding-top: 80px;
+    max-width: 600px;
 
-  h6 {
-    margin-top: 48px;
-    width: 288px;
-    font-size: 18px;
-    line-height: 140%;
-    color: #212529;
-    @include m {
-      width: 435px;
-      margin-top: 16px;
-    }
-  }
-}
-
-.technologiesStack {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.itemsContainer {
-  max-width: 900px;
-}
-
-.workProcess {
-  padding-top: 80px;
-  max-width: 600px;
-  p {
-    font-size: 18px;
-    @include m {
-      font-size: 24px;
+    p {
+      font-size: 18px;
+      @include m {
+        font-size: 24px;
+      }
     }
   }
 }

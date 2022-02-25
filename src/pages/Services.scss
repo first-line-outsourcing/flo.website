@@ -1,13 +1,27 @@
 @import '../components/variables';
 
 .services {
-  background-size: cover;
-  background: url("../images/Vector 17.svg") no-repeat 44% 150%;
+  @include l {
+    background-size: cover;
+    background: url("../images/Vector 17.svg") no-repeat 44% 150%;
+  }
 
   .heading {
+    height: 544px;
     background: linear-gradient(90.22deg, rgba(0, 0, 0, 0.8) 0.18%, rgba(0, 0, 0, 0) 99.8%), url("../images/services.jpg");
     background-size: cover;
-    background-position-y: 40%;
+    background-attachment: fixed;
+    background-position-y: -100px;
+    background-position-x: center;
+  }
+
+  h1 {
+    @include l_max {
+      position: static;
+      font-size: 32px;
+      line-height: 37px;
+      margin-top: 0;
+    }
   }
 }
 
@@ -16,6 +30,10 @@
   overflow: hidden;
   padding-top: 80px;
   margin-bottom: 70px;
+  @include l_max {
+    border-bottom: 1px solid #54420f;
+    margin-bottom: 0;
+  }
 
   h3 {
     font-size: 40px;
@@ -23,6 +41,9 @@
     font-weight: bold;
     font-family: Halvar Breit Bd, sans-serif;
     color: $color-white;
+    @include l_max {
+      font-size: 24px;
+    }
   }
 
   p {
@@ -33,44 +54,9 @@
     font-family: Halvar Mittel Lt, sans-serif;
     color: $color-white;
     width: 588px;
-  }
-}
-
-@media (max-width: $Small) {
-  .services {
-    background: none;
-
-    h1 {
-      position: static;
-      width: 288px;
-      height: 185px;
-      left: 0;
-      top: 0;
-      font-size: 32px;
-      line-height: 37px;
-    }
-
-    h3 {
-      font-size: 24px;
-    }
-
-    p {
+    @include l_max {
       font-size: 16px;
       width: 281px;
-    }
-  }
-  .title {
-    border-bottom: 1px solid #54420f;
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: $ExtraLarge) {
-  .services {
-    background: none;
-
-    h1 {
-      font-size: 36px;
     }
   }
 }
