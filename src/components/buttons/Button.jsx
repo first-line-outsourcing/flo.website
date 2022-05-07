@@ -5,11 +5,11 @@ import * as styles from './Button.module.css';
 /**
  * Button
  *
- * @param props
- * @param {'accent'} [props.theme] Button theme
- * @param {'l' | 'xl'} [props.size] Button size
+ * @param {React.ButtonHTMLAttributes} props Props
+ * @param {'accent'} [props.theme] Theme
+ * @param {'l' | 'xl'} [props.size] Size
  * @param {boolean} [props.full] Fit full width of parent container
- * @param {boolean} [props.responsiveFull] Fit full width of parent container on mobile
+ * @param {boolean} [props.responsiveFull] Fit full width of parent container only on mobile
  * @returns {JSX.Element}
  * @constructor
  */
