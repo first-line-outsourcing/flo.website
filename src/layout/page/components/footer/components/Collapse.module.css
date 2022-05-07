@@ -1,0 +1,59 @@
+.root {
+
+}
+
+.root > h6 {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: var(--font-family-Halvar-Mittel-Bd);
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .root > h6 {
+    cursor: default;
+    display: block;
+  }
+}
+
+.content {
+  padding-top: 16px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding-top: 40px;
+    display: block;
+  }
+}
+
+.root.open > .content {
+  display: block;
+}
+
+
+.root > h6:after {
+  content: '';
+  margin-left: auto;
+  flex: 0 0 auto;
+  transform: rotate(180deg);
+  background: url('../../../../../images/arrowTop.svg') no-repeat;
+  display: block;
+  width: 12px;
+  height: 7px;
+}
+
+@media (min-width: 768px) {
+  .root > h6:after {
+    display: none;
+  }
+}
+
+.root.open > h6:after {
+  transform: unset;
+}

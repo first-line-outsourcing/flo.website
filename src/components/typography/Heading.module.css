@@ -1,0 +1,14 @@
+.h1 {
+  font-family: var(--font-family-Halvar-Breit-XBd);
+  margin-top: 0;
+  font-size: 32px;
+  line-height: 37px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 778px) {
+  .h1 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}

@@ -1,0 +1,43 @@
+.root {
+  list-style: none;
+  padding: 146px 0 96px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .root {
+    flex-wrap: initial;
+  }
+}
+
+.root > li > span {
+  font-size: 40px;
+  line-height: 46px;
+  font-family: var(--font-family-Halvar-Breit-XBd);
+}
+
+.root > li > p {
+  max-width: 152px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.root > li {
+  text-align: center;
+  flex: 1 0 50%;
+  padding: 0 12px;
+}
+
+@media (min-width: 768px) {
+  .root > li {
+    flex: initial;
+  }
+}
+
+@media (min-width: 1440px) {
+  .root > li > span {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}

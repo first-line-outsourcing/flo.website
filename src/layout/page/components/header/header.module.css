@@ -1,0 +1,45 @@
+.root {
+  box-sizing: content-box;
+  position: relative;
+}
+
+.logoContainer {
+  height: 26px;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .logoContainer {
+    height: 46px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logoContainer {
+    height: 62px;
+  }
+}
+
+.logoLink {
+  display:inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+
+.logoLink > img,
+.logoLink > svg {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  height: 100%;
+}
+
+.heroContainer {
+
+}
+
+.link {
+  font-size: 18px;
+  line-height: 21px;
+}
+

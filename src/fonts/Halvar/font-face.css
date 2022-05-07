@@ -1,0 +1,107 @@
+/* Halvar Breit */
+
+:root {
+  --font-family-Halvar-Breit-XBd: 'Halvar Breit XBd';
+  --font-family-Halvar-Breit-Md: 'Halvar Breit Md';
+  --font-family-Halvar-Breit-Rg: 'Halvar Breit Rg';
+}
+
+@font-face {
+  font-family: 'Halvar Breit XBd';
+  src: url('./HalvarBreit-XBd.eot');
+  src: local('Halvar Breitschrift ExtraBold'), local('HalvarBreit-XBd'),
+  url('./HalvarBreit-XBd.eot?#iefix') format('embedded-opentype'),
+  url('./HalvarBreit-XBd.woff2') format('woff2'),
+  url('./HalvarBreit-XBd.woff') format('woff'),
+  url('./HalvarBreit-XBd.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Breit Bd';
+  src: url('./HalvarBreit-Bd.eot');
+  src: local('Halvar Breitschrift Bold'), local('HalvarBreit-Bd'),
+  url('./HalvarBreit-Bd.eot?#iefix') format('embedded-opentype'),
+  url('./HalvarBreit-Bd.woff2') format('woff2'),
+  url('./HalvarBreit-Bd.woff') format('woff'),
+  url('./HalvarBreit-Bd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Breit Rg';
+  src: url('./HalvarBreit-Rg.eot');
+  src: local('Halvar Breitschrift Bold'), local('HalvarBreit-Rg'),
+  url('./HalvarBreit-Rg.eot?#iefix') format('embedded-opentype'),
+  url('./HalvarBreit-Rg.woff2') format('woff2'),
+  url('./HalvarBreit-Rg.woff') format('woff'),
+  url('./HalvarBreit-Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Halvar Mittel */
+
+:root {
+  --font-family-Halvar-Mittel-Lt: 'Halvar Mittel Lt';
+  --font-family-Halvar-Mittel-Md: 'Halvar Mittel Md';
+  --font-family-Halvar-Mittel-Rg: 'Halvar Mittel Rg';
+  --font-family-Halvar-Mittel-Bd: 'Halvar Mittel Bd';
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Lt';
+  src: url('./HalvarMittel-Lt.eot');
+  src: local('Halvar Mittelschrift Light'), local('HalvarMittel-Lt'),
+  url('./HalvarMittel-Lt.eot?#iefix') format('embedded-opentype'),
+  url('./HalvarMittel-Lt.woff2') format('woff2'),
+  url('./HalvarMittel-Lt.woff') format('woff'),
+  url('./HalvarMittel-Lt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Md';
+  src: url('./HalvarMittel-Md.eot');
+  src: local('Halvar Mittelschrift Medium'), local('HalvarMittel-Md'),
+  url('./HalvarMittel-Md.eot?#iefix') format('embedded-opentype'),
+  url('./HalvarMittel-Md.woff2') format('woff2'),
+  url('./HalvarMittel-Md.woff') format('woff'),
+  url('./HalvarMittel-Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Rg';
+  src: url('./HalvarMittel-Rg.eot');
+  src: local('Halvar Mittelschrift Regular'), local('HalvarMittel-Rg'),
+  url('./HalvarMittel-Rg.eot?#iefix') format('embedded-opentype'),
+  url('./HalvarMittel-Rg.woff2') format('woff2'),
+  url('./HalvarMittel-Rg.woff') format('woff'),
+  url('./HalvarMittel-Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halvar Mittel Bd';
+  src: url('./HalvarMittel-Bd.eot');
+  src: local('Halvar Mittelschrift Bold'), local('HalvarMittel-Bd'),
+  url('./HalvarMittel-Bd.eot?#iefix') format('embedded-opentype'),
+  url('./HalvarMittel-Bd.woff2') format('woff2'),
+  url('./HalvarMittel-Bd.woff') format('woff'),
+  url('./HalvarMittel-Bd.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

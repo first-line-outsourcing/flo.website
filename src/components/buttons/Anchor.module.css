@@ -1,0 +1,11 @@
+:global(.anchor) {
+  font-family: var(--font-family-Halvar-Mittel-Lt), sans-serif;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+:global(.anchor):hover {
+  color: #efb104;
+}
