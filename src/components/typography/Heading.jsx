@@ -6,6 +6,18 @@ function H1(props) {
   return <h1 {...props} className={classNames(styles.h1, props.className)} />;
 }
 
+/**
+ * Heading
+ *
+ * How to use
+ *
+ * Heading = <h1>
+ * Heading.H1 = <h1>
+ *
+ * @param {React.HTMLAttributes} props Props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function Heading(props) {
   return <H1 {...props}/>
 }

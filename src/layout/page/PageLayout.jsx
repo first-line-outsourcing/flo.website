@@ -5,10 +5,12 @@ import {Header} from './components/header/Header';
 
 
 /**
+ * Page layout
  *
  * @param props
- * @param {React.ReactElement} [props.hero] Hero
- * @param {string} [props.heroRootClassName] Hero root className
+ * @param {React.ReactElement} [props.children] Page content
+ * @param {React.ReactElement} [props.hero] Hero content
+ * @param {string} [props.heroRootClassName] Hero container className
  * @returns {JSX.Element}
  * @constructor
  */

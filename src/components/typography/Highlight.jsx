@@ -13,6 +13,24 @@ function Blink(props) {
   return <span className={styles.blink} style={{animationDuration: `${seconds}s`}}>{props.children}</span>;
 }
 
+/**
+ * Highlight text
+ *
+ * Highlight.Blink - Make text blinking
+ *
+ * Hot to use
+ * ```
+ * <Highlight>
+ *   te
+ *   <Highlight.Blink>x</Highlight.Blink>
+ *   t
+ * </Highlight>
+ * ```
+ *
+ * @param {React.HTMLAttributes} props Props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function Highlight(props) {
   return (<span {...props} className={classNames(styles.root, props.className)} />);
 }
