@@ -6,6 +6,7 @@ import {Paragraph} from '../../components/typography/Paragraph';
 import {PageLayout} from '../../layout/page/PageLayout';
 import * as styles from './Home.module.css';
 import videoPlaceholderImage from './images/hero_video_placeholder.png';
+import heroCurvImage from './images/hero_curv.svg';
 import {AboutUs} from './sections/about-us/AboutUs';
 import {Numbers} from './sections/Numbers';
 
@@ -25,7 +26,10 @@ function Hero() {
             <Button theme="accent" size="xl" responsiveFull>What we do</Button>
           </div>
           <div className={styles.heroVideoPlaceholder}>
-            <img src={videoPlaceholderImage} alt="Video placeholder"/>
+            <div>
+              <img src={videoPlaceholderImage} alt="Video placeholder"/>
+              <img className={styles.heroVideoPlaceholderCurv} src={heroCurvImage} />
+            </div>
           </div>
         </div>
       </PageLayout.Container>
