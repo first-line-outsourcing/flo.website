@@ -6,6 +6,7 @@ import {Paragraph} from '../../components/typography/Paragraph';
 import {PageLayout} from '../../layout/page/PageLayout';
 import * as styles from './Home.module.css';
 import videoPlaceholderImage from './images/hero_video_placeholder.png';
+import {AboutUs} from './sections/about-us/AboutUs';
 import {Numbers} from './sections/Numbers';
 
 function Hero() {
@@ -39,6 +40,7 @@ export function Home(props) {
       heroRootClassName={styles.heroRoot}
     >
       <Numbers />
+      <AboutUs />
     </PageLayout>
   );
 }

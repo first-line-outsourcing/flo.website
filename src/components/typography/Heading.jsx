@@ -6,6 +6,11 @@ function H1(props) {
   return <h1 {...props} className={classNames(styles.h1, props.className)} />;
 }
 
+function H2(props) {
+  return <h2 {...props} className={classNames(styles.h2, props.className)} />;
+}
+
+
 /**
  * Heading
  *
@@ -23,3 +28,4 @@ export function Heading(props) {
 }
 
 Heading.H1 = H1;
+Heading.H2 = H2;
