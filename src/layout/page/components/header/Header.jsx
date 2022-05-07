@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 import {DesktopMenu} from './components/DesktopMenu';
-import {MobileMenu} from './components/mobile-menu/MobileMenu';
-import * as styles from './header.module.css';
+import {MobileMenu} from './components/MobileMenu';
+import * as styles from './Header.module.css';
 
 export function Header(props) {
   return (

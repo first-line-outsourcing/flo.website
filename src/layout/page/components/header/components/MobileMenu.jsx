@@ -1,15 +1,15 @@
 import classNames from 'classnames';
 import {Link} from 'gatsby';
 import React, {useLayoutEffect, useState} from 'react';
-import {Button} from '../../../../../../components/buttons/Button';
-import {HumburgerButton} from '../../../../../../components/buttons/HumburgerButton';
-import {FacebookSocialLink} from '../../../../../../components/buttons/social/FacebookSocialLink';
-import {InSocialLink} from '../../../../../../components/buttons/social/InSocialLink';
-import {InstagramSocialLink} from '../../../../../../components/buttons/social/InstagramSocialLink';
-import ArrowRightImage from '../../../../../../images/arrowRight.inline.svg';
-import LogoImage from '../../../../../../images/Logo.inline.svg';
-import {BasicLayout} from '../../../../../basic/BasicLayout';
-import * as styles from '../../header.module.css';
+import {Button} from '../../../../../components/buttons/Button';
+import {HumburgerButton} from '../../../../../components/buttons/HumburgerButton';
+import {FacebookSocialLink} from '../../../../../components/buttons/social/FacebookSocialLink';
+import {InSocialLink} from '../../../../../components/buttons/social/InSocialLink';
+import {InstagramSocialLink} from '../../../../../components/buttons/social/InstagramSocialLink';
+import ArrowRightImage from '../../../../../images/arrowRight.inline.svg';
+import LogoImage from '../../../../../images/Logo.inline.svg';
+import {BasicLayout} from '../../../../basic/BasicLayout';
+import * as styles from '../Header.module.css';
 import * as mobileStyles from './MobileMenu.module.css';
 
 export function MobileMenu() {

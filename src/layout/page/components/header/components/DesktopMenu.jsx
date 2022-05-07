@@ -5,7 +5,7 @@ import {Button} from '../../../../../components/buttons/Button';
 import ArrowRightImage from '../../../../../images/arrowRight.inline.svg';
 import LogoImage from '../../../../../images/Logo.inline.svg';
 import {BasicLayout} from '../../../../basic/BasicLayout';
-import * as styles from '../header.module.css';
+import * as styles from '../Header.module.css';
 import * as desktopStyles from './DesktopMenu.module.css';
 
 

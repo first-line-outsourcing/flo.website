@@ -5,7 +5,7 @@ import {FacebookSocialLink} from '../../../../components/buttons/social/Facebook
 import {InSocialLink} from '../../../../components/buttons/social/InSocialLink';
 import {InstagramSocialLink} from '../../../../components/buttons/social/InstagramSocialLink';
 import {PageLayout} from '../../PageLayout';
-import * as mobileStyles from '../header/components/mobile-menu/MobileMenu.module.css';
+import * as mobileStyles from '../header/components/MobileMenu.module.css';
 import {Collapse} from './components/Collapse';
 import * as styles from './Footer.module.css';
 import LogoImage from '../../../../images/Logo.inline.svg';
