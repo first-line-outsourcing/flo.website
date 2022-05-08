@@ -28,6 +28,41 @@
   }
 }
 
+.container.containerResetLeft,
+.container.containerResetRight {
+  margin: initial;
+  padding: 0;
+  max-width: initial;
+}
+
+.container.containerResetLeft {
+  margin-left: -16px;
+}
+
+.container.containerResetRight {
+  margin-right: -16px;
+}
+
+@media (min-width: 768px) {
+  .container.containerResetLeft {
+    margin-left: -40px;
+  }
+
+  .container.containerResetRight {
+    margin-right: -40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container.containerResetLeft {
+    margin-left: -120px;
+  }
+
+  .container.containerResetRight {
+    margin-right: -120px;
+  }
+}
+
 .layout.fitParentHeight {
   height: 100%;
   min-height: 0;

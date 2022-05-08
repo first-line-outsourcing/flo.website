@@ -1,0 +1,93 @@
+.root {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.content {}
+
+@media (min-width: 1440px) {
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.swiperWidthFix {
+  width: calc(236px * 3 + 24px * 2);
+}
+
+@media (min-width: 768px) {
+  .swiperWidthFix {
+    width: calc(275px * 3 + 24px * 2);
+  }
+}
+
+@media (min-width: 768px) {
+  .swiperWidthFix {
+    width: calc(283px * 3 + 24px * 2);
+  }
+}
+
+.swiperContainer {
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .swiperContainer {
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .swiperContainer {
+    margin-top: 0;
+  }
+}
+
+.controls {
+  padding-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    padding-top: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .controls {
+    padding-top: 0;
+  }
+}
+
+.controls > button + button {
+  margin-left: 24px;
+}
+
+.swiperMostOuterContainer {
+
+}
+
+@media (min-width: 1440px) {
+  .swiperMostOuterContainer {
+    margin-left: auto;
+  }
+}
+
+.text {}
+
+@media (min-width: 1440px) {
+  .text {
+    flex-basis: 491px;
+    padding-right: 56px;
+    flex-shrink: 0;
+  }
+}

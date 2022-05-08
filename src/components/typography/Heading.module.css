@@ -34,3 +34,18 @@
     line-height: 46px;
   }
 }
+
+.h4 {
+  font-family: var(--font-family-Halvar-Breit-XBd);
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 18px;
+}
+
+@media (min-width: 768px) {
+  .h4 {
+    font-size: 24px;
+    line-height: 27px;
+  }
+}

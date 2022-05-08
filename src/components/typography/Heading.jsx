@@ -10,6 +10,10 @@ function H2(props) {
   return <h2 {...props} className={classNames(styles.h2, props.className)} />;
 }
 
+function H4(props) {
+  return <h4 {...props} className={classNames(styles.h4, props.className)} />;
+}
+
 
 /**
  * Heading
@@ -18,6 +22,8 @@ function H2(props) {
  *
  * Heading = <h1>
  * Heading.H1 = <h1>
+ * Heading.H2 = <h2>
+ * Heading.H4 = <h4>
  *
  * @param {React.HTMLAttributes} props Props
  * @returns {JSX.Element}
@@ -29,3 +35,4 @@ export function Heading(props) {
 
 Heading.H1 = H1;
 Heading.H2 = H2;
+Heading.H4 = H4;

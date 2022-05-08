@@ -55,6 +55,12 @@ module.exports = {
         "path": `${__dirname}/src/pages`
       },
       __key: "pages"
-    }
+    },
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: `Json`, // a fixed string
+      },
+    },
   ]
 };

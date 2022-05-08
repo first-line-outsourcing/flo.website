@@ -9,6 +9,7 @@ import videoPlaceholderImage from './images/hero_video_placeholder.png';
 import heroCurvImage from './images/hero_curv.svg';
 import {AboutUs} from './sections/about-us/AboutUs';
 import {Numbers} from './sections/Numbers';
+import {OurServices} from './sections/our-services/OurServices';
 
 function Hero() {
   return (
@@ -45,6 +46,7 @@ export function Home(props) {
     >
       <Numbers />
       <AboutUs />
+      <OurServices />
     </PageLayout>
   );
 }
