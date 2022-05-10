@@ -14,7 +14,7 @@
     "build:dev": "ENV=development gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy:dev:ci": "DOTENV_CONFIG_PATH=.env.development npx --node-options \"-r dotenv/config\" gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E25K6G2FOUH28O --paths \"/*\"",
+    "deploy:dev:ci": "DOTENV_CONFIG_PATH=.env.development npx --node-options \"-r dotenv/config\" gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E25K6G2FOUH28O --paths \"/*\" --region us-east-1",
     "deploy:dev": "DOTENV_CONFIG_PATH=.env.development npx --node-options \"-r dotenv/config\" gatsby-plugin-s3 deploy && aws --profile=flo-website cloudfront create-invalidation --distribution-id E25K6G2FOUH28O --paths \"/*\"",
     "deploy:prod": "DOTENV_CONFIG_PATH=.env.production npx --node-options \"-r dotenv/config\" gatsby-plugin-s3 deploy && aws --profile=flo-website cloudfront create-invalidation --distribution-id __ID__ --paths \"/*\"",
     "deploy:prod:ci": "DOTENV_CONFIG_PATH=.env.production npx --node-options \"-r dotenv/config\" gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id __ID__ --paths \"/*\""
