@@ -24,6 +24,7 @@ jobs:
           echo "AWS_BUCKET_NAME=${{ secrets.AWS_BUCKET_NAME }}" >> .env.developemnt
           echo "AWS_BUCKET_PREFIX=${{ secrets.AWS_BUCKET_PREFIX }}" >> .env.developemnt
           echo "SITE_URL=${{ secrets.SITE_URL }}" >> .env.development
+          cat .env.development
 
       - name: Build
         run: npm run build:dev
