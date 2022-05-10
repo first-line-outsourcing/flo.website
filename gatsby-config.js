@@ -4,6 +4,8 @@ const siteURL = new URL(process.env.SITE_URL || 'https://localhost');
 
 console.info('env=%s', env);
 console.info('site url=%s', siteURL);
+console.info('bucket name=%s', process.env.AWS_BUCKET_NAME);
+console.info('bucket prefix=%s', process.env.AWS_BUCKET_PREFIX);
 
 module.exports = {
   siteMetadata: {
