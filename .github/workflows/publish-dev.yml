@@ -20,9 +20,9 @@ jobs:
 
       - name: Add .env.development
         run: |
-          echo "AWS_BUCKET_NAME=${{ AWS_BUCKET_NAME }}" >> .env.developemnt
-          echo "AWS_BUCKET_PREFIX=${{ AWS_BUCKET_PREFIX }}" >> .env.developemnt
-          echo "SITE_URL=${{ SITE_URL }}" >> .env.development
+          echo "AWS_BUCKET_NAME=$AWS_BUCKET_NAME" >> .env.developemnt
+          echo "AWS_BUCKET_PREFIX=$AWS_BUCKET_PREFIX" >> .env.developemnt
+          echo "SITE_URL=$SITE_URL" >> .env.development
 
       - name: Build
         run: npm run build:dev
