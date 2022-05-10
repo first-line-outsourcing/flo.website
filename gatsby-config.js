@@ -1,3 +1,10 @@
+const {env} = require('./load-env');
+
+const siteURL = new URL(process.env.SITE_URL || 'https://localhost');
+
+console.info('env=%s', env);
+console.info('site url=%s', siteURL);
+
 module.exports = {
   siteMetadata: {
     title: `flo.website`,
@@ -59,8 +66,24 @@ module.exports = {
     {
       resolve: `gatsby-transformer-json`,
       options: {
-        typeName: `Json`, // a fixed string
+        typeName: `Json`,
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: siteURL.toString(),
+        stripQueryString: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.AWS_BUCKET_NAME,
+        bucketPrefix: process.env.AWS_BUCKET_PREFIX,
+        protocol: siteURL.protocol,
+        hostname: siteURL.hostname,
+      },
+    }
   ]
 };
