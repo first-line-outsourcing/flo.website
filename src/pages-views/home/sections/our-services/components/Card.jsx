@@ -23,9 +23,15 @@ export function Card(props) {
       style={{
         backgroundImage: `url(${props.background})`
       }}
+      to={props.link}
     >
       <Heading.H4>{props.title}</Heading.H4>
-      <Paragraph>{props.description}</Paragraph>
+      <Paragraph
+        size="s"
+        style={{
+          minHeight: 75
+        }}
+      >{props.description}</Paragraph>
     </Link>
   );
 }

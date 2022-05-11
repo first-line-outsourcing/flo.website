@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function WebDevelopment({pageContext}) {
+export function TechDesign({pageContext}) {
   return 'TODO';
 }
 

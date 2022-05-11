@@ -1,12 +1,31 @@
 .root {
+  overflow: hidden;
+}
+
+.container {
   padding-top: 40px;
   padding-bottom: 40px;
+  position: relative;
+}
+
+.container > .curv {
+  display: none;
+  position: absolute;
+  top: 419px;
+  left: 637px;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
-  .root {
+  .container {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container > .curv {
+    display: block;
   }
 }
 

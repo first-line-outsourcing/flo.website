@@ -1,5 +1,5 @@
 {
-  "cardBg": "./home_card_bg.png",
-  "shortTitle": "Test",
-  "shortDescription": "Test"
+  "cardBg": "./home_card_bg.jpg",
+  "shortTitle": "Web dev",
+  "shortDescription": "SaaS, single page applications, progressive web applications"
 }

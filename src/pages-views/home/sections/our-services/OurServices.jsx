@@ -1,15 +1,15 @@
 import {graphql, useStaticQuery} from 'gatsby';
 import React, {useCallback, useRef} from 'react';
-import {FreeMode} from 'swiper';
+import 'swiper/css/free-mode'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {ArrowButton} from '../../../../components/buttons/arrow/ArrowButton';
 import {Heading} from '../../../../components/typography/Heading';
 import {Highlight} from '../../../../components/typography/Highlight';
 import {Paragraph} from '../../../../components/typography/Paragraph';
 import {PageLayout} from '../../../../layout/page/PageLayout';
-import 'swiper/css/free-mode'
 import {Card} from './components/Card';
 import * as styles from './OurServices.module.css';
+import curvImage from './images/curv.svg';
 
 function useServicesList() {
   const data = useStaticQuery(graphql`
@@ -40,7 +40,7 @@ function useServicesList() {
       path: n.node.path,
       title: metadata.shortTitle,
       description: metadata.shortDescription,
-      cardBg: metadata.cardBg.publicURL,
+      cardBg: metadata.cardBg.publicURL
     });
   });
 }
@@ -67,7 +67,8 @@ export function OurServices(props) {
 
   return (
     <section className={styles.root}>
-      <PageLayout.Container>
+      <PageLayout.Container className={styles.container}>
+        <img src={curvImage} className={styles.curv} />
         <div className={styles.content}>
           <div className={styles.text}>
             <Heading.H2>
@@ -80,7 +81,9 @@ export function OurServices(props) {
               style={{
                 maxWidth: 396
               }}
-            >We provide high-quality services to help your business grow. We aren’t about just closing tickets in Jira – we help your business to conquer new heights!</Paragraph>
+              size="s"
+            >We provide high-quality services to help your business grow. We aren’t about just closing tickets in Jira –
+              we help your business to conquer new heights!</Paragraph>
           </div>
           <div className={styles.swiperMostOuterContainer}>
             <PageLayout.Container reset="right">
@@ -89,10 +92,8 @@ export function OurServices(props) {
                   <Swiper
                     spaceBetween={24}
                     slidesPerView={Math.min(3, services.length)}
+                    rewind
                     loop
-                    freeMode={false}
-                    modules={[FreeMode]}
-                    rewind={false}
                     onSwiper={(swiper) => swiperRef.current = swiper}
                   >
                     {
