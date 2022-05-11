@@ -3,6 +3,11 @@
   text-shadow: 0 0 30px #efb104;
 }
 
+.solid {
+  color: #efb104;
+  text-shadow: none;
+}
+
 /* Thank to https://codepen.io/nodws/pen/WNjXbr */
 .blink {
   animation: blink linear infinite 3s;

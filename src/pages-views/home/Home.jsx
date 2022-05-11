@@ -8,6 +8,7 @@ import {PageLayout} from '../../layout/page/PageLayout';
 import * as styles from './Home.module.css';
 import heroCurvImage from './images/hero_curv.svg';
 import {AboutUs} from './sections/about-us/AboutUs';
+import {Cases} from './sections/cases/Cases';
 import {Numbers} from './sections/Numbers';
 import {OurServices} from './sections/our-services/OurServices';
 
@@ -47,6 +48,7 @@ export function Home(props) {
       <Numbers />
       <AboutUs />
       <OurServices />
+      <Cases />
     </PageLayout>
   );
 }

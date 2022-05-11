@@ -28,11 +28,14 @@ function Blink(props) {
  * ```
  *
  * @param {React.HTMLAttributes} props Props
+ * @param {'solid'} [props.theme] Theme.
  * @returns {JSX.Element}
  * @constructor
  */
 export function Highlight(props) {
-  return (<span {...props} className={classNames(styles.root, props.className)} />);
+  return (<span {...props} className={classNames(styles.root, props.className, {
+    [styles.solid]: props.theme === 'solid'
+  })} />);
 }
 
 Highlight.Blink = Blink;
