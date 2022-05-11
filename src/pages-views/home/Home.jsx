@@ -1,3 +1,4 @@
+import {StaticImage} from 'gatsby-plugin-image';
 import * as React from 'react';
 import {Button} from '../../components/buttons/Button';
 import {Heading} from '../../components/typography/Heading';
@@ -5,7 +6,6 @@ import {Highlight} from '../../components/typography/Highlight';
 import {Paragraph} from '../../components/typography/Paragraph';
 import {PageLayout} from '../../layout/page/PageLayout';
 import * as styles from './Home.module.css';
-import videoPlaceholderImage from './images/hero_video_placeholder.png';
 import heroCurvImage from './images/hero_curv.svg';
 import {AboutUs} from './sections/about-us/AboutUs';
 import {Numbers} from './sections/Numbers';
@@ -28,7 +28,7 @@ function Hero() {
           </div>
           <div className={styles.heroVideoPlaceholder}>
             <div>
-              <img src={videoPlaceholderImage} alt="Video placeholder"/>
+              <StaticImage src="./images/hero_video_placeholder.png" alt="Video placeholder"/>
               <img className={styles.heroVideoPlaceholderCurv} src={heroCurvImage} />
             </div>
           </div>
