@@ -1,5 +1,5 @@
 import {Link} from 'gatsby';
-import {StaticImage} from 'gatsby-plugin-image';
+import {GatsbyImage, StaticImage} from 'gatsby-plugin-image';
 import React from 'react';
 import {TechIcon} from '../../../../../components/icons/tech/TechIcon';
 import {Heading} from '../../../../../components/typography/Heading';
@@ -20,7 +20,7 @@ const iconsMap = {
  * @param props
  * @param {String} props.title Title
  * @param {String} props.link Link to page
- * @param {String} props.preview Preview image
+ * @param {import('gatsby-plugin-image').IGatsbyImageData} props.preview Preview image
  * @param {String[]} props.techList List of technologies
  * @returns {JSX.Element}
  * @constructor
@@ -30,7 +30,7 @@ export function Card(props) {
     <div className={styles.root}>
       <Link className={styles.linkable} to={props.link}>
         <div className={styles.previewContainer}>
-          <img className={styles.preview} src={props.preview}  alt="Preview"/>
+          <GatsbyImage className={styles.preview} image={props.preview}  alt="Preview"/>
         </div>
         <Heading.H4 className={styles.title} theme="black">{props.title}</Heading.H4>
       </Link>

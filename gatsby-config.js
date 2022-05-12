@@ -64,19 +64,26 @@ module.exports = {
         "path": `${__dirname}/src/pages`
       },
       __key: "pages"
+    },{
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "cases",
+        "path": `${__dirname}/content/cases`
+      },
+      __key: "cases"
     },
     {
       resolve: `gatsby-transformer-json`,
       options: {
-        typeName: `Json`,
-      },
+        typeName: `Json`
+      }
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: siteURL.toString(),
-        stripQueryString: true,
-      },
+        stripQueryString: true
+      }
     },
     {
       resolve: `gatsby-plugin-s3`,
@@ -84,8 +91,8 @@ module.exports = {
         bucketName: process.env.AWS_BUCKET_NAME,
         bucketPrefix: process.env.AWS_BUCKET_PREFIX,
         protocol: siteURL.protocol,
-        hostname: siteURL.hostname,
-      },
+        hostname: siteURL.hostname
+      }
     }
   ]
 };
