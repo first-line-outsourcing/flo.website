@@ -1,0 +1,22 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  color: #1B1B1F;
+  fill: #ffffff;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+}
+
+.root svg {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.root.light {
+  color: #ffffff;
+  fill: #1B1B1F;
+}

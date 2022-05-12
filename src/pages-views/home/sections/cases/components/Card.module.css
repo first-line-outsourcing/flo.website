@@ -1,0 +1,73 @@
+.root {
+
+}
+
+.linkable {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.preview {
+  width: 100%;
+  vertical-align: top;
+}
+
+.previewContainer {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1440px) {
+  .title {
+    margin-top: 24px;
+  }
+}
+
+.techList {
+  list-style: none;
+  padding: 8px 0 0 0;
+  margin: 0;
+}
+
+.techList > li {
+  display: inline-block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 10px;
+}
+
+.techList > li + li {
+  margin-left: 16px;
+}
+
+.techList > li > i {
+  font-size: 12px;
+}
+
+.techList > li > span {
+  margin-left: 4px;
+  font-size: 9px;
+  font-family: var(--font-family-Halvar-Breit-Rg);
+  letter-spacing: 0.01em;
+  color: #1B1B1F;
+}
+
+@media (min-width: 768px) {
+  .techList {
+    padding-top: 16px;
+  }
+
+  .techList > li + li {
+    margin-left: 24px;
+  }
+
+  .techList > li > i {
+    font-size: 16px;
+  }
+}
