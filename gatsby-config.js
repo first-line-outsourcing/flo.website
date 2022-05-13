@@ -71,11 +71,23 @@ module.exports = {
         "path": `${__dirname}/content/cases`
       },
       __key: "cases"
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "testimonials",
+        "path": `${__dirname}/content/testimonials`
+      },
+      __key: "testimonials"
     },
     {
       resolve: `gatsby-transformer-json`,
       options: {
-        typeName: `Json`
+        typeName: ({node, object, isArray}) => {
+          if (node.sourceInstanceName === 'testimonials') {
+            return 'Testimonials';
+          }
+          return 'Json'
+        }
       }
     },
     {

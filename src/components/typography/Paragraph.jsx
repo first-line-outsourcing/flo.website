@@ -14,5 +14,6 @@ import * as styles from './Paragraph.module.css';
 export function Paragraph(props) {
   return (<p {...props} className={classNames(styles.root, props.className, {
     [styles.size_s]: props.size === 's',
+    [styles.size_xs]: props.size === 'xs',
   })}/>)
 }

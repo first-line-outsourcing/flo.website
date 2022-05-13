@@ -1,0 +1,89 @@
+.root {
+
+}
+
+@media (min-width: 1440px) {
+  .root {
+    padding-bottom: 59px;
+  }
+}
+
+
+.root > div:last-child {
+  margin-top: 32px;
+  position: relative;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .root {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .root > div:first-child {
+    padding-right: 24px;
+  }
+
+  .root > div:last-child {
+    margin-top: 0;
+    flex: 0 0 273px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .root {
+    align-items: flex-start;
+  }
+
+  .root > div:first-child {
+    padding-right: 80px;
+  }
+
+  .root > div:last-child {
+    flex-basis: 435px;
+  }
+}
+
+.text {
+  padding-bottom: 40px;
+}
+
+.person {
+  display: flex;
+}
+
+.personPhoto {
+  width: 46px;
+  height: 54px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.personInfo {
+  padding-left: 22px;
+}
+
+.personPhoto > p:first-child {
+  font-family: var(--font-family-Halvar-Mittel-Bd);
+  padding-bottom: 4px;
+}
+
+.image {
+
+}
+
+.figure {
+  display: none;
+  position: absolute;
+  top: calc(100% - 24px);
+  left: 24px;
+  width: 135px;
+  height: 83px;
+}
+
+@media (min-width: 1440px) {
+  .figure {
+    display: block;
+  }
+}

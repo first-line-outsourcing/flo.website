@@ -1,5 +1,6 @@
 import {StaticImage} from 'gatsby-plugin-image';
 import * as React from 'react';
+import {Testimonials} from '../../components/blocks/testimonials/Testimonials';
 import {Button} from '../../components/buttons/Button';
 import {Heading} from '../../components/typography/Heading';
 import {Highlight} from '../../components/typography/Highlight';
@@ -51,6 +52,9 @@ export function Home(props) {
       <OurServices />
       <Cases />
       <Serverless />
+      <Testimonials
+        categories={['main']}
+      />
     </PageLayout>
   );
 }

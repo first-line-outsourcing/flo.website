@@ -1,0 +1,92 @@
+.root {
+  background: #ffffff;
+  color: #1b1b1f;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    padding-top: 88px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .root {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.controls {
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+.controls button + button {
+  margin-left: 24px;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    padding-top: 48px;
+    padding-bottom: 0;
+    margin-bottom: -8px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .controls {
+    padding-top: 0;
+    padding-bottom: 59px;
+    margin-bottom: 0;
+    margin-top: -67px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hideOnDesktopLess {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hideOnDesktop {
+    display: none;
+  }
+}
+
+.figure {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .figure {
+    display: block;
+    margin-top: 80px;
+    width: 257px;
+    height: 59px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .figure {
+    margin-top: 0;
+    width: 435px;
+    height: 100px;
+  }
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: 1440px) {
+  .title {
+    margin-bottom: 58px;
+  }
+}

@@ -1,6 +1,5 @@
 import {graphql, useStaticQuery} from 'gatsby';
 import React, {useCallback, useRef} from 'react';
-import 'swiper/css/free-mode'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {ArrowButton} from '../../../../components/buttons/arrow/ArrowButton';
 import {Heading} from '../../../../components/typography/Heading';
