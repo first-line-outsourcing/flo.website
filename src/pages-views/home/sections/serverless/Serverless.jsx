@@ -1,30 +1,32 @@
 import React, {useState} from 'react';
+import {ContactUs} from '../../../../components/blocks/contact-us/ContactUs';
 import {Heading} from '../../../../components/typography/Heading';
 import {Highlight} from '../../../../components/typography/Highlight';
 import {Paragraph} from '../../../../components/typography/Paragraph';
 import {PageLayout} from '../../../../layout/page/PageLayout';
-import {TabContent} from './components/TabContent';
-import {Tabs} from './components/Tabs';
+import {TabContent} from '../../../../components/tabs/TabContent';
+import {TabsNav} from '../../../../components/tabs/TabsNav';
 import * as styles from './Serverless.module.css';
 
 export function Serverless(props) {
   const [tab, setTab] = useState('aws');
 
   return (
-    <div>
+    <div className={styles.root}>
       <PageLayout.Container>
         <div className={styles.content}>
-          <Heading.H2>
+          <Heading style={{textAlign: 'center'}}>
             Serverless and Cloud computing
             <Highlight> eva<Highlight.Blink>n</Highlight.Blink>gelis<Highlight.Blink>t</Highlight.Blink>s</Highlight>
-          </Heading.H2>
-          <Paragraph>
+          </Heading>
+          <Paragraph size="s" style={{textAlign: 'center'}}>
             We’re experts at Serverless development and help our clients don’t think about infrastructure management. This model allows you to pay just for usage of cloud resources. No wasting money for containers or instances anymore.
           </Paragraph>
-          <Paragraph>
+          <Paragraph size="s" style={{marginTop: 16, textAlign: 'center'}}>
             Event-driven architecture allows to keep your solution highly scalable and reliable. Focus on your business challenges with cost-effective solution. we will help you with a quick scale!
           </Paragraph>
-          <Tabs
+          <TabsNav
+            className={styles.tabs}
             active={tab}
             onActive={setTab}
             tabs={[
@@ -117,6 +119,7 @@ export function Serverless(props) {
             </TabContent.Item>
           </TabContent>
         </div>
+        <ContactUs/>
       </PageLayout.Container>
     </div>
   );

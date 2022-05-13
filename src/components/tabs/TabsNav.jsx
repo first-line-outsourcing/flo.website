@@ -1,6 +1,7 @@
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
-import {Button} from '../../../../../components/buttons/Button';
-import * as styles from './Tabs.module.css';
+import {Button} from '../buttons/Button';
+import * as styles from './TabsNav.module.css';
 
 /**
  * Tabs
@@ -9,10 +10,11 @@ import * as styles from './Tabs.module.css';
  * @param {{name: string, id: string}[]} props.tabs Tabs list
  * @param {(active: string) => void} props.onActive
  * @param {String} props.active Id of active tab
+ * @param {String} [props.className]
  * @returns {JSX.Element}
  * @constructor
  */
-export function Tabs(props) {
+export function TabsNav(props) {
   const onTab = useCallback(
     (id) => () => {
       if (props.active !== id) {
@@ -23,7 +25,7 @@ export function Tabs(props) {
   );
 
   return (
-    <nav className={styles.root}>
+    <nav className={classNames(styles.root, props.className)}>
       {
         props.tabs.map(tab => (
           <Button
