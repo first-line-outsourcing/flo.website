@@ -11,6 +11,7 @@ import {AboutUs} from './sections/about-us/AboutUs';
 import {Cases} from './sections/cases/Cases';
 import {Numbers} from './sections/Numbers';
 import {OurServices} from './sections/our-services/OurServices';
+import {Serverless} from './sections/serverless/Serverless';
 
 function Hero() {
   return (
@@ -49,6 +50,7 @@ export function Home(props) {
       <AboutUs />
       <OurServices />
       <Cases />
+      <Serverless />
     </PageLayout>
   );
 }

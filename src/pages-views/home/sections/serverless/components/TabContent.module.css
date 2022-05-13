@@ -1,0 +1,16 @@
+.root {
+  height: auto;
+  transition: height ease-in-out 2s;
+}
+
+.item {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity ease 2s;
+}
+
+.item.active {
+  opacity: 1;
+  height: auto;
+}

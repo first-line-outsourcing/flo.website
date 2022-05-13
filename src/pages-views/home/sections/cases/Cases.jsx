@@ -86,7 +86,7 @@ export function Cases(props) {
             <ul className={styles.row}>
               {
                 row.map(col => (
-                  <li>
+                  <li key={col.id}>
                     <Card
                       link={col.link}
                       preview={col.previewCardImage}

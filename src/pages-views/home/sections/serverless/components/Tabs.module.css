@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid #404147;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.tab {
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 0;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: var(--font-family-Halvar-Mittel-Rg);
+}
+
+.tab + .tab {
+  margin-left: 4px;
+}

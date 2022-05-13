@@ -16,11 +16,11 @@
   outline: 0;
 }
 
-.btn:hover {
+.btn:not(.resetHover):hover {
   box-shadow: 0 0 92px #ffffff, 0 0 20px #ffffff;
 }
 
-.btn:focus {
+.btn:not(.resetFocus):focus {
   border: 2px solid #2F9BFF;
   padding: 8px 14px;
 }
@@ -32,21 +32,21 @@
   box-shadow: none;
 }
 
-.btn:global(.size_l) {
+.btn.size_l {
   padding-top: 14px;
   padding-bottom: 14px
 }
 
-.btn:global(.size_l):focus {
+.btn.size_l:not(.resetFocus):focus {
   padding-top: 12px;
   padding-bottom: 12px
 }
 
-.btn:global(.size_xl) {
+.btn.size_xl {
   padding: 18px 24px;
 }
 
-.btn:global(.size_xl):focus {
+.btn.size_xl:not(.resetFocus):focus {
   padding: 16px 22px;
 }
 
@@ -64,22 +64,38 @@
   }
 }
 
-.btn:global(.theme_accent) {
+.btn.theme_accent {
   background: #efb104;
   color: #ffffff;
 }
 
-.btn:global(.theme_accent):hover {
+.btn.theme_accent:hover {
   box-shadow: 0 0 92px #efb104, 0 0 20px #efb104;
 }
 
-.btn:global(.theme_accent):focus {
+.btn.theme_accent:focus {
   outline: 0;
   box-shadow: 0 0 0 #000000;
 }
 
-.btn:global(.theme_accent):disabled {
+.btn.theme_accent:disabled {
   background: #EAEBEE;
   color: #C5C7CD;
   box-shadow: none;
+}
+
+.btn.theme_tabDark {
+  background: transparent;
+  color: #ffffff;
+}
+
+.btn.theme_tabDark:hover {
+  background: hsla(0,0%,100%,.05);
+}
+
+.btn.theme_tabDark:active,
+.btn.theme_tabDark:focus,
+.btn.theme_tabDark.active {
+  background: #efb104;
+  color: #ffffff;
 }
