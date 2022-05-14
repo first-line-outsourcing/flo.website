@@ -46,6 +46,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-phone-number-input": "3.1.52",
     "swiper": "8.1.4"
   }
 }

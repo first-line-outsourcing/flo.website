@@ -1,0 +1,72 @@
+.root {
+  background: #121213;
+  border: 1px solid #383838;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 16px;
+  color: #C5C7CD;
+  font-family: var(--font-family-Halvar-Mittel-Rg);
+  display: block;
+  width: 100%;
+}
+
+.root:hover,
+.root:focus,
+.root:active {
+  border-color: #C5C7CD;
+  outline: 0;
+}
+
+.root:global(.PhoneInput) {
+  display: flex;
+}
+
+.root:global(.PhoneInput) > input {
+  background: none;
+  color: inherit;
+  padding: 0;
+  line-height: inherit;
+  border: none;
+  outline: 0;
+  margin-left: 6px;
+}
+
+.root:global(.PhoneInput) > input::placeholder {
+  color: #C5C7CD;
+}
+
+textarea.root {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.file {
+  position: relative;
+}
+
+.file > input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.file > svg {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 20px;
+  font-size: 16px;
+  width: 1em;
+  height: 1em;
+}
+
+.file > span {
+  display: inline-block;
+  text-overflow: ellipsis;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  width: calc(100% - 16px * 2 - 44px);
+}
