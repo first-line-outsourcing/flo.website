@@ -12,6 +12,7 @@ import {AboutUs} from './sections/about-us/AboutUs';
 import {Cases} from './sections/cases/Cases';
 import {Numbers} from './sections/Numbers';
 import {OurServices} from './sections/our-services/OurServices';
+import {OurTeamsLife} from './sections/our-teams-life/OurTeamsLife';
 import {Serverless} from './sections/serverless/Serverless';
 
 function Hero() {
@@ -55,6 +56,7 @@ export function Home(props) {
       <Testimonials
         categories={['main']}
       />
+      <OurTeamsLife />
     </PageLayout>
   );
 }
