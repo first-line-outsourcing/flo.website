@@ -1,22 +1,22 @@
 import React, {useState} from 'react';
-import {Input} from './components/Input';
-import {Label} from './components/Label';
+import {ContactUsFormView} from './ContactUsFormView';
 
-
+// TODO: connect send API context
 export function ContactUsForm(props) {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState({
+    name: '',
+    email: '',
+    projectDescription: '',
+    agreement: false
+  });
 
   return (
     <div>
-      <Label>Name</Label>
-      <Input type="tel" pattern="2-[0-9]{3}-[0-9]{3}" />
-      <Label>Name</Label>
-      <Input.InputFile onFile={() => {}} />
-      <Input.TextArea />
-      <Input.Phone
-        placeholder="Enter phone number"
+      <ContactUsFormView
         value={value}
         onChange={setValue}
+        sendDisabled={false}
+        onSend={() => {}}
       />
     </div>
   );

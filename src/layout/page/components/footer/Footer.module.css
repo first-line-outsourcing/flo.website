@@ -1,4 +1,5 @@
 .root {
+  overflow: hidden;
   padding-top: 80px;
   padding-bottom: 32px;
 }
@@ -8,13 +9,21 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .bottom {
+    padding-top: 40px;
+  }
 }
 
 @media (min-width: 1440px) {
-  .root {
+  .bottom {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding-top: 56px;
+  }
+
+  .root {
     padding-bottom: 48px;
     padding-top: 56px;
   }
@@ -228,5 +237,56 @@
 @media (min-width: 1440px) {
   .copyright {
     display: none;
+  }
+}
+
+.contactUs {
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 0;
+}
+
+.contactUsHeading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.contactUsContent {
+}
+
+@media (min-width: 1440px) {
+  .contactUsHeading {
+    text-align: left;
+  }
+
+  .contactUsContent {
+    display: flex;
+  }
+
+  .contactUsContent > div {
+    flex: 0 0 50%;
+  }
+}
+
+.contactUs > .background {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 1164px;
+  bottom: 0;
+  right: 376px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .contactUs > .background {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contactUs > .background {
+    right: 50%;
   }
 }

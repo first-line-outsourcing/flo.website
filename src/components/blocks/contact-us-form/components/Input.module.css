@@ -41,6 +41,15 @@ textarea.root {
   max-width: 100%;
 }
 
+.textAreaWrapper > span {
+  display: block;
+  text-align: right;
+  font-family: var(--font-family-Halvar-Mittel-Rg);
+  font-size: 14px;
+  line-height: 16px;
+  color: #C5C7CD;
+}
+
 .file {
   position: relative;
 }
@@ -70,3 +79,42 @@ textarea.root {
   white-space: nowrap;
   width: calc(100% - 16px * 2 - 44px);
 }
+
+.checkboxRoot {
+  position: relative;
+  color: #efb104;
+  border: 1px solid #383838;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.checkboxRoot:hover,
+.checkboxRoot:focus,
+.checkboxRoot:active {
+  border-color: #C5C7CD;
+}
+
+.checkboxRoot > input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.checkboxRoot > svg {
+  width: 10px;
+  height: 6px;
+  opacity: 0;
+  transition: opacity ease 0.3s;
+}
+
+.checkboxRoot > input:checked + svg {
+  opacity: 1;
+}
+
+
