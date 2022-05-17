@@ -1,4 +1,5 @@
 import React from 'react';
+import {ContactUsFormModal} from '../../components/blocks/contact-us-form/ContactUsFormModal';
 import {BasicLayout} from '../basic';
 import {Footer} from './components/footer/Footer';
 import {Header} from './components/header/Header';
@@ -16,19 +17,21 @@ import {Header} from './components/header/Header';
  */
 export function PageLayout(props) {
   return (
-    <BasicLayout>
-      <BasicLayout.Header>
-        <Header heroRootClassName={props.heroRootClassName}>
-          {props.hero}
-        </Header>
-      </BasicLayout.Header>
-      <BasicLayout.Content>
-        {props.children}
-      </BasicLayout.Content>
-      <BasicLayout.Footer>
-        <Footer />
-      </BasicLayout.Footer>
-    </BasicLayout>
+    <ContactUsFormModal>
+      <BasicLayout>
+        <BasicLayout.Header>
+          <Header heroRootClassName={props.heroRootClassName}>
+            {props.hero}
+          </Header>
+        </BasicLayout.Header>
+        <BasicLayout.Content>
+          {props.children}
+        </BasicLayout.Content>
+        <BasicLayout.Footer>
+          <Footer />
+        </BasicLayout.Footer>
+      </BasicLayout>
+    </ContactUsFormModal>
   );
 }
 

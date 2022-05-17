@@ -1,9 +1,10 @@
-import React, {useCallback, SyntheticEvent} from 'react';
+import React, {useCallback, SyntheticEvent, useMemo} from 'react';
 import {Button} from '../../buttons/Button';
 import {Input} from './components/Input';
 import {Label} from './components/Label';
 import * as styles from './ContactUsFormView.module.css';
 import classNames from 'classnames';
+import {nanoid} from 'nanoid';
 
 /**
  * Contact Us form
@@ -40,37 +41,48 @@ export function ContactUsFormView(props) {
     [props.value, props.onChange]
   );
   const onSend = useCallback(() => props.onSend(props.value), [props.value, props.onSend]);
+  const ids = useMemo(() => ({
+    name: nanoid(),
+    email: nanoid(),
+    phone: nanoid(),
+    projectDescription: nanoid(),
+    agreement: nanoid(),
+  }), []);
 
 
   return (
     <div>
       <div className={styles.row}>
-        <Label>Full name</Label>
+        <Label for={ids.name}>Full name</Label>
         <Input
+          id={ids.name}
           value={props.value.name}
           onChange={onChange('name')}
         />
       </div>
       <div className={classNames(styles.row, styles.responsive)}>
         <div className={styles.row}>
-          <Label>Email address</Label>
+          <Label for={ids.email}>Email address</Label>
           <Input
+            id={ids.email}
             type="email"
             value={props.value.email}
             onChange={onChange('email')}
           />
         </div>
         <div className={styles.row}>
-          <Label>Phone number (optional)</Label>
+          <Label for={ids.phone}>Phone number (optional)</Label>
           <Input.Phone
+            id={ids.phone}
             value={props.value.phone}
             onChange={onChange('phone')}
           />
         </div>
       </div>
       <div className={styles.row}>
-        <Label>Describe your project</Label>
+        <Label for={ids.projectDescription}>Describe your project</Label>
         <Input.TextArea
+          id={ids.projectDescription}
           value={props.value.projectDescription}
           onChange={onChange('projectDescription')}
           maxLength={200}

@@ -54,6 +54,7 @@ function InputFile(props) {
  * @param {string|undefined} props.value
  * @param {number} [props.maxLength]
  * @param {string} [props.className]
+ * @param {string} [props.id]
  * @returns {JSX.Element}
  * @constructor
  */
@@ -74,6 +75,7 @@ function TextArea(props) {
   return (
     <div className={styles.textAreaWrapper}>
       <textarea
+        id={props.id}
         value={props.value}
         maxLength={props.maxLength}
         onChange={onChange}
@@ -90,12 +92,14 @@ function TextArea(props) {
  * @param {import('react-phone-number-input').Value} props.value
  * @param {(value?: import('react-phone-number-input').Value) => void} props.onChange
  * @param {string} [props.className]
+ * @param {string} [props.id]
  * @returns {JSX.Element}
  * @constructor
  */
 function Phone(props) {
   return (
     <PhoneInput
+      id={props.id}
       onChange={props.onChange}
       value={props.value}
       className={classNames(styles.root, props.className)}

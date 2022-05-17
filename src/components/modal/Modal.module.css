@@ -1,0 +1,102 @@
+.root {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .root {
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.root:focus {
+  outline: none;
+}
+
+.overlay {
+  background: rgba(37, 37, 37, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  overflow: auto;
+}
+
+.body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  background: #121213;
+  padding: 20px 28px;
+  flex: 1 1 auto;
+}
+
+@media (min-width: 768px) {
+  .box {
+    border-radius: 16px;
+    max-width: 672px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 24px;
+}
+
+.header > h4 {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.header > button {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  width: 15px;
+  height: 15px;
+  font-size: 0;
+  padding: 0;
+  margin-left: 44px;
+}
+
+.header > button > svg {
+  width: 15px;
+  height: 15px;
+}
+
+.notification {
+  align-self: flex-end;
+  flex: 1 1 auto;
+  background: #121213;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 16px;
+}
+
+.notification > p {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .notification {
+    padding: 32px;
+    width: 320px;
+    flex-grow: 0;
+    align-self: initial;
+  }
+
+  .notification > p {
+    margin-bottom: 48px;
+  }
+}

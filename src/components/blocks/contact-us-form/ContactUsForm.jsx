@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {Button} from '../../buttons/Button';
+import {Modal} from '../../modal/Modal';
 import {ContactUsFormView} from './ContactUsFormView';
 
 // TODO: connect send API context
@@ -9,6 +11,7 @@ export function ContactUsForm(props) {
     projectDescription: '',
     agreement: false
   });
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
@@ -16,8 +19,14 @@ export function ContactUsForm(props) {
         value={value}
         onChange={setValue}
         sendDisabled={false}
-        onSend={() => {}}
+        onSend={() => setIsOpen(!isOpen)}
       />
+      <Modal.Notification
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        Notification text
+      </Modal.Notification>
     </div>
   );
 }

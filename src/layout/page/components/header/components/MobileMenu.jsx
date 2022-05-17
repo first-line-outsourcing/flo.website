@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import {Link} from 'gatsby';
-import React, {useLayoutEffect, useState} from 'react';
+import React, {useContext, useLayoutEffect, useState} from 'react';
+import {context} from '../../../../../components/blocks/contact-us-form/ContactUsFormModal';
 import {Button} from '../../../../../components/buttons/Button';
 import {HumburgerButton} from '../../../../../components/buttons/HumburgerButton';
 import {FacebookSocialLink} from '../../../../../components/buttons/social/FacebookSocialLink';
@@ -13,6 +14,7 @@ import * as styles from '../Header.module.css';
 import * as mobileStyles from './MobileMenu.module.css';
 
 export function MobileMenu() {
+  const ctx = useContext(context);
   const [open, setOpen] = useState(false);
 
   useLayoutEffect(() => {
@@ -70,7 +72,12 @@ export function MobileMenu() {
             </ul>
           </div>
           <div className={mobileStyles.footer}>
-            <Button theme="accent" size="l" full>
+            <Button
+              theme="accent"
+              size="l"
+              full
+              onClick={ctx.open}
+            >
               Contact us
               <ArrowRightImage
                 style={{

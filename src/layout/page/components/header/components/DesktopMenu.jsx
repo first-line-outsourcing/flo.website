@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import {Link} from 'gatsby';
-import React from 'react';
+import React, {useContext} from 'react';
+import {context} from '../../../../../components/blocks/contact-us-form/ContactUsFormModal';
 import {Button} from '../../../../../components/buttons/Button';
 import ArrowRightImage from '../../../../../images/arrowRight.inline.svg';
 import LogoImage from '../../../../../images/Logo.inline.svg';
@@ -10,6 +11,8 @@ import * as desktopStyles from './DesktopMenu.module.css';
 
 
 export function DesktopMenu() {
+  const ctx = useContext(context);
+
   return (
     <section className={desktopStyles.navigation}>
       <BasicLayout.Container>
@@ -40,7 +43,10 @@ export function DesktopMenu() {
                 <Link className={classNames('anchor', styles.link)} to="/contacts">Contacts</Link>
               </li>
               <li>
-                <Button theme="accent">
+                <Button
+                  theme="accent"
+                  onClick={ctx.open}
+                >
                   Contact us
                   <ArrowRightImage
                     style={{
