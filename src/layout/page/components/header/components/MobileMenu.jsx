@@ -12,6 +12,7 @@ import LogoImage from '../../../../../images/Logo.inline.svg';
 import {BasicLayout} from '../../../../basic/BasicLayout';
 import * as styles from '../Header.module.css';
 import * as mobileStyles from './MobileMenu.module.css';
+import MessageSvg from './images/message.inline.svg';
 
 export function MobileMenu() {
   const ctx = useContext(context);
@@ -36,7 +37,22 @@ export function MobileMenu() {
               </Link>
             </div>
             <ul className={mobileStyles.actions}>
-              <li></li>
+              <li>
+                <Button
+                  theme="accent"
+                  className={mobileStyles.actionsContactUs}
+                  onClick={ctx.open}
+                >
+                  <span>Contact us</span>
+                  <ArrowRightImage
+                    style={{
+                      verticalAlign: 'middle',
+                      marginLeft: 16
+                    }}
+                  />
+                  <MessageSvg />
+                </Button>
+              </li>
               <li>
                 <HumburgerButton
                   open={open}
