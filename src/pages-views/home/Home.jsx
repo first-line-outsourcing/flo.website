@@ -28,12 +28,13 @@ function Hero() {
             </Heading.H1>
             <Paragraph>Cloud web and mobile development based on serverless architecture for reaching your business goals </Paragraph>
             <div style={{height: 48}}/>
+            {/*TODO: add link or action*/}
             <Button theme="accent" size="xl" responsiveFull>What we do</Button>
           </div>
           <div className={styles.heroVideoPlaceholder}>
             <div>
               <StaticImage src="./images/hero_video_placeholder.png" alt="Video placeholder"/>
-              <img className={styles.heroVideoPlaceholderCurv} src={heroCurvImage} />
+              <img className={styles.heroVideoPlaceholderCurv} src={heroCurvImage} alt="Video" />
             </div>
           </div>
         </div>
