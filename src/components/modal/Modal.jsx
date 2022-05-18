@@ -7,12 +7,13 @@ import * as styles from './Modal.module.css';
 import CloseSvg from './images/close.inline.svg';
 
 /**
+ * Modal
  *
- * @param {boolean} props.isOpen
- * @param {React.ReactElement} props.children
- * @param {() => void} [props.onClose]
- * @param {boolean} [props.header]
- * @param {string} [props.headerTitle]
+ * @param {boolean} props.isOpen Indicate whether window is open or not
+ * @param {React.ReactElement} props.children Modal content
+ * @param {() => void} [props.onClose] Triggered on close
+ * @param {boolean} [props.header] Show header
+ * @param {string} [props.headerTitle] Header title
  * @returns {JSX.Element}
  * @constructor
  */
@@ -55,10 +56,11 @@ export function Modal(props) {
 }
 
 /**
+ * Notification
  *
- * @param {boolean} props.isOpen
- * @param {string} props.children
- * @param {() => void} props.onClose
+ * @param {boolean} props.isOpen Indicate whether window is open or not
+ * @param {string} props.children Message
+ * @param {() => void} props.onClose Triggered on close
  * @returns {JSX.Element}
  * @constructor
  */
