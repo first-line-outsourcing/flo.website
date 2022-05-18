@@ -88,9 +88,9 @@ export function Footer(props) {
               <InstagramSocialLink className={styles.socialLink} link="https://google.com/" />
               <FacebookSocialLink className={styles.socialLink} link="https://google.com/" />
             </div>
-            <div className={styles.award}>
+            <a href="__LINK__" className={styles.award}>
               <img src={awardImage} alt="Award"/>
-            </div>
+            </a>
           </div>
         </div>
       </PageLayout.Container>
