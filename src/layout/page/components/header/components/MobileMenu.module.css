@@ -5,8 +5,9 @@
 
 .navigation {
   padding-top: 16px;
-  margin-bottom: -42px;
+  margin-bottom: -48px;
   position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {

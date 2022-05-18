@@ -13,7 +13,7 @@ import curvImage from './images/curv.svg';
 function useServicesList() {
   const data = useStaticQuery(graphql`
       query {
-          allSitePage(filter: {path: {regex: "/^\\/services\\//"}}) {
+          allSitePage(filter: {path: {regex: "/^\\/services\\/.+/"}}) {
               edges {
                   node {
                       path

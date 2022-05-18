@@ -12,8 +12,14 @@ export function Header(props) {
       {
         props.children && (
           <section className={classNames(styles.heroContainer, props.heroRootClassName)}>
-            <DesktopMenu.HeightFix />
-            <MobileMenu.HeightFix />
+            {
+              !props.noMenuHeightFix && (
+                <>
+                  <DesktopMenu.HeightFix />
+                  <MobileMenu.HeightFix />
+                </>
+              )
+            }
             {props.children}
           </section>
         )

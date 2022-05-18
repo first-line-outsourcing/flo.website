@@ -12,6 +12,7 @@ import {Header} from './components/header/Header';
  * @param {React.ReactElement} [props.children] Page content
  * @param {React.ReactElement} [props.hero] Hero content
  * @param {string} [props.heroRootClassName] Hero container className
+ * @param {boolean} [props.headerNoMenuHeightFix]
  * @returns {JSX.Element}
  * @constructor
  */
@@ -20,7 +21,10 @@ export function PageLayout(props) {
     <ContactUsFormModal>
       <BasicLayout>
         <BasicLayout.Header>
-          <Header heroRootClassName={props.heroRootClassName}>
+          <Header
+            heroRootClassName={props.heroRootClassName}
+            noMenuHeightFix={props.headerNoMenuHeightFix}
+          >
             {props.hero}
           </Header>
         </BasicLayout.Header>

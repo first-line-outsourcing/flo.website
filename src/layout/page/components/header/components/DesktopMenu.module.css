@@ -2,6 +2,8 @@
   padding-top: 24px;
   margin-bottom: -88px;
   display: none;
+  position: relative;
+  z-index: 1;
 }
 
 .navigationContent {
