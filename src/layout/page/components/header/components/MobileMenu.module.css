@@ -73,6 +73,11 @@
     padding: 10px 6px;
     line-height: 12px;
   }
+
+  .actionsContactUs:not(.__nonsense):focus,
+  .actionsContactUs:not(.__nonsense):active {
+    padding: 8px 4px;
+  }
 }
 
 .actionsContactUs > span,
@@ -116,6 +121,10 @@
 
 .navigation.open .back {
   display: block;
+}
+
+.navigation.open .actionsContactUs {
+  display: none;
 }
 
 .pagesLinksContainer {

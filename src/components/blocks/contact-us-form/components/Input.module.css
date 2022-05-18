@@ -29,7 +29,12 @@
   line-height: inherit;
   border: none;
   outline: 0;
-  margin-left: 6px;
+  width: 100%;
+}
+
+.root:global(.PhoneInput) > :global(.PhoneInputCountry) {
+  margin-right: 0;
+  padding-right: 12px;
 }
 
 .root:global(.PhoneInput) > input::placeholder {
