@@ -1,6 +1,7 @@
 {
-  "cardBg": "./home_card_bg.png",
-  "horPreviewImage": "./home_card_bg.png",
+  "verPreviewImage": "./verPreview.png",
+  "horPreviewImage": "./horPreview.png",
   "shortTitle": "Adobe Panels",
-  "shortDescription": "Automated workflow in your package"
+  "shortDescription": "Automated workflow in your package",
+  "description": "We develop panels with custom functionality inside your favorite Adobe package and help you to automate your specific goals."
 }

@@ -1,6 +1,7 @@
 {
-  "cardBg": "./home_card_bg.png",
-  "horPreviewImage": "./home_card_bg.png",
+  "verPreviewImage": "./verPreview.png",
+  "horPreviewImage": "./horPreview.png",
   "shortTitle": "Integrations",
-  "shortDescription": "With your SaaS, CRM, ERP, etc "
+  "shortDescription": "With your SaaS, CRM, ERP, etc ",
+  "description": "With your SaaS, CRM, ERP, etc "
 }

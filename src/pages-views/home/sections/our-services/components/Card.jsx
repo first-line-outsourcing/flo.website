@@ -9,7 +9,7 @@ import * as styles from './Card.module.css';
  * Card
  *
  * @param props
- * @param {string} props.background Background image URL
+ * @param {string} props.preview Preview image
  * @param {string} props.title Title
  * @param {string} props.description Description
  * @param {string} props.link Link
@@ -21,7 +21,7 @@ export function Card(props) {
     <Link
       className={styles.root}
       style={{
-        backgroundImage: `url(${props.background})`
+        backgroundImage: `url(${props.preview})`
       }}
       to={props.link}
     >

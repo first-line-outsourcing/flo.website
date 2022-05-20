@@ -1,6 +1,7 @@
 {
-  "cardBg": "./home_card_bg.jpg",
-  "horPreviewImage": "./home_card_bg.jpg",
+  "verPreviewImage": "./verPreview.jpg",
+  "horPreviewImage": "./horPreview.png",
   "shortTitle": "Web dev",
-  "shortDescription": "SaaS, single page applications, progressive web applications"
+  "shortDescription": "SaaS, single page applications, progressive web applications",
+  "description": "We develop SaaS solutions, SPA, PWA based on serverless architecture to level up your business. We help with different tasks, the process of optimization, sales growth, and customer loyalty."
 }

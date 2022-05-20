@@ -1,6 +1,7 @@
 {
-  "cardBg": "./home_card_bg.png",
-  "horPreviewImage": "./home_card_bg.png",
+  "verPreviewImage": "./verPreview.png",
+  "horPreviewImage": "./horPreview.png",
   "shortTitle": "Tech Design",
-  "shortDescription": "Business Analysis, Wireframes, Architecture"
+  "shortDescription": "Business Analysis, Wireframes, Architecture",
+  "description": "We design your future app with the help of business intelligence. Based on the data, we create a project architecture that will help you to scale easily in the future. We design wireframes and technical diagrams, so you can see the logic of the application work."
 }

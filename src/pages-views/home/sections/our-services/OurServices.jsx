@@ -1,4 +1,5 @@
 import {graphql, useStaticQuery} from 'gatsby';
+import {getImage} from 'gatsby-plugin-image';
 import React, {useCallback, useRef} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {ArrowButton} from '../../../../components/buttons/arrow/ArrowButton';
@@ -22,7 +23,7 @@ function useServicesList() {
                               id
                               shortDescription
                               shortTitle
-                              cardBg {
+                              verPreviewImage {
                                   publicURL
                               }
                           }
@@ -39,7 +40,7 @@ function useServicesList() {
       path: n.node.path,
       title: metadata.shortTitle,
       description: metadata.shortDescription,
-      cardBg: metadata.cardBg.publicURL
+      preview: metadata.verPreviewImage.publicURL
     });
   });
 }
@@ -102,7 +103,7 @@ export function OurServices(props) {
                             title={service.title}
                             description={service.description}
                             link={service.path}
-                            background={service.cardBg}
+                            preview={service.preview}
                           />
                         </SwiperSlide>
                       ))

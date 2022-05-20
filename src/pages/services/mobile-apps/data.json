@@ -1,6 +1,7 @@
 {
-  "cardBg": "./home_card_bg.jpg",
-  "horPreviewImage": "./home_card_bg.jpg",
+  "verPreviewImage": "./verPreview.jpg",
+  "horPreviewImage": "./horPreview.png",
   "shortTitle": "Mobile apps",
-  "shortDescription": "iOS, Android apps with Flutter"
+  "shortDescription": "iOS, Android apps with Flutter",
+  "description": "Сross-platform app development for a quick launch! Be in touch with your clients!"
 }

@@ -19,7 +19,7 @@ function useServicesList() {
                       children {
                           ... on Json {
                               id
-                              shortDescription
+                              description
                               shortTitle
                               horPreviewImage {
                                   childImageSharp {
@@ -39,7 +39,7 @@ function useServicesList() {
     return ({
       path: n.node.path,
       title: metadata.shortTitle,
-      description: metadata.shortDescription,
+      description: metadata.description,
       previewImage: getImage(metadata.horPreviewImage)
     });
   });
