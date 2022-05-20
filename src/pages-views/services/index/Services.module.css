@@ -92,5 +92,9 @@
 
   .list > li:first-child {
     padding-bottom: 63px;
+    border-top-width: 0;
+  }
+  .list > li:last-child {
+    border-bottom-width: 0;
   }
 }
