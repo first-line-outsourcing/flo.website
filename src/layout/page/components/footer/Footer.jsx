@@ -1,6 +1,6 @@
-import {Link} from 'gatsby';
+import {graphql, Link, useStaticQuery} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
-import React from 'react';
+import React, {useMemo} from 'react';
 import {ContactUsForm} from '../../../../components/blocks/contact-us-form/ContactUsForm';
 import {Anchor} from '../../../../components/buttons/Anchor';
 import {FacebookSocialLink} from '../../../../components/buttons/social/FacebookSocialLink';
@@ -9,13 +9,25 @@ import {InstagramSocialLink} from '../../../../components/buttons/social/Instagr
 import {Heading} from '../../../../components/typography/Heading';
 import {Highlight} from '../../../../components/typography/Highlight';
 import {PageLayout} from '../../PageLayout';
-import * as mobileStyles from '../header/components/MobileMenu.module.css';
 import {Collapse} from './components/Collapse';
 import * as styles from './Footer.module.css';
 import LogoImage from '../../../../images/Logo.inline.svg';
 import awardImage from './images/award.png';
 
 export function Footer(props) {
+  const {site: {siteMetadata}} = useStaticQuery(graphql`
+      query {
+          site {
+              siteMetadata {
+                  companyAddress
+                  companyEmail
+                  companyNumber
+              }
+          }
+      }
+  `);
+  const tel = useMemo(() => siteMetadata.companyNumber.replace(/[^\d+]/g, ''), []);
+
   return (
     <div className={styles.root}>
       <div className={styles.contactUs}>
@@ -48,9 +60,9 @@ export function Footer(props) {
             <Collapse className={styles.collapse} title="Contacts">
               <ul className={styles.links}>
                 <li>First Line Outsorsing</li>
-                <li><Anchor href="mailto:hello@flo.team">hello@flo.team</Anchor></li>
-                <li><Anchor href="tel:+79996384544">+7 (999) 638-45-44</Anchor></li>
-                <li>Russia, Krasnodar Oktabrskaya 141</li>
+                <li><Anchor href={`mailto:${siteMetadata.companyEmail}`}>{siteMetadata.companyEmail}</Anchor></li>
+                <li><Anchor href={`tel:${tel}`}>{siteMetadata.companyNumber}</Anchor></li>
+                <li>{siteMetadata.companyAddress}</li>
               </ul>
             </Collapse>
             <Collapse className={styles.collapse} title="Company">
