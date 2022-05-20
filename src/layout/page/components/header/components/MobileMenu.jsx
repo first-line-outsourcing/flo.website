@@ -74,17 +74,20 @@ export function MobileMenu() {
                 <Link className={classNames('anchor', styles.link)} to="/technologies">Technologies</Link>
               </li>
               <li>
-                <Link className={classNames('anchor', styles.link)} to="/components">Components</Link>
+                <Link className={classNames('anchor', styles.link)} to="/solutions">Solutions</Link>
               </li>
               <li>
                 <Link className={classNames('anchor', styles.link)} to="/cases">Portfolio</Link>
               </li>
               <li>
-                <Link className={classNames('anchor', styles.link)} to="/about">About</Link>
+                <Link className={classNames('anchor', styles.link)} to="/blog">Blog</Link>
               </li>
               <li>
-                <Link className={classNames('anchor', styles.link)} to="/contacts">Contacts</Link>
+                <Link className={classNames('anchor', styles.link)} to="/about-us">About Us</Link>
               </li>
+              {/*<li>*/}
+              {/*  <Link className={classNames('anchor', styles.link)} to="/contacts">Contacts</Link>*/}
+              {/*</li>*/}
             </ul>
           </div>
           <div className={mobileStyles.footer}>
