@@ -31,6 +31,9 @@ export function DesktopMenu() {
                 <Link className={classNames('anchor', styles.link)} to="/technologies">Technologies</Link>
               </li>
               <li>
+                <Link className={classNames('anchor', styles.link)} to="/process">Process</Link>
+              </li>
+              <li>
                 <Link className={classNames('anchor', styles.link)} to="/solutions">Solutions</Link>
               </li>
               <li>
