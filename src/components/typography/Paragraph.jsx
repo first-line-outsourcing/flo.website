@@ -7,7 +7,7 @@ import * as styles from './Paragraph.module.css';
  * Paragraph
  *
  * @param {React.HTMLAttributes} props
- * @param {'s' | 'm'} [props.size] Size. Default os m.
+ * @param {'xs' | 's' | 'm'} [props.size] Size. Default os m.
  * @returns {JSX.Element}
  * @constructor
  */
