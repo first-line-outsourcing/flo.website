@@ -9,7 +9,7 @@ import {PageLayout} from '../../layout/page/PageLayout';
 import * as styles from './Home.module.css';
 import heroCurvImage from './images/hero_curv.svg';
 import {AboutUs} from './sections/about-us/AboutUs';
-import {Cases} from './sections/cases/Cases';
+import {Cases} from '../../components/blocks/cases/Cases';
 import {Numbers} from './sections/Numbers';
 import {OurServices} from './sections/our-services/OurServices';
 import {OurTeamsLife} from './sections/our-teams-life/OurTeamsLife';

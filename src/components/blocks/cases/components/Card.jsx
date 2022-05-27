@@ -1,8 +1,8 @@
 import {Link} from 'gatsby';
-import {GatsbyImage, StaticImage} from 'gatsby-plugin-image';
+import {GatsbyImage} from 'gatsby-plugin-image';
 import React from 'react';
-import {TechIcon} from '../../../../../components/icons/tech/TechIcon';
-import {Heading} from '../../../../../components/typography/Heading';
+import {TechIcon} from '../../../icons/tech/TechIcon';
+import {Heading} from '../../../typography/Heading';
 import * as styles from './Card.module.css';
 
 const iconsMap = {

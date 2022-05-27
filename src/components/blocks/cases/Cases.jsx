@@ -2,10 +2,10 @@ import {graphql, useStaticQuery} from 'gatsby';
 import {navigate} from 'gatsby';
 import {getImage, StaticImage} from 'gatsby-plugin-image';
 import React, {useCallback, useMemo} from 'react';
-import {Button} from '../../../../components/buttons/Button';
-import {Heading} from '../../../../components/typography/Heading';
-import {Highlight} from '../../../../components/typography/Highlight';
-import {PageLayout} from '../../../../layout/page/PageLayout';
+import {Button} from '../../buttons/Button';
+import {Heading} from '../../typography/Heading';
+import {Highlight} from '../../typography/Highlight';
+import {PageLayout} from '../../../layout/page/PageLayout';
 import * as styles from './Cases.module.css';
 import {Card} from './components/Card';
 
