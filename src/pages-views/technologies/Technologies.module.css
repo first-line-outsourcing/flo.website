@@ -1,0 +1,92 @@
+.heroRoot {
+
+}
+
+.heroContent {
+  height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .heroContent {
+    height: 458px;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  .heroContent h1 {
+    max-width: 793px;
+  }
+
+  .heroContent p {
+    max-width: 588px;
+  }
+}
+
+.background {
+
+}
+
+@media (min-width: 768px) {
+  .background {
+    background: url('./images/figure.png') no-repeat center 300px;
+    background-size: cover;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 40px 0 40px 0;
+  margin: 0;
+}
+
+.list > li + li {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .list > li {
+    flex: 0 0 50%;
+    height: 328px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .list > li + li {
+    margin-top: 0;
+  }
+
+  .list > li {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .list > li:nth-child(n+3) {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .list > li {
+    flex: 0 0 33.33%;
+  }
+
+  .list > li:nth-child(n+3) {
+    margin-top: 0;
+  }
+
+  .list > li:nth-child(n+4) {
+    margin-top: 24px;
+  }
+}
+

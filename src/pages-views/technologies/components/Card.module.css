@@ -1,0 +1,20 @@
+.root {
+  border: 1px solid #404147;
+  padding: 20px 32px 24px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.root > i {
+  font-size: 44px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    padding: 32px;
+    backdrop-filter: blur(20px);
+  }
+}

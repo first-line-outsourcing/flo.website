@@ -24,7 +24,7 @@
 }
 
 .heightFix {
-  height: 42px;
+  height: 48px;
 }
 
 @media (min-width: 768px) {
