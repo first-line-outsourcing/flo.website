@@ -10,7 +10,7 @@ import * as styles from './Home.module.css';
 import heroCurvImage from './images/hero_curv.svg';
 import {AboutUs} from './sections/about-us/AboutUs';
 import {Cases} from '../../components/blocks/cases/Cases';
-import {Numbers} from './sections/Numbers';
+import {Numbers} from '../../components/blocks/numbers/Numbers';
 import {OurServices} from './sections/our-services/OurServices';
 import {OurTeamsLife} from './sections/our-teams-life/OurTeamsLife';
 import {Serverless} from './sections/serverless/Serverless';
@@ -49,7 +49,31 @@ export function Home(props) {
       hero={<Hero />}
       heroRootClassName={styles.heroRoot}
     >
-      <Numbers />
+      <Numbers
+        theme="dark"
+        list={[
+          {
+            key: '1',
+            value: '54',
+            caption: 'Clients reached their goals',
+          },
+          {
+            key: '2',
+            value: '83%',
+            caption: 'Net promoter score',
+          },
+          {
+            key: '3',
+            value: '20+',
+            caption: 'High-skilled employees',
+          },
+          {
+            key: '4',
+            value: '4',
+            caption: 'Years of remote development',
+          }
+        ]}
+      />
       <AboutUs />
       <OurServices />
       <Cases

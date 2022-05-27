@@ -22,11 +22,19 @@
 
 .root.themeHighlighted {
   color: #84858A;
-
 }
 
 .root.themeHighlighted:focus,
 .root.themeHighlighted:hover {
   color: #ffffff;
   filter: drop-shadow(0px 0px 5px #EFB104);
+}
+
+.root.orange {
+  color: #EAEBEE;
+}
+
+.root.orange:focus,
+.root.orange:hover {
+  color: #EFB104;
 }

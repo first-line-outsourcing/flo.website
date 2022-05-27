@@ -1,0 +1,69 @@
+.root {
+  padding-top: 40px;
+}
+
+.root > div:first-child > h2 {
+  margin-bottom: 16px;
+}
+
+.root > div:last-child {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialLinks {
+}
+
+.techList {
+  padding-top: 0;
+}
+
+.link {
+  color: #2F44FF;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  font-family: var(--font-family-Halvar-Mittel-Rg);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .link {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
+
+.numbers {
+
+}
+
+@media (min-width: 1440px) {
+  .numbers {
+    padding-top: 80px;
+  }
+
+  .root > div:first-child > h2 {
+    margin-bottom: 32px;
+  }
+
+  .root > div:last-child {
+    padding-top: 0;
+  }
+
+  .link {
+    margin-right: 70px;
+  }
+
+  .root {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

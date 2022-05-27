@@ -147,11 +147,4 @@
 
 .socialLinks {
   padding-top: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.socialLinks > .socialLink + .socialLink {
-  margin-left: 27px;
 }

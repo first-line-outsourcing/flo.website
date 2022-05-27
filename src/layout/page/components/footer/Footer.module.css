@@ -166,28 +166,6 @@
   }
 }
 
-.socialLinks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .socialLinks {
-    margin-left: auto;
-  }
-}
-
-.socialLinks > .socialLink + .socialLink {
-  margin-left: 27px;
-}
-
-@media (min-width: 1440px) {
-  .socialLinks > .socialLink + .socialLink {
-    margin-left: 16px;
-  }
-}
-
 .award {
   display: block;
   cursor: pointer;

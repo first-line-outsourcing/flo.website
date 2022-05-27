@@ -6,14 +6,16 @@ import {SocialLinkBase} from './SocialLinkBase';
 /**
  * Facebook social link
  *
- * @param {string} [className]
- * @param {string} link
+ * @param {string} [props.className]
+ * @param {string} props.link
+ * @param {string} [props.size]
+ * @param {'light'|'dark'} [props.theme]
  * @returns {JSX.Element}
  * @constructor
  */
-export function FacebookSocialLink({className, link}) {
+export function FacebookSocialLink(props) {
   return (
-    <SocialLinkBase className={className} link={link}>
+    <SocialLinkBase className={props.className} link={props.link} size={props.size} theme={props.theme}>
       <Icon />
     </SocialLinkBase>
   );

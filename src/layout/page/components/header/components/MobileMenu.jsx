@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import {Link} from 'gatsby';
 import React, {useContext, useLayoutEffect, useState} from 'react';
 import {context} from '../../../../../components/blocks/contact-us-form/ContactUsFormModal';
+import {SocialLinks} from '../../../../../components/blocks/social-links/SocialLinks';
 import {Button} from '../../../../../components/buttons/Button';
 import {HumburgerButton} from '../../../../../components/buttons/HumburgerButton';
 import {FacebookSocialLink} from '../../../../../components/buttons/social/FacebookSocialLink';
@@ -109,9 +110,11 @@ export function MobileMenu() {
               />
             </Button>
             <div className={mobileStyles.socialLinks}>
-              <InSocialLink className={mobileStyles.socialLink} link="https://google.com/" />
-              <InstagramSocialLink className={mobileStyles.socialLink} link="https://google.com/" />
-              <FacebookSocialLink className={mobileStyles.socialLink} link="https://google.com/" />
+              <SocialLinks
+                instagram="https://google.com"
+                linkedin="https://google.com"
+                facebook="https://google.com"
+              />
             </div>
           </div>
         </BasicLayout.Container>

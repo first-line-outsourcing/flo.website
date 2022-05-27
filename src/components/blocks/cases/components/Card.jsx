@@ -3,17 +3,11 @@ import {GatsbyImage} from 'gatsby-plugin-image';
 import React from 'react';
 import {TechIcon} from '../../../icons/tech/TechIcon';
 import {Heading} from '../../../typography/Heading';
+import {TechList} from '../../tech-list/TechList';
 import * as styles from './Card.module.css';
 import classNames from 'classnames';
 
-const iconsMap = {
-  'JavaScript': 'js-box',
-  'TypeScript': 'ts-box',
-  'Angular': 'angular',
-  'iOS': 'ios',
-  'Web': 'web',
-  'Android': 'android',
-};
+
 
 /**
  * Case card
@@ -38,17 +32,10 @@ export function Card(props) {
         </div>
         <Heading.H4 className={styles.title} theme={props.theme === 'light' ? 'dark' : 'light'}>{props.title}</Heading.H4>
       </Link>
-      <ul className={styles.techList}>
-        {props.techList.map(tech => (
-          <li key={tech}>
-            <TechIcon
-              name={iconsMap[tech]}
-              theme={props.theme === 'light' ? 'dark' : 'light'}
-            />
-            <span>{tech}</span>
-          </li>
-        ))}
-      </ul>
+      <TechList
+        techList={props.techList}
+        theme={props.theme}
+      />
     </div>
   );
 }

@@ -1,0 +1,41 @@
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .socialLinks {
+    margin-left: auto;
+  }
+}
+
+.socialLinks > .socialLink + .socialLink {
+  margin-left: 27px;
+}
+
+.fixedGaps.socialLinks > .socialLink + .socialLink {
+  margin-left: 16px;
+}
+
+
+@media (min-width: 1440px) {
+  .socialLinks > .socialLink + .socialLink {
+    margin-left: 16px;
+  }
+}
+
+
+.socialLinks.inline {
+  display: inline-flex;
+}
+
+.responsive > .socialLink {
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .responsive > .socialLink {
+    font-size: 40px;
+  }
+}

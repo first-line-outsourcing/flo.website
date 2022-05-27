@@ -2,6 +2,7 @@ import {graphql, Link, useStaticQuery} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
 import React, {useMemo} from 'react';
 import {ContactUsForm} from '../../../../components/blocks/contact-us-form/ContactUsForm';
+import {SocialLinks} from '../../../../components/blocks/social-links/SocialLinks';
 import {Anchor} from '../../../../components/buttons/Anchor';
 import {FacebookSocialLink} from '../../../../components/buttons/social/FacebookSocialLink';
 import {InSocialLink} from '../../../../components/buttons/social/InSocialLink';
@@ -95,11 +96,11 @@ export function Footer(props) {
               Created by <s>Creative cult</s><br/>
               © All rights reserved. Flo team 2021
             </p>
-            <div className={styles.socialLinks}>
-              <InSocialLink className={styles.socialLink} link="https://google.com/" />
-              <InstagramSocialLink className={styles.socialLink} link="https://google.com/" />
-              <FacebookSocialLink className={styles.socialLink} link="https://google.com/" />
-            </div>
+            <SocialLinks
+              instagram="https://google.com"
+              linkedin="https://google.com"
+              facebook="https://google.com"
+            />
             <a href="__LINK__" className={styles.award}>
               <img src={awardImage} alt="Award"/>
             </a>

@@ -50,6 +50,7 @@
     "react-modal": "3.15.1",
     "react-parallax": "3.3.0",
     "react-phone-number-input": "3.1.52",
+    "react-player": "2.10.1",
     "swiper": "8.1.4"
   }
 }

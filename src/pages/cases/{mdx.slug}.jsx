@@ -1,18 +1,19 @@
 import {graphql} from 'gatsby';
-import {MDXRenderer} from 'gatsby-plugin-mdx';
+import {getImage} from 'gatsby-plugin-image';
 import * as React from 'react';
-import {PageLayout} from '../../layout/page/PageLayout';
+import {Case} from '../../pages-views/cases/case/Case';
 
 
-export default function Case({data}) {
+export default function ({data}) {
   return (
-    <PageLayout
-      hero={<div style={{height: 500}}/>}
-    >
-      <PageLayout.Container>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      </PageLayout.Container>
-    </PageLayout>
+    <Case
+      heroTitle={data.mdx.frontmatter.title}
+      heroBg={getImage(data.mdx.frontmatter.heroBg)}
+      techList={data.mdx.frontmatter.techList}
+      siteLink={data.mdx.frontmatter.siteLink}
+      social={data.mdx.frontmatter.social}
+      content={data.mdx.body}
+    />
   );
 }
 
@@ -22,6 +23,17 @@ export const query = graphql`
             frontmatter {
                 title
                 techList
+                siteLink
+                social {
+                    instagram
+                    linkedin
+                    facebook
+                }
+                heroBg {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
             }
             body
         }
