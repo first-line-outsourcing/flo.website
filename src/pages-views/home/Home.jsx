@@ -52,7 +52,12 @@ export function Home(props) {
       <Numbers />
       <AboutUs />
       <OurServices />
-      <Cases />
+      <Cases
+        max={4}
+        footerButton="see-more"
+        theme="light"
+        heading="featured"
+      />
       <Serverless />
       <Testimonials
         categories={['main']}

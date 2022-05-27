@@ -9,7 +9,7 @@ import * as styles from './OurTeamsLife.module.css';
 export function OurTeamsLife(props) {
   return (
     <div className={styles.root}>
-      <Heading.H2 theme="black" className={styles.title}>
+      <Heading.H2 theme="dark" className={styles.title}>
         <Highlight theme="solid">Our team</Highlight>’s life
       </Heading.H2>
       <Swiper

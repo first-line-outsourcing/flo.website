@@ -1,5 +1,5 @@
 .root {
-
+  color: #1B1B1F;
 }
 
 .linkable {
@@ -55,7 +55,6 @@
   font-size: 9px;
   font-family: var(--font-family-Halvar-Breit-Rg);
   letter-spacing: 0.01em;
-  color: #1B1B1F;
 }
 
 @media (min-width: 768px) {
@@ -70,4 +69,8 @@
   .techList > li > i {
     font-size: 16px;
   }
+}
+
+.root.dark {
+  color: #ffffff;
 }

@@ -84,7 +84,7 @@ export function Testimonials(props) {
   return (
     <div className={styles.root}>
       <PageLayout.Container style={{position: 'relative'}}>
-        <Heading.H2 theme="black" className={styles.title}>
+        <Heading.H2 theme="dark" className={styles.title}>
           Client <Highlight theme="solid">testimonials</Highlight>
         </Heading.H2>
         <div>

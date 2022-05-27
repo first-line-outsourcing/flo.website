@@ -1,0 +1,33 @@
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 32px;
+}
+
+.heroContent p {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .heroContent h1 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroContent {
+    height: 440px;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .heroContent h1 {
+    max-width: 793px;
+  }
+
+  .heroContent p {
+    display: block;
+    max-width: 588px;
+  }
+}
