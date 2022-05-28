@@ -1,0 +1,47 @@
+.root {
+  display: flex;
+}
+
+.root.gaps {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .root.gaps {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+
+.root > div:first-child {
+  flex: 0 0 95px;
+  text-align: center;
+}
+
+.root > div:last-child {
+  flex: 1 1 auto;
+  padding-left: 16px;
+}
+
+.photo {
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-family: var(--font-family-Halvar-Mittel-Bd);
+}
+
+.position {}
+
+@media (min-width: 768px) {
+  .root > div:first-child {
+    flex-basis: 112px;
+  }
+
+  .root > div:last-child {
+    padding-left: 92px;
+  }
+}

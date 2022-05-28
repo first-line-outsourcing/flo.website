@@ -11,6 +11,7 @@ import * as styles from './Header.module.css';
  * @param {string[]} props.techList
  * @param {string} props.siteLink
  * @param {any} props.social
+ * @param {any} props.numbers
  * @returns {JSX.Element}
  * @constructor
  */
@@ -27,7 +28,7 @@ export function Header(props) {
           />
         </div>
         <div>
-          <a className={styles.link} href={props.siteLink}>Link the site</a>
+          <a className={styles.link} href={props.siteLink}>Website</a>
           <SocialLinks
             className={styles.socialLinks}
             inline
@@ -40,33 +41,16 @@ export function Header(props) {
           />
         </div>
       </PageLayout.Container>
-      <div className={styles.numbers}>
-        <Numbers
-          theme="light"
-          list={[
-            {
-              key: '1',
-              value: '54',
-              caption: 'Clients reached their goals',
-            },
-            {
-              key: '2',
-              value: '83%',
-              caption: 'Net promoter score',
-            },
-            {
-              key: '3',
-              value: '20+',
-              caption: 'High-skilled employees',
-            },
-            {
-              key: '4',
-              value: '4',
-              caption: 'Years of remote development',
-            }
-          ]}
-        />
-      </div>
+      {
+        props.numbers && (
+          <div className={styles.numbers}>
+            <Numbers
+              theme="light"
+              list={props.numbers}
+            />
+          </div>
+        )
+      }
     </>
   );
 }

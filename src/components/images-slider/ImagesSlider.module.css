@@ -1,3 +1,17 @@
+.root {}
+
+.root.gaps {
+  margin-top: 56px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .root.gaps {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+
 .imageFrame {
   padding-bottom: 50%;
   position: relative;
@@ -23,7 +37,6 @@
 
 .controls {
   padding-top: 30px;
-  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,3 +46,4 @@
 .controls > button + button {
   margin-left: 24px;
 }
+

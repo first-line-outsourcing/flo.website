@@ -12,6 +12,7 @@ export default function ({data}) {
       techList={data.mdx.frontmatter.techList}
       siteLink={data.mdx.frontmatter.siteLink}
       social={data.mdx.frontmatter.social}
+      numbers={data.mdx.frontmatter.numbers}
       content={data.mdx.body}
     />
   );
@@ -28,6 +29,11 @@ export const query = graphql`
                     instagram
                     linkedin
                     facebook
+                }
+                numbers {
+                    key
+                    caption
+                    value
                 }
                 heroBg {
                     childImageSharp {

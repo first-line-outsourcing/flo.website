@@ -3,6 +3,7 @@
   line-height: 22px;
   font-family: var(--font-family-Halvar-Mittel-Rg);
   margin: 0;
+  padding-left: 26px;
 }
 
 .root.size_xs {

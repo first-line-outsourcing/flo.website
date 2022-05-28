@@ -57,6 +57,8 @@ function useList(categories) {
 /**
  *
  * @param props
+ * @param {string} [props.className]
+ * @param {React.CSSProperties} [props.style]
  * @param {string[]} [props.categories] Categories to filter by
  * @returns {JSX.Element}
  * @constructor
@@ -82,7 +84,7 @@ export function Testimonials(props) {
   const list = useList(props.categories);
 
   return (
-    <div className={styles.root}>
+    <div className={classNames(styles.root, props.className)} style={props.style}>
       <PageLayout.Container style={{position: 'relative'}}>
         <Heading.H2 theme="dark" className={styles.title}>
           Client <Highlight theme="solid">testimonials</Highlight>
