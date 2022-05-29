@@ -1,0 +1,40 @@
+.root {
+  background-color: #ffffff;
+  color: #121213;
+}
+
+.title {
+  text-align: center;
+}
+
+.subHeader {
+  text-align: center;
+  padding-bottom: 32px;
+  margin-bottom: 0;
+  max-width: 546px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  width: 290px;
+  height: 290px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item > * {
+  flex: 0 0 50%;
+  height: 50%;
+}
+
+@media (min-width: 768px) {
+  .item {
+    width: 480px;
+    height: 480px;
+  }
+
+  .subHeader {
+    padding-bottom: 56px;
+  }
+}

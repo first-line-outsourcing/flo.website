@@ -44,10 +44,12 @@ export function Header(props) {
       {
         props.numbers && (
           <div className={styles.numbers}>
-            <Numbers
-              theme="light"
-              list={props.numbers}
-            />
+            <PageLayout.Container>
+              <Numbers
+                theme="light"
+                list={props.numbers}
+              />
+            </PageLayout.Container>
           </div>
         )
       }

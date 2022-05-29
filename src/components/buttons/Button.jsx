@@ -21,6 +21,7 @@ export function Button(props) {
     {
       [styles.theme_accent]: props.theme === 'accent',
       [styles.theme_tabDark]: props.theme === 'tab-dark',
+      [styles.theme_outlineDark]: props.theme === 'outline-dark',
     },
     {
       [styles.resetHover]: props.theme === 'tab-dark',
@@ -30,6 +31,7 @@ export function Button(props) {
     {
       [styles.size_l]: props.size === 'l',
       [styles.size_xl]: props.size === 'xl',
+      [styles.size_xxl]: props.size === 'xxl',
     },
     {
       [styles.full]: props.full,

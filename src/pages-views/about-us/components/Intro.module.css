@@ -1,0 +1,23 @@
+.root {
+  background-color: #ffffff;
+  color: #121213;
+  padding-top: 88px;
+  padding-bottom: 48px;
+}
+
+.content {}
+
+.content > div:first-child {
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1440px) {
+  .content {
+    display: flex;
+  }
+
+  .content > div:last-child {
+    flex: 0 0 611px;
+    padding-left: 134px;
+  }
+}

@@ -12,8 +12,12 @@
   justify-content: space-between;
 }
 
+.root.compact ul {
+  padding: 0;
+}
+
 @media (min-width: 768px) {
-  .root ul {
+  .root:not(.compact) ul {
     flex-wrap: initial;
   }
 }
@@ -29,6 +33,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .root ul > li {
   text-align: center;
   flex: 1 0 50%;
@@ -36,7 +41,7 @@
 }
 
 @media (min-width: 768px) {
-  .root ul > li {
+  .root:not(.compact) ul > li {
     flex: initial;
   }
 }
@@ -52,3 +57,18 @@
   background-color: #ffffff;
   color: #121213;
 }
+
+@media (max-width: 767px) {
+  .root.responsiveSize ul > li > span {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .root.responsiveSize ul > li > p {
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+}
+

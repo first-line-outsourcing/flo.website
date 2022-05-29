@@ -1,12 +1,12 @@
 import {graphql} from 'gatsby';
 import {getImage} from 'gatsby-plugin-image';
 import * as React from 'react';
-import {Case} from '../../pages-views/cases/case/Case';
+import {Case as CaseView} from '../../pages-views/cases/case/Case';
 
 
-export default function ({data}) {
+export default function Case({data}) {
   return (
-    <Case
+    <CaseView
       heroTitle={data.mdx.frontmatter.title}
       heroBg={getImage(data.mdx.frontmatter.heroBg)}
       techList={data.mdx.frontmatter.techList}

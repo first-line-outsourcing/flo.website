@@ -49,31 +49,33 @@ export function Home(props) {
       hero={<Hero />}
       heroRootClassName={styles.heroRoot}
     >
-      <Numbers
-        theme="dark"
-        list={[
-          {
-            key: '1',
-            value: '54',
-            caption: 'Clients reached their goals',
-          },
-          {
-            key: '2',
-            value: '83%',
-            caption: 'Net promoter score',
-          },
-          {
-            key: '3',
-            value: '20+',
-            caption: 'High-skilled employees',
-          },
-          {
-            key: '4',
-            value: '4',
-            caption: 'Years of remote development',
-          }
-        ]}
-      />
+      <PageLayout.Container>
+        <Numbers
+          theme="dark"
+          list={[
+            {
+              key: '1',
+              value: '54',
+              caption: 'Clients reached their goals',
+            },
+            {
+              key: '2',
+              value: '83%',
+              caption: 'Net promoter score',
+            },
+            {
+              key: '3',
+              value: '20+',
+              caption: 'High-skilled employees',
+            },
+            {
+              key: '4',
+              value: '4',
+              caption: 'Years of remote development',
+            }
+          ]}
+        />
+      </PageLayout.Container>
       <AboutUs />
       <OurServices />
       <Cases

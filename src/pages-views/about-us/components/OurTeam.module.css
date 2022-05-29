@@ -1,0 +1,53 @@
+.root {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.list {
+  list-style: none;
+  padding: 0 0 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -12px -8px;
+}
+
+.list > li {
+  width: 152px;
+  padding: 12px 8px;
+}
+
+.list > li > .photo {
+  vertical-align: top;
+  margin-bottom: 16px;
+}
+
+.list > li > p:last-child {
+  margin-top: 4px;
+  color: #84858A;
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .list {
+    margin: -28px -12px;
+  }
+
+  .list > li {
+    width: 306px;
+    padding: 28px 12px;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+}

@@ -1,0 +1,59 @@
+.root {}
+
+.heroBackground {
+  width: 100vw;
+  height: 440px;
+}
+
+@media (min-width: 768px) {
+  .heroBackground {
+    height: 544px;
+  }
+}
+
+.heroImage {
+  height: 100%;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 440px;
+  padding-bottom: 48px;
+}
+
+.heroContent > h1 {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .heroContent > h1 {
+    margin-bottom: 24px;
+  }
+
+  .heroContent {
+    height: 544px;
+    max-width: 588px;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  .heroContent > h1 {
+    max-width: 896px;
+  }
+}
+
+.contactUs {
+  background-color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .contactUs {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}

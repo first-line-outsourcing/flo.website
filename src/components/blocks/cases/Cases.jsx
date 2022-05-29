@@ -118,7 +118,12 @@ export function Cases(props) {
     <div className={classNames(styles.root, {
       [styles.dark]: props.theme === 'dark'
     })}>
-      <StaticImage className={styles.bg} src="./images/bg.png" alt="Background" />
+      <StaticImage
+        className={styles.bg}
+        src="./images/bg.png"
+        alt="Background"
+        placeholder="blurred"
+      />
       <PageLayout.Container className={styles.container}>
 
         {

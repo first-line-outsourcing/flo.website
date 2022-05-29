@@ -51,7 +51,7 @@ function Hero() {
       <Background className={styles.heroBackground}>
         <StaticImage
           className={styles.heroImage}
-          src="./images/hero.png"
+          src="./images/hero001.png"
           alt="Background"
           quality={100}
           placeholder="blurred"

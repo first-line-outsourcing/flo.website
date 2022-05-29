@@ -50,6 +50,15 @@
   padding: 16px 22px;
 }
 
+.btn:not(.resetFocus):focus,
+.btn.size_xxl {
+  padding: 23px 24px;
+}
+
+.btn.size_xxl:not(.resetFocus):not(.theme_outlineDark):focus {
+  padding: 21px 22px;
+}
+
 .btn.full {
   width: 100%;
 }
@@ -98,4 +107,43 @@
 .btn.theme_tabDark.active {
   background: #efb104;
   color: #ffffff;
+}
+
+.btn.theme_outlineDark {
+  border-radius: 0;
+  background: transparent;
+  color: #EFB104;
+  border: 1px solid #EFB104;
+}
+
+.btn.theme_outlineDark:not(.resetHover):hover {
+  box-shadow: none;
+  border-color: #FFEFC2;
+  color: #FFEFC2;
+  filter: drop-shadow(0px 0px 12px #EFB104) drop-shadow(0px 0px 20px #EFB104);
+}
+
+.btn.theme_outlineDark:active {
+  box-shadow: none;
+  border-width: 1px;
+  border-color: #ffffff;
+  color: #ffffff;
+  filter: none;
+}
+
+.btn.theme_outlineDark:not(.resetFocus):focus {
+  box-shadow: none;
+  border-width: 1px;
+  border-color: #2F9BFF;
+  color: #C5C7CD;
+  filter: none;
+}
+
+.btn.theme_outlineDark:not(.resetHover):disabled,
+.btn.theme_outlineDark:not(.resetFocus):disabled {
+  box-shadow: none;
+  border-width: 1px;
+  border-color: #EAEBEE;
+  color: #EAEBEE;
+  filter: none;
 }
