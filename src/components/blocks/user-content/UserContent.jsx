@@ -1,7 +1,8 @@
+import {MDXProvider} from '@mdx-js/react';
+import {MDXRenderer} from 'gatsby-plugin-mdx';
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
 import {PageLayout} from '../../../layout/page/PageLayout';
-import * as contentStyles from '../../../pages-views/cases/case/content.module.css';
 import {ImagesGrid} from '../../images-grid/ImagesGrid';
 import {ImagesSlider} from '../../images-slider/ImagesSlider';
 import {Heading} from '../../typography/Heading';
@@ -9,6 +10,7 @@ import {Highlight} from '../../typography/Highlight';
 import {Paragraph} from '../../typography/Paragraph';
 import {UL} from '../../typography/UL';
 import {Speech} from '../speech/Speech';
+import * as contentStyles from './UserContent.module.css';
 
 const contentComponents = {
   p: props => (
@@ -89,10 +91,14 @@ const contentComponents = {
       </div>
     </PageLayout.Container>
   )
-}
+};
 
 export function UserContent(props) {
   return (
-    <div></div>
+    <MDXProvider
+      components={contentComponents}
+    >
+      <MDXRenderer>{props.children}</MDXRenderer>
+    </MDXProvider>
   );
 }

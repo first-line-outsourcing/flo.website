@@ -63,3 +63,28 @@
     text-align: center;
   }
 }
+
+.gaps {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .gaps {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+
+.gapsPadding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .gapsPadding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
