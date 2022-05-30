@@ -220,35 +220,39 @@
   }
 }
 
-.contactUs {
+.formRoot {
   padding-bottom: 80px;
   position: relative;
   z-index: 0;
 }
 
-.contactUsHeading {
+.formHeading {
   text-align: center;
   margin-bottom: 32px;
 }
 
-.contactUsContent {
+.formContent {
 }
 
 @media (min-width: 1440px) {
-  .contactUsHeading {
+  .formHeading {
     text-align: left;
   }
 
-  .contactUsContent {
+  .formContent {
     display: flex;
   }
 
-  .contactUsContent > div {
+  .formContent > div {
     flex: 0 0 50%;
+  }
+
+  .formContent > div:first-child {
+    padding-right: 120px;
   }
 }
 
-.contactUs > .background {
+.formRoot > .background {
   display: none;
   position: absolute;
   top: 0;
@@ -260,13 +264,13 @@
 }
 
 @media (min-width: 768px) {
-  .contactUs > .background {
+  .formRoot > .background {
     display: block;
   }
 }
 
 @media (min-width: 1440px) {
-  .contactUs > .background {
+  .formRoot > .background {
     right: 50%;
   }
 }

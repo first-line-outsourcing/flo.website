@@ -1,7 +1,8 @@
 import {graphql, Link, useStaticQuery} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
 import React, {useMemo} from 'react';
-import {ContactUsForm} from '../../../../components/blocks/contact-us-form/ContactUsForm';
+import {ContactUsForm} from '../../../../components/blocks/forms/contact-us-form/ContactUsForm';
+import {JoinUsForm} from '../../../../components/blocks/forms/join-us-form/JoinUsForm';
 import {SocialLinks} from '../../../../components/blocks/social-links/SocialLinks';
 import {Anchor} from '../../../../components/buttons/Anchor';
 import {FacebookSocialLink} from '../../../../components/buttons/social/FacebookSocialLink';
@@ -15,6 +16,14 @@ import * as styles from './Footer.module.css';
 import LogoImage from '../../../../images/Logo.inline.svg';
 import awardImage from './images/award.png';
 
+
+/**
+ * Footer
+ *
+ * @param {'contact-us'|'join-us'} [props.form] Form to show
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function Footer(props) {
   const {site: {siteMetadata}} = useStaticQuery(graphql`
       query {
@@ -28,30 +37,55 @@ export function Footer(props) {
       }
   `);
   const tel = useMemo(() => siteMetadata.companyNumber.replace(/[^\d+]/g, ''), []);
+  const form = props.form || 'contact-us';
 
   return (
     <div className={styles.root}>
-      <div className={styles.contactUs}>
-        <StaticImage
-          className={styles.background}
-          src="./images/contactUsBg.png"
-          alt="Map"
-        />
-        <PageLayout.Container>
-          <div className={styles.contactUsContent}>
-            <div>
-              <Heading.H2 className={styles.contactUsHeading}>
-                Contact
-                {' '}
-                <Highlight>us</Highlight>
-              </Heading.H2>
-            </div>
-            <div>
-              <ContactUsForm />
-            </div>
+      {
+        form === 'contact-us' && (
+          <div className={styles.formRoot}>
+            <StaticImage
+              className={styles.background}
+              src="./images/contactUsBg.png"
+              alt="Map"
+            />
+            <PageLayout.Container>
+              <div className={styles.formContent}>
+                <div>
+                  <Heading.H2 className={styles.formHeading}>
+                    Contact
+                    {' '}
+                    <Highlight>us</Highlight>
+                  </Heading.H2>
+                </div>
+                <div>
+                  <ContactUsForm />
+                </div>
+              </div>
+            </PageLayout.Container>
           </div>
-        </PageLayout.Container>
-      </div>
+        )
+      }
+      {
+        form === 'join-us' && (
+          <div className={styles.formRoot}>
+            <PageLayout.Container>
+              <div className={styles.formContent}>
+                <div>
+                  <Heading.H2 className={styles.formHeading}>
+                    <Highlight>Send us your resume</Highlight>
+                    {' '}
+                    and we will contact you
+                  </Heading.H2>
+                </div>
+                <div>
+                  <JoinUsForm />
+                </div>
+              </div>
+            </PageLayout.Container>
+          </div>
+        )
+      }
       <PageLayout.Container>
         <div className={styles.bottom}>
           <div className={styles.logoContainer}>

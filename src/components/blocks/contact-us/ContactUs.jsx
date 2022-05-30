@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Button} from '../../buttons/Button';
 import {Heading} from '../../typography/Heading';
 import {Paragraph} from '../../typography/Paragraph';
-import {context} from '../contact-us-form/ContactUsFormModal';
+import {context} from '../forms/contact-us-form/ContactUsFormModal';
 import * as styles from './ContactUs.module.css';
 import img from './images/img.svg';
 

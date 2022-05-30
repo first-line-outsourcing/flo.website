@@ -50,7 +50,7 @@
   padding: 16px 22px;
 }
 
-.btn:not(.resetFocus):focus,
+.btn.size_xxl:not(.resetFocus):focus,
 .btn.size_xxl {
   padding: 23px 24px;
 }

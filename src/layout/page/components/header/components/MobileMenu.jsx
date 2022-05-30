@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {Link} from 'gatsby';
 import React, {useContext, useLayoutEffect, useState} from 'react';
-import {context} from '../../../../../components/blocks/contact-us-form/ContactUsFormModal';
+import {context} from '../../../../../components/blocks/forms/contact-us-form/ContactUsFormModal';
 import {SocialLinks} from '../../../../../components/blocks/social-links/SocialLinks';
 import {Button} from '../../../../../components/buttons/Button';
 import {HumburgerButton} from '../../../../../components/buttons/HumburgerButton';

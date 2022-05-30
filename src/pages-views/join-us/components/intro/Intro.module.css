@@ -1,0 +1,161 @@
+.root {
+  background-color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #121213;
+}
+
+.header {
+  padding-bottom: 40px;
+}
+
+.header > div:first-child > h2 {
+  margin-bottom: 32px;
+}
+
+.header > div:first-child > img {
+  width: 179px;
+  height: 58px;
+  vertical-align: top;
+}
+
+.header > div:first-child {
+  margin-bottom: 40px;
+}
+
+.header > p + p {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .header {
+    display: flex;
+    padding-bottom: 120px;
+  }
+
+  .header > div:first-child > h2 {
+    margin-bottom: 51px;
+  }
+
+  .header > div:first-child > img {
+    width: 297px;
+    height: 97px;
+  }
+
+  .header > p + p {
+    margin-top: 0;
+  }
+
+  .header > div:first-child {
+    margin-bottom: 0;
+    max-width: 408px;
+    flex-grow: 0;
+  }
+
+  .header > *:nth-child(2) {
+    padding-left: 51px;
+    max-width: 305px;
+    flex-grow: 0;
+  }
+
+  .header > *:nth-child(3) {
+    padding-left: 24px;
+    max-width: 278px;
+    flex-grow: 0;
+  }
+}
+
+.item {
+  width: 254px;
+  height: 254px;
+}
+
+@media (min-width: 768px) {
+  .item {
+    width: 282px;
+    height: 282px;
+  }
+}
+
+.controls {
+  padding-bottom: 32px;
+  color: #EFB104;
+}
+
+.controls > button + button {
+  margin-left: 24px;
+}
+
+.mood {
+  padding-top: 80px;
+}
+
+.mood ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mood ul > li {
+  position: relative;
+  z-index: 0;
+  padding-left: 32px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: var(--font-family-Halvar-Mittel-Rg);
+}
+
+.mood ul > li + li {
+  margin-top: 16px;
+}
+
+.mood ul > li:before {
+  content: '';
+  left: 0;
+  top: 6px;
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background-image: url('images/join_us_figire_000.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mood > div:last-child {
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 32px;
+}
+
+.mood > div:last-child > img {
+  vertical-align: top;
+  width: 100%;
+}
+
+
+@media (min-width: 768px) {
+  .mood {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .mood > div:first-child {
+    padding-right: 120px;
+  }
+
+  .mood > div:last-child {
+    flex: 0 0 320px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mood > div:last-child {
+    flex-basis: 588px;
+  }
+}

@@ -45,14 +45,14 @@
   }
 }
 
-.contactUs {
+.formRoot {
   background-color: #ffffff;
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
 @media (min-width: 768px) {
-  .contactUs {
+  .formRoot {
     padding-top: 120px;
     padding-bottom: 120px;
   }

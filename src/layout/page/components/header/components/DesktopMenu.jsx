@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {Link} from 'gatsby';
 import React, {useContext} from 'react';
-import {context} from '../../../../../components/blocks/contact-us-form/ContactUsFormModal';
+import {context} from '../../../../../components/blocks/forms/contact-us-form/ContactUsFormModal';
 import {Button} from '../../../../../components/buttons/Button';
 import ArrowRightImage from '../../../../../images/arrowRight.inline.svg';
 import LogoImage from '../../../../../images/Logo.inline.svg';
