@@ -57,3 +57,16 @@
     padding-bottom: 120px;
   }
 }
+
+.contactUs {
+  background-color: #ffffff;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .contactUs {
+    padding-top: 214px;
+    padding-bottom: 170px;
+  }
+}
