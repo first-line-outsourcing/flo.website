@@ -17,6 +17,7 @@ function useCasesList(filter) {
           allMdx {
               edges {
                   node {
+                      id
                       slug
                       parent {
                           internal {
@@ -28,7 +29,6 @@ function useCasesList(filter) {
                               sourceInstanceName
                           }
                       }
-                      id
                       frontmatter {
                           techList
                           shortTitle
@@ -44,22 +44,9 @@ function useCasesList(filter) {
       }
   `);
 
-  return data.allMdx.edges
+  const list = data.allMdx.edges
     .filter(edge => {
-      if (edge.node.parent.sourceInstanceName !== 'cases') {
-        return false;
-      }
-
-      if (filter) {
-        if (filter.type === 'tech') {
-          const techList = edge.node.frontmatter.techList;
-          if (!techList.some(tech => filter.value === tech)) {
-            return false;
-          }
-        }
-      }
-
-      return true;
+      return edge.node.parent.sourceInstanceName === 'cases';
     })
     .map(edge => ({
       id: edge.node.id,
@@ -68,18 +55,24 @@ function useCasesList(filter) {
       link: `/cases/${edge.node.slug}`,
       previewCardImage: getImage(edge.node.frontmatter.previewCardImage),
     }));
+
+  if (filter) {
+    return list.filter(item => filter(item));
+  }
+
+  return list;
 }
 
 /**
  * Cases list
  *
- * @typedef {{type: 'tech', value: string}} Filter
+ * @typedef {{id: string, sortTitle: string, techList: string[], link: string, previewCardImage: import('gatsby-plugin-image').IGatsbyImageData}} Item
  *
  * @param {'light'|'dark'} [props.theme] Default is light
  * @param {number} [props.max] Max number of cases to show
  * @param {'load-more'|'see-more'} [props.footerButton] Button in the footer
- * @param {Filter} [props.filter] Filter
- * @param {string} [props.heading] Heading
+ * @param {(item) => boolean} [props.filter] Filter
+ * @param {'other'|'featured'|'tech'} [props.heading] Heading
  * @param {string} [props.headingTech] Heading tech
  * @returns {JSX.Element}
  * @constructor

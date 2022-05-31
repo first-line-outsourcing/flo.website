@@ -7,6 +7,7 @@ import {Case as CaseView} from '../../pages-views/cases/case/Case';
 export default function Case({data}) {
   return (
     <CaseView
+      id={data.mdx.id}
       heroTitle={data.mdx.frontmatter.title}
       heroBg={getImage(data.mdx.frontmatter.heroBg)}
       techList={data.mdx.frontmatter.techList}
@@ -21,6 +22,7 @@ export default function Case({data}) {
 export const query = graphql`
     query ($id: String) {
         mdx(id: {eq: $id}) {
+            id
             frontmatter {
                 title
                 techList

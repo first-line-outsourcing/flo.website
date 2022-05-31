@@ -1,6 +1,7 @@
 import {GatsbyImage} from 'gatsby-plugin-image';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {Background, Parallax} from 'react-parallax';
+import {Cases} from '../../../components/blocks/cases/Cases';
 import {ContactUs} from '../../../components/blocks/contact-us/ContactUs';
 import {Testimonials} from '../../../components/blocks/testimonials/Testimonials';
 import {UserContent} from '../../../components/blocks/user-content/UserContent';
@@ -29,19 +30,35 @@ function Hero(props) {
   );
 }
 
+const filter = (item) => {
+
+}
+
 /**
+ *  Case page view
  *
- * @param {string} props.heroTitle
- * @param {import('gatsby-plugin-image').IGatsbyImageData} props.heroBg
- * @param {string} props.techList
- * @param {any} props.social
- * @param {string} props.siteLink
+ * @param {string} props.id Case ID
+ * @param {string} props.heroTitle Hero title
+ * @param {import('gatsby-plugin-image').IGatsbyImageData} props.heroBg Hero background image
+ * @param {string} props.techList Tech list
+ * @param {any} props.social Social links
+ * @param {string} props.siteLink Site link
  * @param {any} props.numbers
  * @param {any} props.content
  * @returns {JSX.Element}
  * @constructor
  */
 export function Case(props) {
+  const filter = useCallback(
+    (item) => {
+      if (item.id === props.id) {
+        return false;
+      }
+      return item.techList.some(i => props.techList.includes(i));
+    },
+    [props.id]
+  );
+
   return (
     <PageLayout
       hero={
@@ -60,11 +77,21 @@ export function Case(props) {
           numbers={props.numbers}
         />
         <UserContent>{props.content}</UserContent>
-        <Testimonials className={styles.gaps} style={{padding: 0}}/>
+        <Testimonials
+          className={styles.gaps}
+          style={{padding: 0}}
+        />
         <PageLayout.Container className={styles.gapsPadding}>
           <ContactUs/>
         </PageLayout.Container>
       </div>
+      <Cases
+        theme="dark"
+        heading="other"
+        filter={filter}
+        max={2}
+        footerButton="see-more"
+      />
     </PageLayout>
   );
 }
