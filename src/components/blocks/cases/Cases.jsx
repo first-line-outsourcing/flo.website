@@ -143,7 +143,9 @@ export function Cases(props) {
             </>
           )
         }
-        <div className={styles.gap}/>
+        {
+          props.heading && <div className={styles.gap}/>
+        }
         {
           sorted.map(row => (
             <ul className={styles.row}>
