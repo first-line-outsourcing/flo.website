@@ -1,0 +1,152 @@
+.root {
+  background-color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+
+.heroBackground {
+  width: 100vw;
+  height: 440px;
+}
+
+@media (min-width: 768px) {
+  .heroBackground {
+    height: 544px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .root {
+    padding-top: 56px;
+  }
+}
+
+.heroImage {
+  height: 100%;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 440px;
+  padding-bottom: 48px;
+}
+
+.heroContent > h1 {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .heroContent > h1 {
+    margin-bottom: 24px;
+  }
+
+  .heroContent {
+    height: 544px;
+    max-width: 588px;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  .heroContent > h1 {
+    max-width: 896px;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  gap: 16px;
+}
+
+.list > li {
+  place-self: stretch;
+}
+
+@media (min-width: 768px) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 24px;
+  }
+
+  .list > li:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .list > li {
+    place-self: stretch;
+  }
+}
+
+.paginationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.paginationContainer > div {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.paginationContainer > div > * {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.paginationNumber {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  color: #84858A;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: var(--font-family-Halvar-Mittel-Rg);
+}
+
+.paginationNumber.active {
+  color: #efb104;
+}
+
+.paginationNumber:hover,
+.paginationNumber:focus {
+  color: #efb104;
+}
+
+.paginationDots {
+  color: #84858A;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: var(--font-family-Halvar-Mittel-Rg);
+}
+
+.loadMore {
+}
+
+@media (min-width: 1440px) {
+  .paginationContainer {
+    flex-direction: row;
+  }
+
+  .paginationContainer > div {
+    padding-bottom: 0;
+  }
+
+  .loadMore {
+    margin-left: 72px;
+  }
+}

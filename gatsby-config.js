@@ -88,6 +88,13 @@ module.exports = {
         "path": `${__dirname}/content/positions`
       },
       __key: "positions"
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "blog-posts",
+        "path": `${__dirname}/content/blog-posts`
+      },
+      __key: "blog-posts"
     },
     {
       resolve: `gatsby-transformer-json`,

@@ -1,0 +1,40 @@
+.root {
+  background-color: #121213;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.root h4 {
+  margin-bottom: 32px;
+}
+
+.controls {
+  padding-top: 24px;
+}
+
+.controls > * + * {
+  margin-left: 24px;
+}
+
+@media (min-width: 1440px) {
+  .controls {
+    display: none;
+  }
+}
+
+.item {
+
+}
+
+@media (min-width: 768px) {
+  .item {
+    width: 384px;
+  }
+}
