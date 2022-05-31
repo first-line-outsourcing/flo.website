@@ -1,13 +1,21 @@
 import {StaticImage} from 'gatsby-plugin-image';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {Button} from '../../../components/buttons/Button';
 import {Heading} from '../../../components/typography/Heading';
 import {Highlight} from '../../../components/typography/Highlight';
 import {Paragraph} from '../../../components/typography/Paragraph';
 import {PageLayout} from '../../../layout/page/PageLayout';
 import * as styles from './OurTeam.module.css';
+import {navigate} from 'gatsby';
 
 export function OurTeam(props) {
+  const onJoinUs = useCallback(
+    async () => {
+      await navigate('/join-us');
+    },
+    []
+  );
+
   return (
     <div className={styles.root}>
       <PageLayout.Container>
@@ -150,11 +158,11 @@ export function OurTeam(props) {
             <Paragraph size="xs">Senior Software Engineer</Paragraph>
           </li>
         </ul>
-        {/*TODO: add event*/}
         <Button
           theme="outline-dark"
           full
           size="xxl"
+          onClick={onJoinUs}
         >Join us</Button>
       </PageLayout.Container>
     </div>
