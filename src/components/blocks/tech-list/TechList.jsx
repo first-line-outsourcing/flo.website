@@ -3,18 +3,11 @@ import {TechIcon} from '../../icons/tech/TechIcon';
 import * as styles from './TechList.module.css';
 import classNames from 'classnames';
 
-const iconsMap = {
-  'JavaScript': 'js-box',
-  'TypeScript': 'ts-box',
-  'Angular': 'angular',
-  'iOS': 'ios',
-  'Web': 'web',
-  'Android': 'android',
-};
 
 /**
+ * Inline Tech list
  *
- * @param {string[]} props.techList List of technologies
+ * @param {('js'|'JavaScript'|'Node'|'NodeJs'|'js-box'|'ts-box'|'TypeScript'|'angular'|'Angular'|'react'|'React'|'aws'|'AWS'|'postgresql'|'PostgreSQL'|'sls-framework'|'Serverless framework'|'Serverless'|'express'|'Express'|'gcp'|'GCP'|'Google Cloud Platform'|'azure'|'Azure'|'Microsoft Azure'|'ibm'|'IBM'|'flutter'|'Flutter'|'cloudantdb'|'amazon-quantum-ledger-db'|'dart'|'Dart'|'electron'|'Electron'|'ios'|'iOS'|'web'|'Web'|'android'|'Android')[]} props.techList List of technologies
  * @param {string} [props.className]
  * @param {'light'|'dark'} [props.theme]
  * @returns {JSX.Element}
@@ -26,7 +19,7 @@ export function TechList(props) {
       {props.techList.map(tech => (
         <li key={tech}>
           <TechIcon
-            name={iconsMap[tech]}
+            name={tech}
             theme={props.theme === 'light' ? 'dark' : 'light'}
           />
           <span>{tech}</span>

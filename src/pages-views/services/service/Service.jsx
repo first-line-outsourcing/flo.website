@@ -2,14 +2,13 @@ import {GatsbyImage} from 'gatsby-plugin-image';
 import React, {useCallback} from 'react';
 import {Background, Parallax} from 'react-parallax';
 import {Cases} from '../../../components/blocks/cases/Cases';
-import {ContactUs} from '../../../components/blocks/contact-us/ContactUs';
-import {Testimonials} from '../../../components/blocks/testimonials/Testimonials';
+import {OurWorkProcess} from '../../../components/blocks/our-work-process/OurWorkProcess';
+import {TechStack} from '../../../components/blocks/tech-stack/TechStack';
 import {UserContent} from '../../../components/blocks/user-content/UserContent';
 import {Heading} from '../../../components/typography/Heading';
+import {Paragraph} from '../../../components/typography/Paragraph';
 import {PageLayout} from '../../../layout/page/PageLayout';
-import * as styles from './Case.module.css';
-import {Header} from './components/Header';
-
+import * as styles from './Service.module.css';
 
 function Hero(props) {
   return (
@@ -24,71 +23,65 @@ function Hero(props) {
       <PageLayout.Container>
         <div className={styles.heroContent}>
           <Heading>{props.title}</Heading>
+          <Paragraph size="s">{props.description}</Paragraph>
         </div>
       </PageLayout.Container>
     </Parallax>
   );
 }
 
-
 /**
- *  Case page view
+ * Service page view
  *
- * @param {string} props.id Case ID
- * @param {string} props.heroTitle Hero title
- * @param {import('gatsby-plugin-image').IGatsbyImageData} props.heroBg Hero background image
- * @param {string} props.techList Tech list
- * @param {any} props.social Social links
- * @param {string} props.siteLink Site link
- * @param {any} props.numbers
+ * @param {string} props.id
+ * @param {string} props.title
+ * @param {string} props.description
+ * @param {string[]} props.techStack
+ * @param {any} props.heroImage
  * @param {any} props.content
  * @returns {JSX.Element}
  * @constructor
  */
-export function Case(props) {
+export function Service(props) {
   const filter = useCallback(
     (item) => {
       if (item.id === props.id) {
         return false;
       }
-      return item.techList.some(i => props.techList.includes(i));
+      return item.techList.some(i => props.techStack.includes(i));
     },
     [props.id]
   );
+
 
   return (
     <PageLayout
       hero={
         <Hero
-          title={props.heroTitle}
-          bg={props.heroBg}
+          title={props.title}
+          description={props.description}
+          bg={props.heroImage}
         />
       }
       headerNoMenuHeightFix
     >
-      <div style={{backgroundColor: '#ffffff', color: '#1b1b1f'}}>
-        <Header
-          techList={props.techList}
-          siteLink={props.siteLink}
-          social={props.social}
-          numbers={props.numbers}
-        />
+      <div
+        className={styles.root}
+      >
         <UserContent>{props.content}</UserContent>
-        <Testimonials
-          className={styles.gaps}
-          style={{padding: 0}}
-        />
-        <PageLayout.Container className={styles.gapsPadding}>
-          <ContactUs/>
-        </PageLayout.Container>
       </div>
       <Cases
         theme="dark"
-        heading="other"
+        heading="tech"
+        headingTech={props.title}
         filter={filter}
-        max={2}
+        max={4}
         footerButton="see-more"
       />
+      <TechStack
+        list={props.techStack}
+      />
+      <OurWorkProcess/>
     </PageLayout>
   );
 }

@@ -20,12 +20,7 @@ function useCasesList(filter) {
                       id
                       slug
                       parent {
-                          internal {
-                              type
-                          }
                           ... on File {
-                              id
-                              name
                               sourceInstanceName
                           }
                       }
@@ -68,12 +63,12 @@ function useCasesList(filter) {
  *
  * @typedef {{id: string, sortTitle: string, techList: string[], link: string, previewCardImage: import('gatsby-plugin-image').IGatsbyImageData}} Item
  *
- * @param {'light'|'dark'} [props.theme] Default is light
+ * @param {'light'|'dark'} [props.theme] Theme. Default is 'light'.
  * @param {number} [props.max] Max number of cases to show
- * @param {'load-more'|'see-more'} [props.footerButton] Button in the footer
- * @param {(item) => boolean} [props.filter] Filter
- * @param {'other'|'featured'|'tech'} [props.heading] Heading
- * @param {string} [props.headingTech] Heading tech
+ * @param {'load-more'|'see-more'} [props.footerButton] What type of button to show in the footer
+ * @param {(item) => boolean} [props.filter] Filter cases function
+ * @param {'other'|'featured'|'tech'} [props.heading] Heading text preset name
+ * @param {string} [props.headingTech] Tech name. Use it together with heading of type 'tech'.
  * @returns {JSX.Element}
  * @constructor
  */
@@ -138,13 +133,17 @@ export function Cases(props) {
         {
           props.heading === 'tech' && props.headingTech && (
             <>
-              <Heading theme={props.theme === 'light' ? 'dark' : 'light'} className={styles.title}>
-                <Highlight theme={props.theme === 'light' ? 'solid' : undefined}>Our {props.headingTech}</Highlight>
-              </Heading>
-              <Paragraph>We developed the entertainment platform and increased sales by 15%, integrated social networks with external services, and increased DAU by 8%... What are you waiting for? Let’s work together!</Paragraph>
+              <Heading.H2 theme={props.theme === 'light' ? 'dark' : 'light'} className={styles.title}>
+                Our {props.headingTech.toLowerCase()}
+                <br/>
+                {' '}
+                <Highlight theme={props.theme === 'light' ? 'solid' : undefined}>cases</Highlight>
+              </Heading.H2>
+              <Paragraph className={styles.subHeader}>We developed the entertainment platform and increased sales by 15%, integrated social networks with external services, and increased DAU by 8%... What are you waiting for? Let’s work together!</Paragraph>
             </>
           )
         }
+        <div className={styles.gap}/>
         {
           sorted.map(row => (
             <ul className={styles.row}>

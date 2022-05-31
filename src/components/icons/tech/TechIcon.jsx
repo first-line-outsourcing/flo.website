@@ -24,33 +24,56 @@ import Android from './images/android.inline.svg';
 
 const map = {
   'js': Js,
+  'JavaScript': Js,
+  'Node': Js,
+  'NodeJs': Js,
   'js-box': JsBox,
   'ts-box': TsBox,
+  'TypeScript': TsBox,
   'angular': Angular,
+  'Angular': Angular,
   'react': _React,
+  'React': _React,
   'aws': Aws,
+  'AWS': Aws,
   'postgresql': PostgreSql,
+  'PostgreSQL': PostgreSql,
   'sls-framework': SlsFramework,
+  'Serverless framework': SlsFramework,
+  'Serverless': SlsFramework,
   'express': Express,
+  'Express': Express,
   'gcp': Electron,
+  'GCP': Electron,
+  'Google Cloud Platform': Electron,
   'azure': Azure,
+  'Azure': Azure,
+  'Microsoft Azure': Azure,
   'ibm': Ibm,
+  'IBM': Ibm,
   'flutter': Flutter,
+  'Flutter': Flutter,
   'cloudantdb': CloudantDb,
   'amazon-quantum-ledger-db': AmazonQuantumLedgerDb,
   'dart': Dart,
+  'Dart': Dart,
   'electron': Electron,
+  'Electron': Electron,
   'ios': Ios,
+  'iOS': Ios,
   'web': Web,
-  'android': Android
+  'Web': Web,
+  'android': Android,
+  'Android': Android,
 };
+
 
 /**
  * Tech iconik
  *
  * @param {String} [props.className]
  * @param {React.CSSProperties} [props.style] Style
- * @param {'js'|'js-box'|'ts-box'|'angular'|'react'|'aws'|'postgresql'|'sls-framework'|'express'|'gcp'|'azure'|'ibm'|'flutter'|'cloudantdb'|'amazon-quantum-ledger-db'|'dart'|'electron'|'ios'|'web'|'android'} props.name Name
+ * @param {'js'|'JavaScript'|'Node'|'NodeJs'|'js-box'|'ts-box'|'TypeScript'|'angular'|'Angular'|'react'|'React'|'aws'|'AWS'|'postgresql'|'PostgreSQL'|'sls-framework'|'Serverless framework'|'Serverless'|'express'|'Express'|'gcp'|'GCP'|'Google Cloud Platform'|'azure'|'Azure'|'Microsoft Azure'|'ibm'|'IBM'|'flutter'|'Flutter'|'cloudantdb'|'amazon-quantum-ledger-db'|'dart'|'Dart'|'electron'|'Electron'|'ios'|'iOS'|'web'|'Web'|'android'|'Android'} props.name Name
  * @param {'dark' | 'light} [props.theme] Theme. Default is dark.
  * @returns {JSX.Element}
  * @constructor

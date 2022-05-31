@@ -1,0 +1,47 @@
+.root {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #ffffff;
+  color: #121213;
+}
+
+.heroBackground {
+  width: 100vw;
+  height: 320px;
+}
+
+@media (min-width: 768px) {
+  .heroBackground {
+    height: 544px;
+  }
+}
+
+.heroImage {
+  height: 100%;
+  width: 100%;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 440px;
+  padding-bottom: 48px;
+}
+
+.heroContent > h1 {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .heroContent > h1 {
+    margin-bottom: 24px;
+  }
+
+  .heroContent {
+    height: 544px;
+    padding-bottom: 89px;
+    max-width: 896px;
+  }
+}

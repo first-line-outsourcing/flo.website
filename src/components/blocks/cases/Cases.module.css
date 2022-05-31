@@ -33,14 +33,21 @@
 }
 
 .title {
-  margin-bottom: 48px;
   text-align: center;
+  max-width: 587px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subHeader {
+  text-align: center;
+  max-width: 587px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .title {
-    margin-bottom: 56px;
-  }
 }
 
 .row {
@@ -117,3 +124,7 @@
 }
 
 .container {}
+
+.gap {
+  margin-top: 56px;
+}

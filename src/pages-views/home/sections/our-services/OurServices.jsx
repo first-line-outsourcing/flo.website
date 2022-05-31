@@ -1,5 +1,4 @@
 import {graphql, useStaticQuery} from 'gatsby';
-import {getImage} from 'gatsby-plugin-image';
 import React, {useCallback, useRef} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {ArrowButton} from '../../../../components/buttons/arrow/ArrowButton';
@@ -8,24 +7,28 @@ import {Highlight} from '../../../../components/typography/Highlight';
 import {Paragraph} from '../../../../components/typography/Paragraph';
 import {PageLayout} from '../../../../layout/page/PageLayout';
 import {Card} from './components/Card';
-import * as styles from './OurServices.module.css';
 import curvImage from './images/curv.svg';
+import * as styles from './OurServices.module.css';
+
 
 function useServicesList() {
-  const data = useStaticQuery(graphql`
+  const result = useStaticQuery(graphql`
       query {
-          allSitePage(filter: {path: {regex: "/^\\/services\\/.+/"}}) {
+          allMdx {
               edges {
                   node {
-                      path
-                      children {
-                          ... on Json {
-                              id
-                              shortDescription
-                              shortTitle
-                              verPreviewImage {
-                                  publicURL
-                              }
+                      id
+                      slug
+                      frontmatter {
+                          shortDescription
+                          shortTitle
+                          verPreviewImage {
+                              publicURL
+                          }
+                      }
+                      parent {
+                          ... on File {
+                              sourceInstanceName
                           }
                       }
                   }
@@ -34,10 +37,14 @@ function useServicesList() {
       }
   `);
 
-  return data.allSitePage.edges.map(n => {
-    const metadata = n.node.children[0];
+  const items = result.allMdx.edges
+    .filter(i => i.node.parent.sourceInstanceName === 'services');
+
+  return items.map(n => {
+    const metadata = n.node.frontmatter;
     return ({
-      path: n.node.path,
+      id: n.node.id,
+      path: `/services/${n.node.slug}`,
       title: metadata.shortTitle,
       description: metadata.shortDescription,
       preview: metadata.verPreviewImage.publicURL
@@ -68,7 +75,7 @@ export function OurServices(props) {
   return (
     <section className={styles.root}>
       <PageLayout.Container className={styles.container}>
-        <img src={curvImage} className={styles.curv} />
+        <img src={curvImage} className={styles.curv}/>
         <div className={styles.content}>
           <div className={styles.text}>
             <Heading.H2>
@@ -98,7 +105,7 @@ export function OurServices(props) {
                   >
                     {
                       services.map(service => (
-                        <SwiperSlide key={service.path}>
+                        <SwiperSlide key={service.id}>
                           <Card
                             title={service.title}
                             description={service.description}
