@@ -11,7 +11,7 @@ import {Card} from '../../components/Card';
 function useList(currentId, tags, limit) {
   const result = useStaticQuery(graphql`
       query {
-          allMdx {
+          allMdx(filter: {fields: {source: {eq: "blog-posts"}}}) {
               edges {
                   node {
                       id
@@ -26,18 +26,14 @@ function useList(currentId, tags, limit) {
                               }
                           }
                       }
-                      parent {
-                          ... on File {
-                              sourceInstanceName
-                          }
-                      }
                   }
               }
           }
       }
   `);
 
-  const nodes = result.allMdx.edges.filter(i => i.node.parent.sourceInstanceName === 'blog-posts');
+  const nodes = result.allMdx.edges;
+
   const filter = n => {
     if (n.node.id === currentId) {
       return false;

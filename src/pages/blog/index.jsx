@@ -7,7 +7,7 @@ import {Blog as BlogView} from '../../pages-views/blog/Blog';
 function useList() {
   const result = useStaticQuery(graphql`
       query {
-          allMdx {
+          allMdx(filter: {fields: {source: {eq: "blog-posts"}}}) {
               edges {
                   node {
                       id
@@ -21,18 +21,12 @@ function useList() {
                               }
                           }
                       }
-                      parent {
-                          ... on File {
-                              sourceInstanceName
-                          }
-                      }
                   }
               }
           }
       }
   `);
-  const items = result.allMdx.edges
-    .filter(i => i.node.parent.sourceInstanceName === 'blog-posts');
+  const items = result.allMdx.edges;
 
   return items
     .map(i => ({

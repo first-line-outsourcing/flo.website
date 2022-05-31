@@ -53,7 +53,7 @@ module.exports = {
           }
         ]
       }
-    }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+    }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", `gatsby-plugin-mdx-source-name`, {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "images",

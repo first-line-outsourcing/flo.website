@@ -14,16 +14,11 @@ import classNames from 'classnames';
 function useCasesList(filter) {
   const data = useStaticQuery(graphql`
       query {
-          allMdx {
+          allMdx(filter: {fields: {source: {eq: "cases"}}}) {
               edges {
                   node {
                       id
                       slug
-                      parent {
-                          ... on File {
-                              sourceInstanceName
-                          }
-                      }
                       frontmatter {
                           techList
                           shortTitle
@@ -40,9 +35,6 @@ function useCasesList(filter) {
   `);
 
   const list = data.allMdx.edges
-    .filter(edge => {
-      return edge.node.parent.sourceInstanceName === 'cases';
-    })
     .map(edge => ({
       id: edge.node.id,
       shortTitle: edge.node.frontmatter.shortTitle,

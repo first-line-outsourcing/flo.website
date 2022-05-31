@@ -14,7 +14,7 @@ import * as styles from './OurServices.module.css';
 function useServicesList() {
   const result = useStaticQuery(graphql`
       query {
-          allMdx {
+          allMdx(filter: {fields: {source: {eq: "services"}}}) {
               edges {
                   node {
                       id
@@ -26,19 +26,13 @@ function useServicesList() {
                               publicURL
                           }
                       }
-                      parent {
-                          ... on File {
-                              sourceInstanceName
-                          }
-                      }
                   }
               }
           }
       }
   `);
 
-  const items = result.allMdx.edges
-    .filter(i => i.node.parent.sourceInstanceName === 'services');
+  const items = result.allMdx.edges;
 
   return items.map(n => {
     const metadata = n.node.frontmatter;

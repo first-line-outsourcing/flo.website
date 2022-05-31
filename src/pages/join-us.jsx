@@ -5,7 +5,7 @@ import {JoinUs as JoinUsView} from '../pages-views/join-us/JoinUs';
 function useList() {
   const result = useStaticQuery(graphql`
       query {
-          allMdx {
+          allMdx(filter: {fields: {source: {eq: "positions"}}}) {
               edges {
                   node {
                       frontmatter {
@@ -16,11 +16,6 @@ function useList() {
                           workTime
                       }
                       body
-                      parent {
-                          ... on File {
-                              sourceInstanceName
-                          }
-                      }
                   }
               }
           }
@@ -28,7 +23,6 @@ function useList() {
   `);
 
   return result.allMdx.edges
-    .filter(i => i.node.parent.sourceInstanceName === 'positions')
     .map(i => ({
       meta: i.node.frontmatter,
       body: i.node.body,

@@ -5,7 +5,7 @@ const util = require('util');
 const fileExists = util.promisify(fs.exists);
 
 exports.onCreateNode = async ({actions, node, getNode, createContentDigest, cache}) => {
-  const { createParentChildLink } = actions
+  const {createParentChildLink} = actions
 
   /*
    * It allows you to use data.json as page metadata. Put data.json along with page component(like MyPage.jsx).
@@ -81,4 +81,58 @@ exports.onCreateNode = async ({actions, node, getNode, createContentDigest, cach
 
     await cache.set(cacheKey, node.id);
   }
+}
+
+// Create pages
+
+async function createPagesFromMdxContent(createPage, graphql, sourceName, pathRoot, templatePath) {
+  const queryString = `
+    query {
+      allMdx(filter: {fields: {source: {eq: "${sourceName}"}}}) {
+        nodes {
+          slug
+          id
+        }
+      }
+    }
+  `
+  const query = await graphql(queryString);
+
+  const nodes = query.data.allMdx.nodes;
+
+  for (const node of nodes) {
+    await createPage({
+      path: `/${pathRoot}/${node.slug}`,
+      component: templatePath,
+      context: {
+        id: node.id
+      }
+    })
+  }
+}
+
+exports.createPages = async ({actions, graphql}) => {
+  const {createPage} = actions
+
+  await createPagesFromMdxContent(
+    createPage,
+    graphql,
+    'blog-posts',
+    'blog',
+    path.resolve('src/pages/blog/_post.jsx')
+  );
+  await createPagesFromMdxContent(
+    createPage,
+    graphql,
+    'cases',
+    'cases',
+    path.resolve('src/pages/cases/_case.jsx')
+  );
+  await createPagesFromMdxContent(
+    createPage,
+    graphql,
+    'services',
+    'services',
+    path.resolve('src/pages/services/_service.jsx')
+  );
 }
