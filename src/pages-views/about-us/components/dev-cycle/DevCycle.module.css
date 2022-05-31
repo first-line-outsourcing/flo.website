@@ -74,16 +74,16 @@
 
 }
 
-.fullImage {
+.fullImage:not(.__) {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .miniImage {
+  .miniImage:not(.__) {
     display: none;
   }
 
-  .fullImage {
+  .fullImage:not(.__) {
     display: block;
   }
 }
