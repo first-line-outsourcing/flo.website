@@ -19,6 +19,7 @@ import {nanoid} from 'nanoid';
  * @constructor
  */
 export function JointUsFormView(props) {
+  const errors = props.errors;
   const onChange = useCallback(
     (field) => (valueOrEvent) => {
       let value;
@@ -59,6 +60,9 @@ export function JointUsFormView(props) {
           value={props.value.name}
           onChange={onChange('name')}
         />
+        {
+          errors['name'] && <span>{errors['name']}</span>
+        }
       </div>
       <div className={classNames(styles.row, styles.responsive)}>
         <div className={styles.row}>
@@ -69,6 +73,9 @@ export function JointUsFormView(props) {
             value={props.value.email}
             onChange={onChange('email')}
           />
+          {
+            errors['email'] && <span>{errors['email']}</span>
+          }
         </div>
         <div className={styles.row}>
           <Label for={ids.phone}>Phone number (optional)</Label>
@@ -77,6 +84,9 @@ export function JointUsFormView(props) {
             value={props.value.phone}
             onChange={onChange('phone')}
           />
+          {
+            errors['phone'] && <span>{errors['phone']}</span>
+          }
         </div>
       </div>
       <div className={styles.row}>
@@ -86,6 +96,9 @@ export function JointUsFormView(props) {
           value={props.value.link}
           onChange={onChange('link')}
         />
+        {
+          errors['link'] && <span>{errors['link']}</span>
+        }
       </div>
       <div className={styles.row}>
         <Label for={ids.link}>Resume</Label>
@@ -93,6 +106,9 @@ export function JointUsFormView(props) {
           id={ids.resume}
           onFile={onChange('resume')}
         />
+        {
+          errors['resume'] && <span>{errors['resume']}</span>
+        }
       </div>
       <div className={styles.row}>
         <div className={styles.agree}>

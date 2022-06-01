@@ -67,3 +67,11 @@
 .footer {
   margin-top: 32px;
 }
+
+.row > span:last-child {
+  color: #FF2F2F;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 0;
+}

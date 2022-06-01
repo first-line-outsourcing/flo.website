@@ -14,11 +14,13 @@ import {nanoid} from 'nanoid';
  * @param {Value} props.value
  * @param {(value: Value) => void} props.onChange
  * @param {boolean} props.sendDisabled
+ * @param {React<string, string>} [props.errors]
  * @param {(value: Value) => void} props.onSend
  * @returns {JSX.Element}
  * @constructor
  */
 export function ContactUsFormView(props) {
+  const errors = props.errors;
   const onChange = useCallback(
     (field) => (valueOrEvent) => {
       let value;
@@ -60,6 +62,9 @@ export function ContactUsFormView(props) {
           value={props.value.name}
           onChange={onChange('name')}
         />
+        {
+          errors['name'] && <span>{errors['name']}</span>
+        }
       </div>
       <div className={classNames(styles.row, styles.responsive)}>
         <div className={styles.row}>
@@ -70,6 +75,9 @@ export function ContactUsFormView(props) {
             value={props.value.email}
             onChange={onChange('email')}
           />
+          {
+            errors['email'] && <span>{errors['email']}</span>
+          }
         </div>
         <div className={styles.row}>
           <Label for={ids.phone}>Phone number (optional)</Label>
@@ -78,6 +86,9 @@ export function ContactUsFormView(props) {
             value={props.value.phone}
             onChange={onChange('phone')}
           />
+          {
+            errors['phone'] && <span>{errors['phone']}</span>
+          }
         </div>
       </div>
       <div className={styles.row}>
@@ -86,6 +97,9 @@ export function ContactUsFormView(props) {
           id={ids.attachment}
           onFile={onChange('attachment')}
         />
+        {
+          errors['attachment'] && <span>{errors['attachment']}</span>
+        }
       </div>
       <div className={styles.row}>
         <Label for={ids.projectDescription}>Describe your project</Label>
@@ -95,6 +109,9 @@ export function ContactUsFormView(props) {
           onChange={onChange('projectDescription')}
           maxLength={200}
         />
+        {
+          errors['projectDescription'] && <span>{errors['projectDescription']}</span>
+        }
       </div>
       <div className={styles.row}>
         <div className={styles.agree}>
