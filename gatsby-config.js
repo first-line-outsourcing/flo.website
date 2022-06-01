@@ -127,7 +127,9 @@ module.exports = {
         bucketName: process.env.AWS_BUCKET_NAME,
         bucketPrefix: process.env.AWS_BUCKET_PREFIX,
         protocol: siteURL.protocol,
-        hostname: siteURL.hostname
+        hostname: siteURL.hostname,
+        generateRoutingRules: true,
+        generateRedirectObjectsForPermanentRedirects: true,
       }
     }
   ]
