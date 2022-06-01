@@ -125,7 +125,7 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: process.env.AWS_BUCKET_NAME,
-        bucketPrefix: process.env.AWS_BUCKET_PREFIX,
+        bucketPrefix: process.env.AWS_BUCKET_PREFIX || undefined,
         protocol: siteURL.protocol,
         hostname: siteURL.hostname,
         generateRoutingRules: true,
