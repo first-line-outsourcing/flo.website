@@ -56,7 +56,7 @@ export function ContactUsFormView(props) {
   return (
     <div>
       <div className={styles.row}>
-        <Label for={ids.name}>Full name</Label>
+        <Label htmlFor={ids.name}>Full name</Label>
         <Input
           id={ids.name}
           value={props.value.name}
@@ -68,7 +68,7 @@ export function ContactUsFormView(props) {
       </div>
       <div className={classNames(styles.row, styles.responsive)}>
         <div className={styles.row}>
-          <Label for={ids.email}>Email address</Label>
+          <Label htmlFor={ids.email}>Email address</Label>
           <Input
             id={ids.email}
             type="email"
@@ -80,7 +80,7 @@ export function ContactUsFormView(props) {
           }
         </div>
         <div className={styles.row}>
-          <Label for={ids.phone}>Phone number (optional)</Label>
+          <Label htmlFor={ids.phone}>Phone number (optional)</Label>
           <Input.Phone
             id={ids.phone}
             value={props.value.phone}
@@ -92,7 +92,7 @@ export function ContactUsFormView(props) {
         </div>
       </div>
       <div className={styles.row}>
-        <Label for={ids.link}>File</Label>
+        <Label htmlFor={ids.link}>File</Label>
         <Input.InputFile
           id={ids.attachment}
           onFile={onChange('attachment')}
@@ -102,7 +102,7 @@ export function ContactUsFormView(props) {
         }
       </div>
       <div className={styles.row}>
-        <Label for={ids.projectDescription}>Describe your project</Label>
+        <Label htmlFor={ids.projectDescription}>Describe your project</Label>
         <Input.TextArea
           id={ids.projectDescription}
           value={props.value.projectDescription}

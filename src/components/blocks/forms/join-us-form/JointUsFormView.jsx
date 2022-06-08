@@ -54,7 +54,7 @@ export function JointUsFormView(props) {
   return (
     <div>
       <div className={styles.row}>
-        <Label for={ids.name}>Full name</Label>
+        <Label htmlFor={ids.name}>Full name</Label>
         <Input
           id={ids.name}
           value={props.value.name}
@@ -66,7 +66,7 @@ export function JointUsFormView(props) {
       </div>
       <div className={classNames(styles.row, styles.responsive)}>
         <div className={styles.row}>
-          <Label for={ids.email}>Email address</Label>
+          <Label htmlFor={ids.email}>Email address</Label>
           <Input
             id={ids.email}
             type="email"
@@ -78,7 +78,7 @@ export function JointUsFormView(props) {
           }
         </div>
         <div className={styles.row}>
-          <Label for={ids.phone}>Phone number (optional)</Label>
+          <Label htmlFor={ids.phone}>Phone number (optional)</Label>
           <Input.Phone
             id={ids.phone}
             value={props.value.phone}
@@ -90,7 +90,7 @@ export function JointUsFormView(props) {
         </div>
       </div>
       <div className={styles.row}>
-        <Label for={ids.link}>Link on portfolio or social network </Label>
+        <Label htmlFor={ids.link}>Link on portfolio or social network </Label>
         <Input
           id={ids.link}
           value={props.value.link}
@@ -101,7 +101,7 @@ export function JointUsFormView(props) {
         }
       </div>
       <div className={styles.row}>
-        <Label for={ids.link}>Resume</Label>
+        <Label htmlFor={ids.link}>Resume</Label>
         <Input.InputFile
           id={ids.resume}
           onFile={onChange('resume')}
