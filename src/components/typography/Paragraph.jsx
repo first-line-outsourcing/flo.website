@@ -13,7 +13,10 @@ import * as styles from './Paragraph.module.css';
  * @constructor
  */
 export function Paragraph(props) {
-  return (<p {...props} className={classNames(styles.root, props.className, {
+  const pProps = {...props};
+  delete pProps.gaps;
+  delete pProps.size;
+  return (<p {...pProps} className={classNames(styles.root, props.className, {
     [styles.size_s]: props.size === 's',
     [styles.size_xs]: props.size === 'xs',
     [styles.gaps]: props.gaps,
