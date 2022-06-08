@@ -1,12 +1,22 @@
 [
   {
     "categories": [
-      "main"
+      "case-hirefy"
     ],
-    "personName": "Natasha Kozanovich",
-    "personDescription": "Product engineering & Director of Strategic Partnerships and Integration at Svenn",
+    "personName": "Nick Blanch",
+    "personDescription": "Co-founder at Hirefy",
     "personPhoto": "./images/photo_natashsa_kozanovich.png",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.",
+    "text": "These guys done a remarkable work. They're an extremely talented engineers that know how to work agile and fast while remaining in deadline and write beautiful flawless code.",
+    "image": null
+  },
+  {
+    "categories": [
+      "__"
+    ],
+    "personName": "__",
+    "personDescription": "Dummy item to help gatsby to infer image/personPhoto fields types",
+    "personPhoto": "./images/photo_natashsa_kozanovich.png",
+    "text": "__",
     "image": "./images/image0.png"
   }
 ]

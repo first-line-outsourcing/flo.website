@@ -41,6 +41,7 @@ function Hero(props) {
  * @param {any} props.social Social links
  * @param {string} props.siteLink Site link
  * @param {any} props.numbers
+ * @param {string[]} props.testimonials
  * @param {any} props.content
  * @returns {JSX.Element}
  * @constructor
@@ -77,6 +78,7 @@ export function Case(props) {
         <Testimonials
           className={styles.gaps}
           style={{padding: 0}}
+          categories={props.testimonials}
         />
         <PageLayout.Container className={styles.gapsPadding}>
           <ContactUs/>

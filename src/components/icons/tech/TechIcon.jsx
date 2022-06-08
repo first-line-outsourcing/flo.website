@@ -27,6 +27,7 @@ const map = {
   'JavaScript': Js,
   'Node': Js,
   'NodeJs': Js,
+  'Node.js': Js,
   'js-box': JsBox,
   'ts-box': TsBox,
   'TypeScript': TsBox,

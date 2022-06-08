@@ -73,6 +73,23 @@
 
 }
 
+.noImage {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .noImage {
+    display: block;
+    height: 240px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .noImage {
+    height:328px;
+  }
+}
+
 .figure {
   display: none;
   position: absolute;

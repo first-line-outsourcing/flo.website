@@ -14,6 +14,7 @@ export default function Case({data}) {
       siteLink={data.mdx.frontmatter.siteLink}
       social={data.mdx.frontmatter.social}
       numbers={data.mdx.frontmatter.numbers}
+      testimonials={data.mdx.frontmatter.testimonials}
       content={data.mdx.body}
     />
   );
@@ -42,6 +43,7 @@ export const query = graphql`
                         gatsbyImageData
                     }
                 }
+                testimonials
             }
             body
         }

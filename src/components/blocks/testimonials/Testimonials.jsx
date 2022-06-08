@@ -50,7 +50,12 @@ function useList(categories) {
   }
 
   return list.allTestimonials.edges
-    .filter(item => item.node.categories.some(category => categories.includes(category)))
+    .filter(item => {
+      if (item.node.personName === '__') {
+        return false;
+      }
+      return item.node.categories.some(category => categories.includes(category));
+    })
     .map(mapper);
 }
 

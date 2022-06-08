@@ -28,8 +28,19 @@ export function Card(props) {
         </div>
       </div>
       <div>
-        <GatsbyImage className={styles.image} image={props.image} alt="Image"/>
-        <img className={styles.figure} src={figure} alt="Figure"/>
+        {
+          props.image && (
+            <>
+              <GatsbyImage className={styles.image} image={props.image} alt="Image"/>
+              <img className={styles.figure} src={figure} alt="Figure"/>
+            </>
+          )
+        }
+        {
+          !props.image && (
+            <div className={styles.noImage}/>
+          )
+        }
       </div>
     </div>
   );
