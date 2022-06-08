@@ -24,7 +24,7 @@ export function Numbers(props) {
       <ul>
         {
           props.list.map(item => (
-            <li>
+            <li key={item.key}>
               <span><Highlight theme={props.theme === 'light' ? 'solid' : undefined}>{item.value}</Highlight></span>
               <p>{item.caption}</p>
             </li>
