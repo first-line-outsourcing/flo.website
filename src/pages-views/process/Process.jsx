@@ -34,6 +34,9 @@ function Hero() {
 export function Process(props) {
   return (
     <PageLayout
+      seo={{
+        title: 'Process'
+      }}
       hero={<Hero/>}
       headerNoMenuHeightFix
     >

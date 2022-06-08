@@ -138,6 +138,9 @@ export function Blog(props) {
 
   return (
     <PageLayout
+      seo={{
+        title: 'Blog'
+      }}
       hero={<Hero/>}
       headerNoMenuHeightFix
     >

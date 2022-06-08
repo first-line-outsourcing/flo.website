@@ -24,6 +24,9 @@ function Hero() {
 export function Technologies(props) {
   return (
     <PageLayout
+      seo={{
+        title: 'Technologies'
+      }}
       hero={<Hero/>}
       heroRootClassName={styles.heroRoot}
     >

@@ -60,6 +60,9 @@ export function JoinUs(props) {
 
   return (
     <PageLayout
+      seo={{
+        title: 'Join Us'
+      }}
       hero={<Hero/>}
       headerNoMenuHeightFix
       footerForm="join-us"

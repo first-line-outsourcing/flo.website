@@ -46,6 +46,9 @@ function Hero() {
 export function Home(props) {
   return (
     <PageLayout
+      seo={{
+        title: 'Main'
+      }}
       hero={<Hero />}
       heroRootClassName={styles.heroRoot}
     >

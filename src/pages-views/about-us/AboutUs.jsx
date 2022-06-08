@@ -37,6 +37,9 @@ function Hero() {
 export function AboutUs(props) {
   return (
     <PageLayout
+      seo={{
+        title: 'About Us'
+      }}
       hero={<Hero/>}
       headerNoMenuHeightFix
     >

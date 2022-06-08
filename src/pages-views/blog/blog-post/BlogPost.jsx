@@ -24,6 +24,9 @@ function Hero(props) {
 export function BlogPost(props) {
   return (
     <PageLayout
+      seo={{
+        title: props.title
+      }}
       hero={
         <Hero
           title={props.title}

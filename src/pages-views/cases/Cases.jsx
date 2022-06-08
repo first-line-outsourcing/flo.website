@@ -24,6 +24,9 @@ function Hero() {
 export function Cases(props) {
   return (
     <PageLayout
+      seo={{
+        title: 'Cases'
+      }}
       hero={<Hero/>}
     >
       <CasesSection

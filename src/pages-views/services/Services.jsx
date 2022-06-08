@@ -70,6 +70,9 @@ export function Services(props) {
 
   return (
     <PageLayout
+      seo={{
+        title: 'Services'
+      }}
       hero={<Hero/>}
       headerNoMenuHeightFix
     >

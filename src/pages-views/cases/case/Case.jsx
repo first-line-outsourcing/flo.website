@@ -59,6 +59,9 @@ export function Case(props) {
 
   return (
     <PageLayout
+      seo={{
+        title: props.heroTitle
+      }}
       hero={
         <Hero
           title={props.heroTitle}

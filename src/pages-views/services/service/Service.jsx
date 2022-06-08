@@ -56,6 +56,9 @@ export function Service(props) {
 
   return (
     <PageLayout
+      seo={{
+        title: props.title
+      }}
       hero={
         <Hero
           title={props.title}
