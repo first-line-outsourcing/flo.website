@@ -21,6 +21,16 @@
   },
   {
     "categories": [
+      "case-mds-collection"
+    ],
+    "personName": "Andrew Adisson",
+    "personDescription": "Producer at MDS",
+    "personPhoto": "./images/photo_natashsa_kozanovich.png",
+    "text": "This team is a highly professional developers and fun to work with. They created a complex project from scratch and took care of all aspects from database design, testing, backup, UX design, API integration etc. Also, they are highly organised, keeping work flowing in a well documented scrum sprints and all communication, brain storming and problem solving with this team is a pleasure.",
+    "image": null
+  },
+  {
+    "categories": [
       "__"
     ],
     "personName": "__",
