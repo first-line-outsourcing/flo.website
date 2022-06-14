@@ -28,7 +28,7 @@ export function Header(props) {
           />
         </div>
         <div>
-          <a className={styles.link} href={props.siteLink}>Website</a>
+          <a className={styles.link} href={props.siteLink}>Link</a>
           <SocialLinks
             className={styles.socialLinks}
             inline

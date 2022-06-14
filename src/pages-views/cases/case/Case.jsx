@@ -78,11 +78,15 @@ export function Case(props) {
           numbers={props.numbers}
         />
         <UserContent>{props.content}</UserContent>
-        <Testimonials
-          className={styles.gaps}
-          style={{padding: 0}}
-          categories={props.testimonials}
-        />
+        {
+          props.testimonials.length && (
+            <Testimonials
+              className={styles.gaps}
+              style={{padding: 0}}
+              categories={props.testimonials}
+            />
+          )
+        }
         <PageLayout.Container className={styles.gapsPadding}>
           <ContactUs/>
         </PageLayout.Container>
