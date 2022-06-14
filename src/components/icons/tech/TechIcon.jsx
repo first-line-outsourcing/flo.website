@@ -21,6 +21,7 @@ import TsBox from './images/ts-box.inline.svg';
 import Ios from './images/ios.inline.svg';
 import Web from './images/web.inline.svg';
 import Android from './images/android.inline.svg';
+import Terraform from './images/terraform.inline.svg';
 
 const map = {
   'js': Js,
@@ -66,6 +67,8 @@ const map = {
   'Web': Web,
   'android': Android,
   'Android': Android,
+  'Terraform': Terraform,
+  'terraform': Terraform,
 };
 
 
@@ -74,7 +77,7 @@ const map = {
  *
  * @param {String} [props.className]
  * @param {React.CSSProperties} [props.style] Style
- * @param {'js'|'JavaScript'|'Node'|'NodeJs'|'js-box'|'ts-box'|'TypeScript'|'angular'|'Angular'|'react'|'React'|'aws'|'AWS'|'postgresql'|'PostgreSQL'|'sls-framework'|'Serverless framework'|'Serverless'|'express'|'Express'|'gcp'|'GCP'|'Google Cloud Platform'|'azure'|'Azure'|'Microsoft Azure'|'ibm'|'IBM'|'flutter'|'Flutter'|'cloudantdb'|'amazon-quantum-ledger-db'|'dart'|'Dart'|'electron'|'Electron'|'ios'|'iOS'|'web'|'Web'|'android'|'Android'} props.name Name
+ * @param {'js'|'JavaScript'|'Node'|'NodeJs'|'js-box'|'ts-box'|'TypeScript'|'angular'|'Angular'|'react'|'React'|'aws'|'AWS'|'postgresql'|'PostgreSQL'|'sls-framework'|'Serverless framework'|'Serverless'|'express'|'Express'|'gcp'|'GCP'|'Google Cloud Platform'|'azure'|'Azure'|'Microsoft Azure'|'ibm'|'IBM'|'flutter'|'Flutter'|'cloudantdb'|'amazon-quantum-ledger-db'|'dart'|'Dart'|'electron'|'Electron'|'ios'|'iOS'|'web'|'Web'|'android'|'Android'|'Terraform'|'terraform'} props.name Name
  * @param {'dark' | 'light} [props.theme] Theme. Default is dark.
  * @returns {JSX.Element}
  * @constructor

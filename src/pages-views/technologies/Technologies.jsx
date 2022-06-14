@@ -37,126 +37,126 @@ export function Technologies(props) {
               <Card
                 icon="js"
                 name="Node.js"
-                description="A single-threaded, open-source, cross-platform runtime environment for building fast and scalable server-side and networking applications."
+                description="Single-threaded, open-source, cross-platform runtime to build fast and scalable server-side applications"
               />
             </li>
             <li>
               <Card
                 icon="js-box"
                 name="Java Script"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet."
+                description="Dynamic programming language that's used for web and game development, in web applications, and lots more"
               />
             </li>
             <li>
               <Card
                 icon="ts-box"
                 name="TypeScript"
-                description="A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale."
+                description="Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale"
               />
             </li>
             <li>
               <Card
                 icon="angular"
                 name="Angular | NGXS"
-                description="A most potent, component-based, open-source framework for building scalable web applications written in TypeScript. "
+                description="Most potent, component-based, open-source framework to build scalable web apps written in TypeScript"
               />
             </li>
             <li>
               <Card
                 icon="react"
                 name="React | MobX"
-                description="The main purpose of React is to be fast, scalable, and simple. It works only on user interfaces in the application. This corresponds to the view in the MVC template."
+                description="React is a fast, scalable and simple way to build modern and powerful web and mobile applications"
               />
             </li>
             <li>
               <Card
                 icon="sls-framework"
                 name="Serverless Framework"
-                description="An open source tool available for building, packaging and deploying serverless applications across multiple cloud providers and platforms like AWS, GCP, Azure, Kubernetes, etc."
+                description="Open-source tool to build, package and deploy serverless applications to AWS, GCP, Azure, Kubernetes, etc"
               />
             </li>
             <li>
               <Card
                 icon="express"
                 name="Express | Sails | Nest"
-                description="Node.js frameworks designed to build API's web applications cross-platform mobile apps quickly and make Node.js easy."
+                description="Node.js frameworks designed to build API's web applications cross-platform mobile apps quickly and easy"
               />
             </li>
             <li>
               <Card
                 icon="aws"
                 name="Amazon Web Services"
-                description="A comprehensive, evolving cloud computing platform provided by Amazon that includes a mixture of infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS) offerings."
+                description="Cloud computing platform provided by Amazon that includes a mixture of IaaS, PaaS and SaaS offerings"
               />
             </li>
             <li>
               <Card
                 icon="aws"
                 name="AWS SAM/CDK"
-                description="Open-source software development frameworks to define your cloud application resources using familiar programming languages for Amazon Web Services."
+                description="Open-source frameworks to define cloud application resources using familiar programming languages for AWS"
+              />
+            </li>
+            <li>
+              <Card
+                icon="terraform"
+                name="Terraform"
+                description="Infrastructure as code tool that lets build, change, and version cloud resources safely and efficiently"
               />
             </li>
             <li>
               <Card
                 icon="gcp"
                 name="Google Cloud Platform"
-                description="A public cloud vendor that offers a suite of computing services to do everything from data management to delivering web and video over the web to AI and machine learning tools."
+                description="Cloud vendor that offers computing services for SaaS, delivering web and video, AI and machine learning tools"
               />
             </li>
             <li>
               <Card
                 icon="azure"
                 name="Microsoft Azure"
-                description="A cloud computing platform and an online portal that allows you to access and manage cloud services and resources provided by Microsoft."
+                description="Сloud computing platform that allows you to access and manage cloud services and resources by Microsoft"
               />
             </li>
             <li>
               <Card
                 icon="ibm"
                 name="IBM Cloud"
-                description="The most open and secure public cloud platform for business, a next-generation hybrid multicloud platform, advanced data and AI capabilities, and deep enterprise expertise across 20 industries."
+                description="Open and secure public cloud platform, a next-gen hybrid multicloud platform, advanced data and AI capabilities"
               />
             </li>
             <li>
               <Card
                 icon="postgresql"
                 name="PostgreSQL | MySQL | Aurora"
-                description="Most popular and powerful databases specifically used by business professionals or program developers for administering, updating, maintaining and manipulating the databases or tables that are used for business decision-making."
+                description="Powerful databases used explicitly by developers for building the highly reliable and effective solutions"
+              />
+            </li>
+            <li>
+              <Card
+                icon="amazon-quantum-ledger-db"
+                name="NoSQL databases"
+                description="Database management approach generally means that it is non-relational, distributed, flexible, and scalable"
               />
             </li>
             <li>
               <Card
                 icon="flutter"
                 name="Flutter | GetIt"
-                description="An open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase."
-              />
-            </li>
-            <li>
-              <Card
-                icon="cloudantdb"
-                name="CloudantDB | SQLite"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet."
-              />
-            </li>
-            <li>
-              <Card
-                icon="amazon-quantum-ledger-db"
-                name="Amazon Quantum Ledger DB"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet."
+                description="Open-source framework to build beautiful, natively compiled, multi-platform apps from a single codebase"
               />
             </li>
             <li>
               <Card
                 icon="dart"
                 name="Dart"
-                description="Dart is a client-optimized language for developing fast apps on any platform. Its goal is to offer the most productive programming language for multi-platform development, paired with a flexible execution runtime platform for app frameworks."
+                description="Dart is a client-optimized language developed by Google for developing fast apps on any platform "
               />
             </li>
             <li>
               <Card
                 icon="electron"
                 name="Electron"
-                description="a framework for building desktop applications using JavaScript, HTML, and CSS. By embedding Chromium and Node.js into its binary, Electron allows you to maintain one JavaScript codebase and create cross-platform apps that work on Windows, macOS, and Linux."
+                description="Framework for building desktop apps using JavaScript, HTML, and CSS with embedded Chromium and Node.js"
               />
             </li>
           </ul>

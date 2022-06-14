@@ -1,0 +1,10 @@
+<svg width="53px" height="61px" viewBox="0 0 53 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Terraform_Logo</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Terraform_Logo" transform="translate(0.000000, 0.150000)" fill="currentColor" fill-rule="nonzero">
+            <polygon id="Path" points="36.4 20.05 36.4 38.98 52.8 29.52 52.8 10.57"></polygon>
+            <polygon id="Path" points="18.2 10.57 34.6 20.05 34.6 38.98 18.2 29.51"></polygon>
+            <path d="M0,0 L0,18.94 L16.4,28.41 L16.4,9.47 L0,0 Z M34.6,60 L34.6,41.06 L18.2,31.59 L18.2,50.53 L34.6,60 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

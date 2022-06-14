@@ -6,7 +6,7 @@ import * as styles from './Card.module.css';
 
 /**
  *
- * @param {'js'|'js-box'|'ts-box'|'angular'|'react'|'aws'|'postgresql'|'sls-framework'|'express'|'gcp'|'azure'|'ibm'|'flutter'|'cloudantdb'|'amazon-quantum-ledger-db'|'dart'|'electron'|'ios'|'web'|'android'} props.icon Icon name
+ * @param {'js'|'js-box'|'ts-box'|'angular'|'react'|'aws'|'postgresql'|'sls-framework'|'express'|'gcp'|'azure'|'ibm'|'flutter'|'cloudantdb'|'amazon-quantum-ledger-db'|'dart'|'electron'|'ios'|'web'|'android'|'terraform'} props.icon Icon name
  * @param {string} props.name Tech name
  * @param {string} props.description Tech name
  * @returns {JSX.Element}
