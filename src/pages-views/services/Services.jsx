@@ -1,50 +1,13 @@
-import {graphql, useStaticQuery} from 'gatsby';
-import {getImage, StaticImage} from 'gatsby-plugin-image';
+import {StaticImage} from 'gatsby-plugin-image';
 import * as React from 'react';
+import {Background, Parallax} from 'react-parallax';
 import {Heading} from '../../components/typography/Heading';
 import {Highlight} from '../../components/typography/Highlight';
 import {Paragraph} from '../../components/typography/Paragraph';
 import {PageLayout} from '../../layout/page/PageLayout';
-import {Parallax, Background} from 'react-parallax';
 import {Card} from './component/Card';
 import * as styles from './Services.module.css';
 
-function useServicesList() {
-  const result = useStaticQuery(graphql`
-      query {
-          allMdx(filter: {fields: {source: {eq: "services"}}}) {
-              edges {
-                  node {
-                      id
-                      slug
-                      frontmatter {
-                          description
-                          shortTitle
-                          horPreviewImage {
-                              childImageSharp {
-                                  gatsbyImageData
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
-  `);
-
-  const items = result.allMdx.edges;
-
-  return items.map(n => {
-    const metadata = n.node.frontmatter;
-    return ({
-      id: n.node.id,
-      path: `/services/${n.node.slug}`,
-      title: metadata.shortTitle,
-      description: metadata.description,
-      previewImage: getImage(metadata.horPreviewImage)
-    });
-  });
-}
 
 function Hero() {
   return (
@@ -65,13 +28,20 @@ function Hero() {
   );
 }
 
+/**
+ *
+ * @param {string} props.title Page title
+ * @param {any[]} props.list List of services
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export function Services(props) {
-  const list = useServicesList();
+  const list = props.list;
 
   return (
     <PageLayout
       seo={{
-        title: 'Services'
+        title: props.title
       }}
       hero={<Hero/>}
       headerNoMenuHeightFix
@@ -79,14 +49,16 @@ export function Services(props) {
       <div
         className={styles.root}
       >
-        <PageLayout.Container >
+        <PageLayout.Container>
           <Heading.H2>
             Our{' '}
             <Highlight>
               se<Highlight.Blink>r</Highlight.Blink>vic<Highlight.Blink>e</Highlight.Blink>s
             </Highlight>
           </Heading.H2>
-          <Paragraph>Together with you we discuss your challenges and choose the most effective way of solving them. We interview you to understand your business, understand the processes and offer the and concentrate on the result you get after our partnership.</Paragraph>
+          <Paragraph>Together with you we discuss your challenges and choose the most effective way of solving them. We
+            interview you to understand your business, understand the processes and offer the and concentrate on the
+            result you get after our partnership.</Paragraph>
           <ul className={styles.list}>
             {
               list.map(item => (

@@ -6,7 +6,7 @@ import {Services as ServicesView} from '../../pages-views/services/Services';
 function useList() {
   const result = useStaticQuery(graphql`
       query {
-          allMdx(filter: {fields: {source: {eq: "services"}}}) {
+          allMdx(filter: {fields: {source: {eq: "solutions"}}}) {
               edges {
                   node {
                       id
@@ -32,7 +32,7 @@ function useList() {
     const metadata = n.node.frontmatter;
     return ({
       id: n.node.id,
-      path: `/services/${n.node.slug}`,
+      path: `/solutions/${n.node.slug}`,
       title: metadata.shortTitle,
       description: metadata.description,
       previewImage: getImage(metadata.horPreviewImage)
@@ -40,11 +40,11 @@ function useList() {
   });
 }
 
-export default function Services() {
+export default function Solutions() {
   const list = useList();
   return (
     <ServicesView
-      title="Services"
+      title="Solutions"
       list={list}
     />
   )

@@ -135,4 +135,11 @@ exports.createPages = async ({actions, graphql}) => {
     'services',
     path.resolve('src/pages/services/_service.jsx')
   );
+  await createPagesFromMdxContent(
+    createPage,
+    graphql,
+    'solutions',
+    'solutions',
+    path.resolve('src/pages/solutions/_solution.jsx')
+  );
 }

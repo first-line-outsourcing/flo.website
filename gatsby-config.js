@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: siteURL.toString(),
     companyAddress: 'Russia, Krasnodar, Oktabrskaya 1/4',
     companyNumber: '+7 (998) 838-45-44',
-    companyEmail: 'hello@flo.team',
+    companyEmail: 'hello@flo.team'
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -54,55 +54,73 @@ module.exports = {
           }
         ]
       }
-    }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", `gatsby-plugin-mdx-source-name`, {
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-mdx-source-name",
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "images",
         "path": `${__dirname}/src/images`
       },
       __key: "images"
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "pages",
         "path": `${__dirname}/src/pages`
       },
       __key: "pages"
-    },{
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "cases",
         "path": `${__dirname}/content/cases`
       },
       __key: "cases"
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "testimonials",
         "path": `${__dirname}/content/testimonials`
       },
       __key: "testimonials"
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "positions",
         "path": `${__dirname}/content/positions`
       },
       __key: "positions"
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "blog-posts",
         "path": `${__dirname}/content/blog-posts`
       },
       __key: "blog-posts"
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "services",
         "path": `${__dirname}/content/services`
       },
       __key: "services"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "solutions",
+        "path": `${__dirname}/content/solutions`
+      },
+      __key: "solutions"
     },
     {
       resolve: `gatsby-transformer-json`,
@@ -130,7 +148,7 @@ module.exports = {
         protocol: siteURL.protocol,
         hostname: siteURL.hostname,
         generateRoutingRules: true,
-        generateRedirectObjectsForPermanentRedirects: true,
+        generateRedirectObjectsForPermanentRedirects: true
       }
     }
   ]
