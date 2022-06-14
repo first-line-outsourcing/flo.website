@@ -89,7 +89,9 @@ export function TechIcon(props) {
     <i role="img" style={props.style} className={classNames(styles.root, {
       [styles.light]: props.theme === 'light'
     }, props.className)}>
-      <Icon/>
+      {
+        Icon && <Icon/>
+      }
     </i>
   );
 }
