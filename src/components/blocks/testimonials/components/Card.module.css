@@ -103,4 +103,8 @@
   .figure {
     display: block;
   }
+  .person {
+    display: flex;
+    padding-bottom: 67px;
+  }
 }

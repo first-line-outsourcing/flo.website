@@ -79,7 +79,7 @@ export function Case(props) {
         />
         <UserContent>{props.content}</UserContent>
         {
-          props.testimonials.length && (
+          props.testimonials.length > 0 && (
             <Testimonials
               className={styles.gaps}
               style={{padding: 0}}
