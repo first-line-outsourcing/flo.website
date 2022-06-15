@@ -4,7 +4,7 @@ shortTitle: Hirefy
 siteLink: https://www.hirefy.me/
 social:
   facebook: https://www.facebook.com/HirefyApp/
-heroBg: ./test/testHeroBg.png
+heroBg: ./hirefy/images/hero.png
 numbers:
   - key: 1
     value: '4'
@@ -23,10 +23,20 @@ techList:
   - JavaScript
   - Node.js
   - AWS
-previewCardImage: ./chrome-extension/images/previewCardImage.png
+previewCardImage: ./hirefy/images/preview.png
 testimonials:
   - 'case-hirefy'
 ---
+import hirefy_img1 from './hirefy/images/1.png';
+import hirefy_img2 from './hirefy/images/2.png';
+import hirefy_img3 from './hirefy/images/3.png';
+import hirefy_img4 from './hirefy/images/4.png';
+
+import hirefy_img5 from './hirefy/images/5.png';
+import hirefy_img6 from './hirefy/images/6.png';
+import hirefy_img7 from './hirefy/images/7.png';
+
+import hirefy_expanded from './hirefy/images/expanded.png';
 
 ## <Highlight>Goal</Highlight> of the project
 
@@ -44,3 +54,21 @@ Hirefy saves valuable time and thousands of dollars on recruiting fees by using 
 
 During meetings with the client, we gathered all details of this idea, made the business analysis work, and suggested a solution based on simple, but trustful technologies. As the result, we’ve built the next generation of recruitment software for companies of all shapes and sizes. It uses sophisticated algorithms to accurately evaluate applicants. You can compare candidates by answers, collaborate with colleagues, check analytics, charts, and scores, create questionnaires, and share them on social networks and by email.
 
+<ImagesSlider images={[
+  hirefy_img1,
+  hirefy_img2,
+  hirefy_img3,
+]}/>
+
+<ImagesGrid
+  images={[
+    hirefy_img4,
+    hirefy_img5,
+    hirefy_img6,
+    hirefy_img7,
+  ]}
+/>
+
+<ExpandedImage
+  src={hirefy_expanded}
+/>

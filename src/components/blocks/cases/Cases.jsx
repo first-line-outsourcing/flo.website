@@ -2,6 +2,7 @@ import {graphql, useStaticQuery} from 'gatsby';
 import {navigate} from 'gatsby';
 import {getImage, StaticImage} from 'gatsby-plugin-image';
 import React, {useCallback, useMemo, useState} from 'react';
+import {filterDevNode} from '../../../utils/pages';
 import {Button} from '../../buttons/Button';
 import {Heading} from '../../typography/Heading';
 import {Highlight} from '../../typography/Highlight';
@@ -35,6 +36,7 @@ function useCasesList(filter) {
   `);
 
   const list = data.allMdx.edges
+    .filter(filterDevNode)
     .map(edge => ({
       id: edge.node.id,
       shortTitle: edge.node.frontmatter.shortTitle,
