@@ -9,12 +9,12 @@ console.info('bucket prefix=%s', process.env.AWS_BUCKET_PREFIX);
 
 module.exports = {
   siteMetadata: {
-    title: `flo.website`,
+    title: `FLO`,
     description: `flo.website`,
     siteUrl: siteURL.toString(),
     companyAddress: 'Russia, Krasnodar, Oktabrskaya 1/4',
     companyNumber: '+7 (998) 838-45-44',
-    companyEmail: 'hello@flo.team'
+    companyEmail: 'hello@flo.team',
   },
   plugins: [
     "gatsby-plugin-postcss",

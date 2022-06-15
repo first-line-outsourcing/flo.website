@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 export function SEO({ description, lang, meta = [], title }) {
-  const { site } = useStaticQuery(
+  const { site, file: ogImage } = useStaticQuery(
     graphql`
         query {
             site {
@@ -11,6 +11,9 @@ export function SEO({ description, lang, meta = [], title }) {
                     title
                     description
                 }
+            }
+            file(sourceInstanceName: {eq: "images"}, name: {eq: "ogImage"}) {
+                publicURL
             }
         }
     `
@@ -38,6 +41,10 @@ export function SEO({ description, lang, meta = [], title }) {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: ogImage.publicURL,
         },
         {
           property: `og:type`,

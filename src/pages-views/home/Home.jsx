@@ -47,7 +47,7 @@ export function Home(props) {
   return (
     <PageLayout
       seo={{
-        title: 'Main'
+        title: 'Home'
       }}
       hero={<Hero />}
       heroRootClassName={styles.heroRoot}
