@@ -20,6 +20,21 @@
 .list > li > .photo {
   vertical-align: top;
   margin-bottom: 16px;
+  height: 160px;
+  transition: opacity ease 0.3s;
+}
+
+.list > li > .photo.photoHover {
+  opacity: 0;
+  margin-top: -176px;
+}
+
+.list > li:hover > .photo:not(.photoHover) {
+  opacity: 0;
+}
+
+.list > li:hover > .photo.photoHover {
+  opacity: 1;
 }
 
 .list > li > p:last-child {
@@ -44,6 +59,14 @@
   .list > li {
     width: 306px;
     padding: 28px 12px;
+  }
+
+  .list > li > .photo {
+    height: 331px;
+  }
+
+  .list > li > .photo.photoHover {
+    margin-top: -347px;
   }
 
   .title {

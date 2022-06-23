@@ -7,6 +7,7 @@ import {Paragraph} from '../../../components/typography/Paragraph';
 import {PageLayout} from '../../../layout/page/PageLayout';
 import * as styles from './OurTeam.module.css';
 import {navigate} from 'gatsby';
+import classNames from 'classnames';
 
 export function OurTeam(props) {
   const onJoinUs = useCallback(
@@ -33,6 +34,13 @@ export function OurTeam(props) {
               quality={100}
               placeholder="blurred"
             />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_000_hover.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
             <Paragraph size="s">Андрей Заикин</Paragraph>
             <Paragraph size="xs">Founder, CEO</Paragraph>
           </li>
@@ -40,6 +48,13 @@ export function OurTeam(props) {
             <StaticImage
               className={styles.photo}
               src="../images/team/our_team_001.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_001_hover.png"
               alt="Photo"
               quality={100}
               placeholder="blurred"
@@ -55,6 +70,13 @@ export function OurTeam(props) {
               quality={100}
               placeholder="blurred"
             />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_002_hover.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
             <Paragraph size="s">Колесников Виктор</Paragraph>
             <Paragraph size="xs">Senior Software Engineer</Paragraph>
           </li>
@@ -62,6 +84,13 @@ export function OurTeam(props) {
             <StaticImage
               className={styles.photo}
               src="../images/team/our_team_003.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_003_hover.png"
               alt="Photo"
               quality={100}
               placeholder="blurred"
@@ -77,6 +106,13 @@ export function OurTeam(props) {
               quality={100}
               placeholder="blurred"
             />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_004_hover.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
             <Paragraph size="s">Махота Евгений</Paragraph>
             <Paragraph size="xs">Middle Software Engineer</Paragraph>
           </li>
@@ -84,6 +120,13 @@ export function OurTeam(props) {
             <StaticImage
               className={styles.photo}
               src="../images/team/our_team_005.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_005_hover.png"
               alt="Photo"
               quality={100}
               placeholder="blurred"
@@ -99,6 +142,13 @@ export function OurTeam(props) {
               quality={100}
               placeholder="blurred"
             />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_006_hover.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
             <Paragraph size="s">Кирилл Чигрин</Paragraph>
             <Paragraph size="xs">Project Manager</Paragraph>
           </li>
@@ -106,6 +156,13 @@ export function OurTeam(props) {
             <StaticImage
               className={styles.photo}
               src="../images/team/our_team_007.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_007_hover.png"
               alt="Photo"
               quality={100}
               placeholder="blurred"
@@ -121,6 +178,13 @@ export function OurTeam(props) {
               quality={100}
               placeholder="blurred"
             />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_008_hover.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
             <Paragraph size="s">Виталий Чорба</Paragraph>
             <Paragraph size="xs">Middle Software Engineer</Paragraph>
           </li>
@@ -128,6 +192,13 @@ export function OurTeam(props) {
             <StaticImage
               className={styles.photo}
               src="../images/team/our_team_009.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_009_hover.png"
               alt="Photo"
               quality={100}
               placeholder="blurred"
@@ -143,6 +214,13 @@ export function OurTeam(props) {
               quality={100}
               placeholder="blurred"
             />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_010_hover.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
             <Paragraph size="s">Николенко Станислав</Paragraph>
             <Paragraph size="xs">Quality Assurance Engineer</Paragraph>
           </li>
@@ -150,6 +228,13 @@ export function OurTeam(props) {
             <StaticImage
               className={styles.photo}
               src="../images/team/our_team_011.png"
+              alt="Photo"
+              quality={100}
+              placeholder="blurred"
+            />
+            <StaticImage
+              className={classNames(styles.photo, styles.photoHover)}
+              src="../images/team/our_team_011_hover.png"
               alt="Photo"
               quality={100}
               placeholder="blurred"
