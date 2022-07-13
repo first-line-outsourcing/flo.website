@@ -9,11 +9,11 @@ console.info('bucket prefix=%s', process.env.AWS_BUCKET_PREFIX);
 
 module.exports = {
   siteMetadata: {
-    title: `FLO`,
+    title: `First Line Outsourcing`,
     description: `flo.website`,
     siteUrl: siteURL.toString(),
-    companyAddress: 'Russia, Krasnodar, Oktabrskaya 1/4',
-    companyNumber: '+7 (998) 838-45-44',
+    companyAddress: 'Armenia, Yerevan, 59 Komitas',
+    companyNumber: '+374 55799406',
     companyEmail: 'hello@flo.team',
   },
   plugins: [
